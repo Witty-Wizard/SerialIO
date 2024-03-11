@@ -1,0 +1,23 @@
+{
+    "name": "SerialIO",
+    "version": "0.0.2",
+    "description": "A common library that can decode multiple rc protocols",
+    "keywords": "sbus, crsf",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/Witty-Wizard/SerialIO"
+    },
+    "authors":
+    [
+      {
+        "name": "Witty Wizard",
+        "email": "shashankmarch27@gmail.com",
+        "url": "https://github.com/Witty-Wizard",
+        "maintainer": true
+      }
+    ],
+    "license": "GPL-3.0-only",
+    "frameworks": "*",
+    "platforms": "*"
+  }
