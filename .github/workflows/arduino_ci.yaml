@@ -1,0 +1,14 @@
+name: Arduino_CI
+
+on: [push, pull_request]
+
+jobs:
+  arduino_ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Arduino Continuous Integration
+        uses: Arduino-CI/action@latest
