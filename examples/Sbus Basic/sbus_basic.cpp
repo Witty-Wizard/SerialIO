@@ -1,17 +1,15 @@
 #include <Arduino.h>
-#include <serialIO.h>
 #include <crsf/crsf.h>
 #include <sbus/sbus.h>
+#include <serialIO.h>
 
 crsf_channels_t channelData;
 
-serialIO *receiver = new sbus(Serial1, 16, 17);;
+serialIO *receiver = new sbus(Serial1, 16, 17);
 
-void setup() { 
-    receiver->begin();
- }
+void setup() { receiver->begin(); }
 
 void loop() {
-    receiver->processIncoming();
-    receiver->getChannel(&channelData);
+  receiver->processIncoming();
+  receiver->getChannel(&channelData);
 }
