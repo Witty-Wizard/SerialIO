@@ -40,6 +40,16 @@
 class serialIO
 {
 public:
+  /**
+   * @brief Constructor for the serialIO class.
+   *
+   * Initializes the pins and sets up the serial port.
+   *
+   * @param rxPort Pointer to the hardware serial port to use.
+   * @param rxPin The RX pin number.
+   * @param txPin The TX pin number.
+   * @param inverted Whether the serial signal is inverted (true) or not (false).
+   */
   serialIO(HardwareSerial *rxPort, int rxPin, int txPin, bool inverted)
       : _rxPort(rxPort), _rxPin(rxPin), _txPin(txPin), _inverted(inverted){};
 
@@ -62,15 +72,15 @@ public:
       @brief Gives the decoded rc channels
       @param  channelData
               A pointer to a crsf_channels_t struct where the decoded channel data will be stored.
-              
+
   */
   /**************************************************************************/
   virtual void getChannel(crsf_channels_t *channelData);
 
 protected:
-  HardwareSerial *_rxPort;
-  bool _inverted;
-  int _rxPin;
-  int _txPin;
+  HardwareSerial *_rxPort; // Pointer to the hardware serial port used for communication.
+  bool _inverted;          // Indicates whether the serial signal is inverted (true) or not (false).
+  int _rxPin;              // The RX pin number.
+  int _txPin;              // The TX pin number.
 };
 #endif
