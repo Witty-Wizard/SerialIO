@@ -1,4 +1,27 @@
 var searchData=
 [
-  ['footer_5fsbus_0',['FOOTER_SBUS',['../sbus_8h.html#a7a98b3e4d029e60d0e1a1602f31ba4fe',1,'sbus.h']]]
+  ['configuration_0',['Configuration',['../protocol.html#autotoc_md2',1,'Configuration'],['../protocol.html#autotoc_md3',1,'Configuration']]],
+  ['crsf_1',['crsf',['../classcrsf.html',1,'crsf'],['../classcrsf.html#a37f354c2c9b6b20a5f211405ad508f46',1,'crsf::crsf()']]],
+  ['crsf_2',['CRSF',['../protocol.html#crsfintro',1,'']]],
+  ['crsf_2eh_3',['crsf.h',['../crsf_8h.html',1,'']]],
+  ['crsf_5faddr_5fe_4',['crsf_addr_e',['../crsf__protocol_8h.html#a39bdc922bc88d3bcbbae652a25110a6e',1,'crsf_protocol.h']]],
+  ['crsf_5fbaudrate_5',['CRSF_BAUDRATE',['../crsf__protocol_8h.html#a6f065c1b6223b86398f4caaede4d1e49',1,'crsf_protocol.h']]],
+  ['crsf_5fchannel_5fvalue_5fmax_6',['CRSF_CHANNEL_VALUE_MAX',['../crsf__protocol_8h.html#a4aa66a6fd32c49bbd6c0286a6f03391d',1,'crsf_protocol.h']]],
+  ['crsf_5fchannel_5fvalue_5fmid_7',['CRSF_CHANNEL_VALUE_MID',['../crsf__protocol_8h.html#a80451a0d2d65d6766ebb3f980b90e43f',1,'crsf_protocol.h']]],
+  ['crsf_5fchannel_5fvalue_5fmin_8',['CRSF_CHANNEL_VALUE_MIN',['../crsf__protocol_8h.html#a7b05fbea6cf78a5b37fae5199a9ac40a',1,'crsf_protocol.h']]],
+  ['crsf_5fchannels_5fs_9',['crsf_channels_s',['../structcrsf__channels__s.html',1,'']]],
+  ['crsf_5fchannels_5ft_10',['crsf_channels_t',['../crsf__protocol_8h.html#acc70938025350136337a247b487027a6',1,'crsf_protocol.h']]],
+  ['crsf_5fframe_5ftype_5fe_11',['crsf_frame_type_e',['../crsf__protocol_8h.html#aa13192edaa7261c9a939b9e0580f5415',1,'crsf_protocol.h']]],
+  ['crsf_5fheader_5fs_12',['crsf_header_s',['../structcrsf__header__s.html',1,'']]],
+  ['crsf_5fheader_5ft_13',['crsf_header_t',['../crsf__protocol_8h.html#a0cc4c5ca1a3bf27c166ca7dcbd4b0148',1,'crsf_protocol.h']]],
+  ['crsf_5fmax_5fpacket_5fsize_14',['CRSF_MAX_PACKET_SIZE',['../crsf__protocol_8h.html#abd0505e85d02f142757c5d98d657cf4f',1,'crsf_protocol.h']]],
+  ['crsf_5fmax_5fpayload_5flen_15',['CRSF_MAX_PAYLOAD_LEN',['../crsf__protocol_8h.html#a85118da49164bb3609df4ccc27272c00',1,'crsf_protocol.h']]],
+  ['crsf_5fnum_5fchannels_16',['CRSF_NUM_CHANNELS',['../crsf__protocol_8h.html#a59aab7b2554e0147613fee1223253175',1,'crsf_protocol.h']]],
+  ['crsf_5fprotocol_2eh_17',['crsf_protocol.h',['../crsf__protocol_8h.html',1,'']]],
+  ['crsf_5fsensor_5fbattery_5fs_18',['crsf_sensor_battery_s',['../structcrsf__sensor__battery__s.html',1,'']]],
+  ['crsf_5fsensor_5fbattery_5ft_19',['crsf_sensor_battery_t',['../crsf__protocol_8h.html#a164a573a02f23209fbe22d3e0ce56531',1,'crsf_protocol.h']]],
+  ['crsf_5fsensor_5fgps_5fs_20',['crsf_sensor_gps_s',['../structcrsf__sensor__gps__s.html',1,'']]],
+  ['crsf_5fsensor_5fgps_5ft_21',['crsf_sensor_gps_t',['../crsf__protocol_8h.html#ae56654eb723999d9827d4f81c34b52e8',1,'crsf_protocol.h']]],
+  ['crsflinkstatistics_5ft_22',['crsfLinkStatistics_t',['../crsf__protocol_8h.html#a8f7ff0bb6ce61424bdf92c67edd7e069',1,'crsf_protocol.h']]],
+  ['crsfpayloadlinkstatistics_5fs_23',['crsfPayloadLinkstatistics_s',['../structcrsfPayloadLinkstatistics__s.html',1,'']]]
 ];
