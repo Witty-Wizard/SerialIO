@@ -8,5 +8,6 @@ var searchData=
   ['serialio_5',['serialIO',['../classserialIO.html',1,'serialIO'],['../classserialIO.html#adcdd78a568e0f27449becb25f74f6530',1,'serialIO::serialIO()']]],
   ['serialio_6',['SerialIO',['../index.html',1,'']]],
   ['serialio_2eh_7',['serialIO.h',['../serialIO_8h.html',1,'']]],
-  ['supported_20protocol_8',['Supported Protocol',['../protocol.html',1,'']]]
+  ['subpage_20protocol_8',['@subpage protocol',['../index.html#autotoc_md0',1,'']]],
+  ['supported_20protocol_9',['Supported Protocol',['../protocol.html',1,'']]]
 ];
