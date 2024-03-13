@@ -6,31 +6,31 @@ void sbus::begin() {
 
 void sbus::processIncoming() {
   while (_rxPort->available()) {
-    prev_buffer_sbus = buffer_sbus;
-    buffer_sbus = _rxPort->read();
+    _prevBuffer = _buffer;
+    _buffer = _rxPort->read();
 
-    if (header_detected_sbus == true) {
-      data_rx[rx_index] = buffer_sbus;
-      rx_index++;
-      if (rx_index > 23) {
-        header_detected_sbus = false;
+    if (_headerDetected == true) {
+      __rxData[_rxIndex] = _buffer;
+      _rxIndex++;
+      if (_rxIndex > 23) {
+        _headerDetected = false;
       }
     } else {
-      if (prev_buffer_sbus == FOOTER_SBUS && buffer_sbus == HEADER_SBUS) {
-        header_detected_sbus = true;
-        data_rx[0] = 0x0F;
-        data_rx[24] = 0x00;
-        rx_index = 1;
+      if (_prevBuffer == FOOTER_SBUS && _buffer == HEADER_SBUS) {
+        _headerDetected = true;
+        __rxData[0] = 0x0F;
+        __rxData[24] = 0x00;
+        _rxIndex = 1;
       }
     }
 
-    if (rx_index == sizeof(data_rx) / sizeof(data_rx[0])) {
-      rx_index = 0;
-      header_detected_sbus = false;
+    if (_rxIndex == sizeof(__rxData) / sizeof(__rxData[0])) {
+      _rxIndex = 0;
+      _headerDetected = false;
     }
   }
 }
 
 void sbus::getChannel(crsf_channels_t *channelData) {
-  memcpy(channelData, data_rx + 1, sizeof(*channelData));
+  memcpy(channelData, __rxData + 1, sizeof(*channelData));
 }

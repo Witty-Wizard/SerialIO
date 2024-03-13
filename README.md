@@ -2,14 +2,14 @@
 
 A versatile Arduino library that provides support for decoding multiple RC protocols such as SBUS and CRSF.
 
-## Overview
+# Overview
 
 SerialIO is a common library designed to simplify the implementation of RC protocol decoding in Arduino projects. It provides a modular and extensible architecture that allows for easy integration of various RC protocols.
 
 ## Supported Protocols
 
-- **SBUS**: Futaba SBUS protocol.
-- **CRSF**: Crossfire RC protocol.
+- \ref sbusIntro : Futaba SBUS protocol.
+- \ref crsfIntro : Crossfire RC protocol.
 
 ## Installation
 
