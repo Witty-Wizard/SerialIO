@@ -1,9 +1,8 @@
 /*!
  * @page sbusintro SBUS
- * @brief Overview of the SBUS protocol.
- *
- * The SBUS (Serial Bus) protocol is a digital communication protocol commonly used in radio-controlled (RC) systems
- * for transmitting control signals between transmitters and receivers.
+ * @brief The SBUS (Serial Bus) protocol is a digital communication protocol commonly
+ * used in radio-controlled (RC) systems for transmitting control signals
+ * between transmitters and receivers.
  *
  * @section Configuration
  * - Baud rate : 100000
@@ -23,7 +22,7 @@
 #define SBUS_H
 
 #include "../crsf/crsf_protocol.h" // Include header file for CRSF protocol
-#include <serialIO.h> // Include header file for the serial IO class
+#include "../serialIO.h" // Include header file for the serial IO class
 
 #define HEADER_SBUS 0X0F        ///< SBUS Header Byte
 #define FOOTER_SBUS 0X00        ///< SBUS Footer Byte
