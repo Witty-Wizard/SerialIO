@@ -1,11 +1,10 @@
 @mainpage
 SerialIO is a common library designed to simplify the implementation of RC protocol decoding in Arduino projects. It provides a modular and extensible architecture that allows for easy integration of various RC protocols.
 
-# @subpage protocol
- - @ref sbusintro : Futaba SBUS protocol
- - @ref crsfintro : Crossfire RC protocol
-
- **also see :** [**SerialIO**](@ref serialIO)
+# Getting Started
+- [Installation](#installation)
+- [tutorial](#tutorial)
+- [Examples](#example)
 
 # License
 This library is distributed under the GNU General Public License version 3.0 (GPL-3.0). 

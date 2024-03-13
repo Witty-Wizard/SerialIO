@@ -1,18 +1,4 @@
 /*!
- * @page crsfintro CRSF
- * @brief CRSF (Crossfire Serial Protocol) is a digital communication protocol designed
- * for radio-controlled (RC) systems.
- *
- * @section Configuration
- * - Baud rate : 420000
- * - Data bits : 8 Bits
- * - Parity : No Parity
- * - Stop bits : 1 Stop bits
- * - Signal polarity : Uninverted
- * 
- */
-
-/*!
  * @file crsf.h
  * @brief Header file for the CRSF protocol implementation.
  */
@@ -21,8 +7,9 @@
 #ifndef CRSF_H
 #define CRSF_H
 
+#include "../serialIO.h"   // Include header file for the serial IO class
 #include "crsf_protocol.h" // Include header file for CRSF protocol
-#include "../serialIO.h"      // Include header file for the serial IO class
+
 
 /**
  * @brief A class for handling CRSF protocol communication.

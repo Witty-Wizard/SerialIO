@@ -1,18 +1,4 @@
 /*!
- * @page sbusintro SBUS
- * @brief The SBUS (Serial Bus) protocol is a digital communication protocol commonly
- * used in radio-controlled (RC) systems for transmitting control signals
- * between transmitters and receivers.
- *
- * @section Configuration
- * - Baud rate : 100000
- * - Data bits : 8 Bits
- * - Parity : Even Parity
- * - Stop bits : 2 Stop bits
- * - Signal polarity : Inverted
- */
-
-/*!
  * @file sbus.h
  * @brief Header file for the SBUS protocol implementation.
  */
