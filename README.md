@@ -10,8 +10,8 @@ SerialIO is a common library designed to simplify the implementation of RC proto
 
 ## Supported Protocols
 
-- \ref sbusIntro : Futaba SBUS protocol.
-- \ref crsfIntro : Crossfire RC protocol.
+- [SBUS](https://witty-wizard.github.io/SerialIO/sbusintro.html) : Futaba SBUS protocol.
+- [CRSF](https://witty-wizard.github.io/SerialIO/crsfintro.html) : Crossfire RC protocol.
 
 ## Installation
 
