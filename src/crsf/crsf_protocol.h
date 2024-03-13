@@ -38,6 +38,7 @@ enum {
       4, // combined length of all fields except payload
 };
 
+/** Length of CRSF frames */
 enum {
   CRSF_FRAME_GPS_PAYLOAD_SIZE = 15,
   CRSF_FRAME_BATTERY_SENSOR_PAYLOAD_SIZE = 8,
@@ -47,6 +48,7 @@ enum {
   CRSF_FRAME_ATTITUDE_PAYLOAD_SIZE = 6,
 };
 
+/** CRSF Sensor frame type */
 typedef enum {
   CRSF_FRAMETYPE_GPS = 0x02,
   CRSF_FRAMETYPE_BATTERY_SENSOR = 0x08,
@@ -71,6 +73,7 @@ typedef enum {
                                    // outbound telemetry_buffer limit)
 } crsf_frame_type_e;
 
+/** CRSF sensor address */
 typedef enum {
   CRSF_ADDRESS_BROADCAST = 0x00,
   CRSF_ADDRESS_USB = 0x10,
@@ -87,8 +90,7 @@ typedef enum {
   CRSF_ADDRESS_CRSF_TRANSMITTER = 0xEE,
 } crsf_addr_e;
 
-/** This structure defines the header of a CRSF frame, including the device
- * address, frame size,and frame type.*/
+/** Heder of CRSF Packet*/
 typedef struct crsf_header_s {
   uint8_t device_addr; // from crsf_addr_e
   uint8_t frame_size;  // counts size after this byte, so it must be the payload
@@ -96,6 +98,7 @@ typedef struct crsf_header_s {
   uint8_t type;        // from crsf_frame_type_e
 } PACKED crsf_header_t;
 
+/** RC Packet Frame */
 typedef struct crsf_channels_s {
   unsigned channel1 : 11;
   unsigned channel2 : 11;
@@ -115,6 +118,7 @@ typedef struct crsf_channels_s {
   unsigned channel16 : 11;
 } PACKED crsf_channels_t;
 
+/** Payload Statics */
 typedef struct crsfPayloadLinkstatistics_s {
   uint8_t uplink_RSSI_1;
   uint8_t uplink_RSSI_2;
@@ -128,6 +132,7 @@ typedef struct crsfPayloadLinkstatistics_s {
   int8_t downlink_SNR;
 } crsfLinkStatistics_t;
 
+/** Battery Voltage parameters */
 typedef struct crsf_sensor_battery_s {
   uint32_t voltage : 16;  // V * 10 big endian
   uint32_t current : 16;  // A * 10 big endian
@@ -135,6 +140,7 @@ typedef struct crsf_sensor_battery_s {
   uint32_t remaining : 8; // %
 } PACKED crsf_sensor_battery_t;
 
+/** GPS parameters */
 typedef struct crsf_sensor_gps_s {
   int32_t latitude;     // degree / 10,000,000 big endian
   int32_t longitude;    // degree / 10,000,000 big endian
