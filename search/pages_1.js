@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['protocol_0',['Supported Protocol',['../protocol.html',1,'']]]
+  ['installation_0',['Installation',['../installation.html',1,'']]]
 ];
