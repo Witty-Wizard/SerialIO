@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['installation_0',['Installation',['../installation.html#autotoc_md4',1,'Arduino Installation'],['../installation.html',1,'Installation'],['../installation.html#autotoc_md5',1,'PlatformIO Installation']]]
+  ['installation_0',['Installation',['../index.html#autotoc_md4',1,'Arduino Installation'],['../index.html#installation',1,'Installation'],['../index.html#autotoc_md5',1,'PlatformIO Installation']]]
 ];

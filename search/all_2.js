@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['configuration_0',['Configuration',['../protocol.html#autotoc_md6',1,'Configuration'],['../protocol.html#autotoc_md7',1,'Configuration']]],
+  ['configuration_0',['Configuration',['../index.html#autotoc_md1',1,'Configuration'],['../index.html#autotoc_md2',1,'Configuration']]],
   ['crsf_1',['crsf',['../classcrsf.html',1,'crsf'],['../classcrsf.html#a37f354c2c9b6b20a5f211405ad508f46',1,'crsf::crsf()']]],
-  ['crsf_2',['CRSF',['../protocol.html#crsfintro',1,'']]],
-  ['crsf_20basic_20example_3',['CRSF Basic Example',['../example.html#autotoc_md0',1,'']]],
+  ['crsf_2',['CRSF',['../index.html#crsfintro',1,'']]],
+  ['crsf_20basic_20example_3',['CRSF Basic Example',['../index.html#autotoc_md6',1,'']]],
   ['crsf_2eh_4',['crsf.h',['../crsf_8h.html',1,'']]],
   ['crsf_5faddr_5fe_5',['crsf_addr_e',['../crsf__protocol_8h.html#a39bdc922bc88d3bcbbae652a25110a6e',1,'crsf_protocol.h']]],
   ['crsf_5fbaudrate_6',['CRSF_BAUDRATE',['../crsf__protocol_8h.html#a6f065c1b6223b86398f4caaede4d1e49',1,'crsf_protocol.h']]],

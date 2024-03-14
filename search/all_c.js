@@ -1,8 +1,8 @@
 var searchData=
 [
   ['sbus_0',['sbus',['../classsbus.html',1,'sbus'],['../classsbus.html#ac04349d7fb9d7072534c0117a36dc324',1,'sbus::sbus()']]],
-  ['sbus_1',['SBUS',['../protocol.html#sbusintro',1,'']]],
-  ['sbus_20basic_20example_2',['SBUS Basic Example',['../example.html#autotoc_md1',1,'']]],
+  ['sbus_1',['SBUS',['../index.html#sbusintro',1,'']]],
+  ['sbus_20basic_20example_2',['SBUS Basic Example',['../index.html#autotoc_md7',1,'']]],
   ['sbus_2eh_3',['sbus.h',['../sbus_8h.html',1,'']]],
   ['sbus_5fbaudrate_4',['SBUS_BAUDRATE',['../sbus_8h.html#a3845cac6a52b70c707222df645b6c853',1,'sbus.h']]],
   ['sbus_5fmax_5fpacket_5fsize_5',['SBUS_MAX_PACKET_SIZE',['../sbus_8h.html#a663707452658145decf130f3f1ebd631',1,'sbus.h']]],
@@ -10,6 +10,7 @@ var searchData=
   ['serialio_7',['SerialIO',['../index.html',1,'']]],
   ['serialio_2ecpp_8',['serialIO.cpp',['../serialIO_8cpp.html',1,'']]],
   ['serialio_2eh_9',['serialIO.h',['../serialIO_8h.html',1,'']]],
-  ['started_10',['Getting Started',['../index.html#autotoc_md2',1,'']]],
-  ['supported_20protocol_11',['Supported Protocol',['../protocol.html',1,'']]]
+  ['started_10',['Getting Started',['../index.html#autotoc_md3',1,'']]],
+  ['steps_11',['Steps',['../index.html#autotoc_md9',1,'']]],
+  ['supported_20protocol_12',['Supported Protocol',['../index.html#autotoc_md0',1,'']]]
 ];
