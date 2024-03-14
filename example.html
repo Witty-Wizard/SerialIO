@@ -94,7 +94,53 @@ $(function(){initNavTree('example.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Examples</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="textblock"><h2><a class="anchor" id="autotoc_md0"></a>
+CRSF Basic Example</h2>
+<div class="fragment"><div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="crsf_8h.html">crsf/crsf.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="sbus_8h.html">sbus/sbus.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="serialIO_8h.html">serialIO.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> channelData;</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="classserialIO.html">serialIO</a> *receiver = <span class="keyword">new</span> <a class="code hl_class" href="classcrsf.html">crsf</a>(Serial1, 16, 17);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup() { receiver-&gt;<a class="code hl_function" href="classserialIO.html#a5a4eddda14bb5c1a56f8470850ccf409">begin</a>(); }</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop() {</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classserialIO.html#aa1c85eb818f86988c7d5e8d00b5fc0f5">processIncoming</a>();</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classserialIO.html#a69b9dfd3d97b23f0973352792342a269">getChannel</a>(&amp;channelData);</div>
+<div class="line">}</div>
+<div class="ttc" id="aclasscrsf_html"><div class="ttname"><a href="classcrsf.html">crsf</a></div><div class="ttdoc">A class for handling CRSF protocol communication.</div><div class="ttdef"><b>Definition</b> crsf.h:17</div></div>
+<div class="ttc" id="aclassserialIO_html"><div class="ttname"><a href="classserialIO.html">serialIO</a></div><div class="ttdoc">Class that stores state and functions for initialising and decoding rc protocol.</div><div class="ttdef"><b>Definition</b> serialIO.h:17</div></div>
+<div class="ttc" id="aclassserialIO_html_a5a4eddda14bb5c1a56f8470850ccf409"><div class="ttname"><a href="classserialIO.html#a5a4eddda14bb5c1a56f8470850ccf409">serialIO::begin</a></div><div class="ttdeci">virtual void begin()</div><div class="ttdoc">Initialises the pins and setup serial port.</div></div>
+<div class="ttc" id="aclassserialIO_html_a69b9dfd3d97b23f0973352792342a269"><div class="ttname"><a href="classserialIO.html#a69b9dfd3d97b23f0973352792342a269">serialIO::getChannel</a></div><div class="ttdeci">virtual void getChannel(crsf_channels_t *channelData)</div><div class="ttdoc">Gives the decoded rc channels.</div></div>
+<div class="ttc" id="aclassserialIO_html_aa1c85eb818f86988c7d5e8d00b5fc0f5"><div class="ttname"><a href="classserialIO.html#aa1c85eb818f86988c7d5e8d00b5fc0f5">serialIO::processIncoming</a></div><div class="ttdeci">virtual void processIncoming()</div><div class="ttdoc">decode the incoming serial data.</div></div>
+<div class="ttc" id="acrsf_8h_html"><div class="ttname"><a href="crsf_8h.html">crsf.h</a></div><div class="ttdoc">Header file for the CRSF protocol implementation.</div></div>
+<div class="ttc" id="asbus_8h_html"><div class="ttname"><a href="sbus_8h.html">sbus.h</a></div><div class="ttdoc">Header file for the SBUS protocol implementation.</div></div>
+<div class="ttc" id="aserialIO_8h_html"><div class="ttname"><a href="serialIO_8h.html">serialIO.h</a></div><div class="ttdoc">Header file for serial input/output (IO) functionality.</div></div>
+<div class="ttc" id="astructcrsf__channels__s_html"><div class="ttname"><a href="structcrsf__channels__s.html">crsf_channels_s</a></div><div class="ttdef"><b>Definition</b> crsf_protocol.h:102</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1"></a>
+SBUS Basic Example</h2>
+<div class="fragment"><div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="crsf_8h.html">crsf/crsf.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="sbus_8h.html">sbus/sbus.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="serialIO_8h.html">serialIO.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> channelData;</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="classserialIO.html">serialIO</a> *receiver = <span class="keyword">new</span> <a class="code hl_class" href="classsbus.html">sbus</a>(Serial1, 16, 17);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup() { receiver-&gt;<a class="code hl_function" href="classserialIO.html#a5a4eddda14bb5c1a56f8470850ccf409">begin</a>(); }</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop() {</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classserialIO.html#aa1c85eb818f86988c7d5e8d00b5fc0f5">processIncoming</a>();</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classserialIO.html#a69b9dfd3d97b23f0973352792342a269">getChannel</a>(&amp;channelData);</div>
+<div class="line">}</div>
+<div class="ttc" id="aclasssbus_html"><div class="ttname"><a href="classsbus.html">sbus</a></div><div class="ttdoc">A class for handling SBUS protocol communication.</div><div class="ttdef"><b>Definition</b> sbus.h:21</div></div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
