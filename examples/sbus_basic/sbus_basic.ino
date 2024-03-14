@@ -1,14 +1,13 @@
 /*!
- * @file crsf_basic.cpp
+ * @file sbus_basic.ino
  */
-#include <Arduino.h>
-#include <crsf/crsf.h>
-#include <sbus/sbus.h>
+#include <sbus.h>
+#include <crsf.h>
 #include <serialIO.h>
 
 crsf_channels_t channelData;
 
-serialIO *receiver = new crsf(Serial1, 16, 17);
+serialIO *receiver = new sbus(Serial1, 16, 17);
 
 void setup() { receiver->begin(); }
 

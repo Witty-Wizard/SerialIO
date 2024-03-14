@@ -7,7 +7,7 @@
 #ifndef CRSF_H
 #define CRSF_H
 
-#include "../serialIO.h"   // Include header file for the serial IO class
+#include "serialIO.h"   // Include header file for the serial IO class
 #include "crsf_protocol.h" // Include header file for CRSF protocol
 
 
