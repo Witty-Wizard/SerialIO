@@ -1,0 +1,11 @@
+<map id="src/crsf_protocol.h" name="src/crsf_protocol.h">
+<area shape="rect" id="Node000001" title="Header file for the CRSF protocol implementation." alt="" coords="31,5,159,31"/>
+<area shape="rect" id="Node000002" href="$crsf_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="5,153,81,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,43,49,60,36,80,32,99,32,118,41,151,35,153,27,119,26,98,31,78,45,56,62,39"/>
+<area shape="rect" id="Node000003" href="$sbus_8h.html" title="Header file for the SBUS protocol implementation." alt="" coords="122,153,204,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,39,145,56,159,78,165,98,168,118,167,153,162,152,163,119,160,99,154,80,140,60,123,43"/>
+<area shape="rect" id="Node000004" href="$serialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="46,79,144,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="98,46,98,79,92,79,92,46"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="80,119,54,154,50,151,75,116"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="119,114,153,150,150,154,115,118"/>
+</map>

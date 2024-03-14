@@ -19,6 +19,9 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -95,14 +98,187 @@ $(function(){initNavTree('index.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>SerialIO is a common library designed to simplify the implementation of RC protocol decoding in Arduino projects. It provides a modular and extensible architecture that allows for easy integration of various RC protocols.</p>
-<h1><a class="anchor" id="autotoc_md2"></a>
-Getting Started</h1>
+<h1><a class="anchor" id="autotoc_md0"></a>
+Supported Protocol</h1>
 <ul>
-<li><a class="el" href="installation.html">Installation</a></li>
-<li><a class="el" href="tutorial.html">Tutorial</a></li>
-<li><a class="el" href="example.html">Examples</a></li>
+<li><a class="el" href="#sbusintro">Futaba SBUS protocol</a></li>
+<li><a class="el" href="#crsfintro">Crossfire RC protocol</a></li>
+</ul>
+<h2><a class="anchor" id="sbusintro"></a>
+SBUS</h2>
+<p>The SBUS (Serial Bus) protocol is a digital communication protocol commonly used in radio-controlled (RC) systems for transmitting control signals between transmitters and receivers.</p>
+<h3><a class="anchor" id="autotoc_md1"></a>
+Configuration</h3>
+<ul>
+<li>Baud rate: 100000</li>
+<li>Data bits: 8 Bits</li>
+<li>Parity: Even Parity</li>
+<li>Stop bits: 2 Stop bits</li>
+<li>Signal polarity: Inverted</li>
+</ul>
+<h2><a class="anchor" id="crsfintro"></a>
+CRSF</h2>
+<p>CRSF (Crossfire Serial Protocol) is a digital communication protocol designed for radio-controlled (RC) systems.</p>
+<h3><a class="anchor" id="autotoc_md2"></a>
+Configuration</h3>
+<ul>
+<li>Baud rate: 420000</li>
+<li>Data bits: 8 Bits</li>
+<li>Parity: No Parity</li>
+<li>Stop bits: 1 Stop bits</li>
+<li>Signal polarity: Uninverted</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
+Getting Started</h1>
+<ul>
+<li><a class="el" href="#installation">Installation</a></li>
+<li><a class="el" href="#tutorial">Tutorial</a></li>
+<li><a class="el" href="#example">Examples</a></li>
+</ul>
+<h1><a class="anchor" id="installation"></a>
+Installation</h1>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Arduino Installation</h2>
+<p>To use the SerialIO library in your Arduino projects, follow these installation steps:</p>
+<ol type="1">
+<li>Download the SerialIO library from the <a href="https://github.com/Witty-Wizard/SerialIO">GitHub repository</a>.</li>
+<li>Extract the downloaded ZIP file.</li>
+<li>Copy the extracted folder to the <code>libraries</code> directory in your Arduino sketchbook.</li>
+<li>Restart the Arduino IDE.</li>
+<li>You should now be able to include the SerialIO library in your Arduino sketches.</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md5"></a>
+PlatformIO Installation</h2>
+<p>If you are using PlatformIO, you can install the SerialIO library directly from the PlatformIO Library Manager. Add the following line to your <code>platformio.ini</code> file:</p>
+<div class="fragment"><div class="line">lib_deps = Witty-Wizard/SerialIO @ ^0.0.3</div>
+</div><!-- fragment --><h1><a class="anchor" id="tutorial"></a>
+Tutorial</h1>
+<p>To use the library for decoding RC protocols in your Arduino project, follow these steps:</p>
+<ol type="1">
+<li><b>Include Necessary Libraries</b>: Include the required libraries at the beginning of your sketch: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="crsf_8h.html">crsf.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="sbus_8h.html">sbus.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="serialIO_8h.html">serialIO.h</a>&gt;</span></div>
+<div class="ttc" id="acrsf_8h_html"><div class="ttname"><a href="crsf_8h.html">crsf.h</a></div><div class="ttdoc">Header file for the CRSF protocol implementation.</div></div>
+<div class="ttc" id="asbus_8h_html"><div class="ttname"><a href="sbus_8h.html">sbus.h</a></div><div class="ttdoc">Header file for the SBUS protocol implementation.</div></div>
+<div class="ttc" id="aserialIO_8h_html"><div class="ttname"><a href="serialIO_8h.html">serialIO.h</a></div><div class="ttdoc">Header file for serial input/output (IO) functionality.</div></div>
+</div><!-- fragment --></li>
+<li><b>Define Channel Data Structure</b>: Define a structure to hold the decoded RC channel data. <div class="fragment"><div class="line"><a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> channelData;</div>
+<div class="ttc" id="astructcrsf__channels__s_html"><div class="ttname"><a href="structcrsf__channels__s.html">crsf_channels_s</a></div><div class="ttdef"><b>Definition</b> crsf_protocol.h:102</div></div>
+</div><!-- fragment --></li>
+<li><b>Instantiate SerialIO Object</b>: Create an instance of the <a class="el" href="classserialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">serialIO</a> class, specifying the serial port, RX pin, and TX pin: <div class="fragment"><div class="line"><a class="code hl_class" href="classserialIO.html">serialIO</a> *receiver = <span class="keyword">new</span> <a class="code hl_class" href="classcrsf.html">crsf</a>(Serial1, pinRX, pinTX);</div>
+<div class="ttc" id="aclasscrsf_html"><div class="ttname"><a href="classcrsf.html">crsf</a></div><div class="ttdoc">A class for handling CRSF protocol communication.</div><div class="ttdef"><b>Definition</b> crsf.h:17</div></div>
+<div class="ttc" id="aclassserialIO_html"><div class="ttname"><a href="classserialIO.html">serialIO</a></div><div class="ttdoc">Class that stores state and functions for initialising and decoding rc protocol.</div><div class="ttdef"><b>Definition</b> serialIO.h:17</div></div>
+</div><!-- fragment --></li>
+<li><b>Initialize Communication</b>: Call the begin() method to initialize communication with the specified serial port: <div class="fragment"><div class="line"><span class="keywordtype">void</span> setup() {</div>
+<div class="line">    receiver-&gt;<a class="code hl_function" href="classserialIO.html#a5a4eddda14bb5c1a56f8470850ccf409">begin</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassserialIO_html_a5a4eddda14bb5c1a56f8470850ccf409"><div class="ttname"><a href="classserialIO.html#a5a4eddda14bb5c1a56f8470850ccf409">serialIO::begin</a></div><div class="ttdeci">virtual void begin()</div><div class="ttdoc">Initialises the pins and setup serial port.</div></div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b>Process Incoming Data</b>: In the loop() function, call the processIncoming() method to process incoming bytes:</p>
+<div class="fragment"><div class="line">receiver-&gt;<a class="code hl_function" href="classserialIO.html#aa1c85eb818f86988c7d5e8d00b5fc0f5">processIncoming</a>();</div>
+<div class="ttc" id="aclassserialIO_html_aa1c85eb818f86988c7d5e8d00b5fc0f5"><div class="ttname"><a href="classserialIO.html#aa1c85eb818f86988c7d5e8d00b5fc0f5">serialIO::processIncoming</a></div><div class="ttdeci">virtual void processIncoming()</div><div class="ttdoc">decode the incoming serial data.</div></div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b>Retrieve Channel Data</b>: To retrieve the decoded RC channel data, call the getChannel() method, passing a pointer to the channelData structure:</p>
+<div class="fragment"><div class="line">receiver-&gt;<a class="code hl_function" href="classserialIO.html#a69b9dfd3d97b23f0973352792342a269">getChannel</a>(&amp;channelData);</div>
+<div class="ttc" id="aclassserialIO_html_a69b9dfd3d97b23f0973352792342a269"><div class="ttname"><a href="classserialIO.html#a69b9dfd3d97b23f0973352792342a269">serialIO::getChannel</a></div><div class="ttdeci">virtual void getChannel(crsf_channels_t *channelData)</div><div class="ttdoc">Gives the decoded rc channels.</div></div>
+</div><!-- fragment --><p> <b>see also</b>:</p><ul>
+<li><a class="el" href="classserialIO.html">serialIO</a></li>
+<li><a class="el" href="classsbus.html">sbus</a></li>
+<li><a class="el" href="classcrsf.html">crsf</a></li>
+</ul>
+</li>
+</ol>
+<h1><a class="anchor" id="example"></a>
+Examples</h1>
+<h2><a class="anchor" id="autotoc_md6"></a>
+CRSF Basic Example</h2>
+<div class="fragment"><div class="line">/*!</div>
+<div class="line"> * @file crsf_basic.ino</div>
+<div class="line"> */</div>
+<div class="line">#include &lt;sbus.h&gt;</div>
+<div class="line">#include &lt;crsf.h&gt;</div>
+<div class="line">#include &lt;serialIO.h&gt;</div>
+<div class="line"> </div>
+<div class="line">crsf_channels_t channelData;</div>
+<div class="line"> </div>
+<div class="line">serialIO *receiver = new crsf(Serial1, 16, 17);</div>
+<div class="line"> </div>
+<div class="line">void setup() { receiver-&gt;begin(); }</div>
+<div class="line"> </div>
+<div class="line">void loop() {</div>
+<div class="line">  receiver-&gt;processIncoming();</div>
+<div class="line">  receiver-&gt;getChannel(&amp;channelData);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
+SBUS Basic Example</h2>
+<div class="fragment"><div class="line">/*!</div>
+<div class="line"> * @file sbus_basic.ino</div>
+<div class="line"> */</div>
+<div class="line">#include &lt;sbus.h&gt;</div>
+<div class="line">#include &lt;crsf.h&gt;</div>
+<div class="line">#include &lt;serialIO.h&gt;</div>
+<div class="line"> </div>
+<div class="line">crsf_channels_t channelData;</div>
+<div class="line"> </div>
+<div class="line">serialIO *receiver = new sbus(Serial1, 16, 17);</div>
+<div class="line"> </div>
+<div class="line">void setup() { receiver-&gt;begin(); }</div>
+<div class="line"> </div>
+<div class="line">void loop() {</div>
+<div class="line">  receiver-&gt;processIncoming();</div>
+<div class="line">  receiver-&gt;getChannel(&amp;channelData);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+Guide to Adding More Protocols</h1>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Steps</h2>
+<p>To add more protocols to your project, follow these steps:</p>
+<ol type="1">
+<li><b>Create a New Protocol File</b> : Start by creating a new header file for each additional protocol you want to add. For example, if you want to add a protocol named "XYZ", create a file named <code>xyz_protocol.h</code>.</li>
+<li><b>Define Protocol Structure</b> : In the protocol header file (<code>xyz_protocol.h</code>), define the structure of the protocol, including any necessary constants, data structures, and functions.</li>
+<li><b>Implement Protocol Functions</b> : Implement the protocol functions in a corresponding source file (<code>xyz_protocol.cpp</code>). These functions should handle initializing the protocol, processing incoming data, and extracting channel information.</li>
+<li><b>Include Protocol Header</b> : In your main project files or wherever you want to use the protocol, include the header file of the protocol you've created (<code>#include "xyz_protocol.h"</code>).</li>
+<li><b>Initialize Protocol</b> : Initialize the protocol in your code by calling the initialization function provided by the protocol implementation.</li>
+<li><b>Process Incoming Data</b> : Call the function to process incoming data from the protocol whenever data is received.</li>
+<li><b>Extract Channel Information</b> : Use the provided function to extract channel information from the received data, if applicable.</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md10"></a>
+Basic Functions Required</h2>
+<p>For initializing the header of a new protocol, you'll typically need the following basic functions:</p>
+<ul>
+<li><code>void begin()</code> : Initializes the protocol, sets up necessary parameters, and prepares for data reception.</li>
+<li><code>void processIncoming()</code>: Processes incoming data from the protocol, including parsing and interpreting the received data.</li>
+<li><code>void getChannels()</code>: Extracts channel information from the received data, if the protocol deals with channel data.</li>
+</ul>
+<p>Here's a basic template for the header of a new protocol:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div>
+<div class="line"><span class="preprocessor">#ifndef XYZ_PROTOCOL_H</span></div>
+<div class="line"><span class="preprocessor">#define XYZ_PROTOCOL_H</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Include any necessary headers</span></div>
+<div class="line"><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Define any constants or data structures specific to the protocol</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>XYZProtocol : <span class="keyword">public</span> <a class="code hl_class" href="classserialIO.html">serialIO</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">  <span class="keyword">explicit</span> XYZProtocol(HardwareSerial &amp;rxPort, <span class="keywordtype">int</span> rxPin, <span class="keywordtype">int</span> txPin,</div>
+<div class="line">                       <span class="keywordtype">bool</span> inverted = <span class="keyword">false</span>)</div>
+<div class="line">      : <a class="code hl_class" href="classserialIO.html">serialIO</a>(&amp;rxPort, rxPin, txPin, inverted){};</div>
+<div class="line">  ;</div>
+<div class="line">  ~XYZProtocol();</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordtype">void</span> <a class="code hl_function" href="classserialIO.html#a5a4eddda14bb5c1a56f8470850ccf409">begin</a>();</div>
+<div class="line">  <span class="keywordtype">void</span> <a class="code hl_function" href="classserialIO.html#aa1c85eb818f86988c7d5e8d00b5fc0f5">processIncoming</a>();</div>
+<div class="line">  <span class="keywordtype">void</span> <a class="code hl_function" href="classserialIO.html#a69b9dfd3d97b23f0973352792342a269">getChannel</a>(<span class="comment">/* Parameters as needed */</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">  HardwareSerial *_serialPort;</div>
+<div class="line">  <span class="comment">// Add any additional private members as needed</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#endif </span><span class="comment">// XYZ_PROTOCOL_H</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md11"></a>
 License</h1>
 <p>This library is distributed under the GNU <a href="https://www.gnu.org/licenses/gpl-3.0.html">General Public License version 3.0</a>. </p>
 </div></div><!-- PageDoc -->

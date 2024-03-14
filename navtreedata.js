@@ -25,25 +25,29 @@
 var NAVTREE =
 [
   [ "SerialIO", "index.html", [
-    [ "Getting Started", "index.html#autotoc_md2", null ],
-    [ "License", "index.html#autotoc_md3", null ],
-    [ "Examples", "example.html", null ],
-    [ "Installation", "installation.html", [
-      [ "Arduino Installation", "installation.html#autotoc_md4", null ],
-      [ "PlatformIO Installation", "installation.html#autotoc_md5", null ]
-    ] ],
-    [ "Supported Protocol", "protocol.html", [
-      [ "SBUS", "protocol.html#sbusintro", [
-        [ "Configuration", "protocol.html#autotoc_md6", null ]
+    [ "Supported Protocol", "index.html#autotoc_md0", [
+      [ "SBUS", "index.html#sbusintro", [
+        [ "Configuration", "index.html#autotoc_md1", null ]
       ] ],
-      [ "CRSF", "protocol.html#crsfintro", [
-        [ "Configuration", "protocol.html#autotoc_md7", null ]
-      ] ],
-      [ "Guide to Adding More Protocols", "protocol.html#autotoc_md8", [
-        [ "Basic Functions Required", "protocol.html#autotoc_md9", null ]
+      [ "CRSF", "index.html#crsfintro", [
+        [ "Configuration", "index.html#autotoc_md2", null ]
       ] ]
     ] ],
-    [ "Tutorial", "tutorial.html", null ],
+    [ "Getting Started", "index.html#autotoc_md3", null ],
+    [ "Installation", "index.html#installation", [
+      [ "Arduino Installation", "index.html#autotoc_md4", null ],
+      [ "PlatformIO Installation", "index.html#autotoc_md5", null ]
+    ] ],
+    [ "Tutorial", "index.html#tutorial", null ],
+    [ "Examples", "index.html#example", [
+      [ "CRSF Basic Example", "index.html#autotoc_md6", null ],
+      [ "SBUS Basic Example", "index.html#autotoc_md7", null ]
+    ] ],
+    [ "Guide to Adding More Protocols", "index.html#autotoc_md8", [
+      [ "Steps", "index.html#autotoc_md9", null ],
+      [ "Basic Functions Required", "index.html#autotoc_md10", null ]
+    ] ],
+    [ "License", "index.html#autotoc_md11", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
