@@ -1,7 +1,7 @@
 @page example Examples
 
 ## CRSF Basic Example
-@include "./examples/CRSF Bacic/crsf_basic.cpp"
+@include "./examples/crsf_basic/crsf_basic.ino"
 
 ## SBUS Basic Example
-@include "./examples/Sbus Basic/sbus_basic.cpp"
+@include "./examples/sbus_basic/sbus_basic.ino"
