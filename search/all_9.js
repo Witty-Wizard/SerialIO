@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['more_20protocol_0',['Guide to add more protocol',['../protocol.html#autotoc_md4',1,'']]]
+  ['more_20protocols_0',['Guide to Adding More Protocols',['../protocol.html#autotoc_md8',1,'']]]
 ];
