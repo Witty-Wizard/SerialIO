@@ -96,11 +96,9 @@ $(function(){initNavTree('tutorial.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p>To use the library for decoding RC protocols in your Arduino project, follow these steps:</p>
 <ol type="1">
-<li><b>Include Necessary Libraries</b>: Include the required libraries at the beginning of your sketch: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="crsf_8h.html">crsf/crsf.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="sbus_8h.html">sbus/sbus.h</a>&gt;</span></div>
+<li><b>Include Necessary Libraries</b>: Include the required libraries at the beginning of your sketch: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;crsf/crsf.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;sbus/sbus.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="serialIO_8h.html">serialIO.h</a>&gt;</span></div>
-<div class="ttc" id="acrsf_8h_html"><div class="ttname"><a href="crsf_8h.html">crsf.h</a></div><div class="ttdoc">Header file for the CRSF protocol implementation.</div></div>
-<div class="ttc" id="asbus_8h_html"><div class="ttname"><a href="sbus_8h.html">sbus.h</a></div><div class="ttdoc">Header file for the SBUS protocol implementation.</div></div>
 <div class="ttc" id="aserialIO_8h_html"><div class="ttname"><a href="serialIO_8h.html">serialIO.h</a></div><div class="ttdoc">Header file for serial input/output (IO) functionality.</div></div>
 </div><!-- fragment --></li>
 <li><b>Define Channel Data Structure</b>: Define a structure to hold the decoded RC channel data. <div class="fragment"><div class="line"><a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> channelData;</div>
