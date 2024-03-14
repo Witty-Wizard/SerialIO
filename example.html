@@ -96,9 +96,43 @@ $(function(){initNavTree('example.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><h2><a class="anchor" id="autotoc_md0"></a>
 CRSF Basic Example</h2>
-<div class="fragment"></div><!-- fragment --><h2><a class="anchor" id="autotoc_md1"></a>
+<div class="fragment"><div class="line">/*!</div>
+<div class="line"> * @file crsf_basic.ino</div>
+<div class="line"> */</div>
+<div class="line">#include &lt;sbus.h&gt;</div>
+<div class="line">#include &lt;crsf.h&gt;</div>
+<div class="line">#include &lt;serialIO.h&gt;</div>
+<div class="line"> </div>
+<div class="line">crsf_channels_t channelData;</div>
+<div class="line"> </div>
+<div class="line">serialIO *receiver = new crsf(Serial1, 16, 17);</div>
+<div class="line"> </div>
+<div class="line">void setup() { receiver-&gt;begin(); }</div>
+<div class="line"> </div>
+<div class="line">void loop() {</div>
+<div class="line">  receiver-&gt;processIncoming();</div>
+<div class="line">  receiver-&gt;getChannel(&amp;channelData);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1"></a>
 SBUS Basic Example</h2>
-<div class="fragment"></div><!-- fragment --> </div></div><!-- contents -->
+<div class="fragment"><div class="line">/*!</div>
+<div class="line"> * @file sbus_basic.ino</div>
+<div class="line"> */</div>
+<div class="line">#include &lt;sbus.h&gt;</div>
+<div class="line">#include &lt;crsf.h&gt;</div>
+<div class="line">#include &lt;serialIO.h&gt;</div>
+<div class="line"> </div>
+<div class="line">crsf_channels_t channelData;</div>
+<div class="line"> </div>
+<div class="line">serialIO *receiver = new sbus(Serial1, 16, 17);</div>
+<div class="line"> </div>
+<div class="line">void setup() { receiver-&gt;begin(); }</div>
+<div class="line"> </div>
+<div class="line">void loop() {</div>
+<div class="line">  receiver-&gt;processIncoming();</div>
+<div class="line">  receiver-&gt;getChannel(&amp;channelData);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
