@@ -1,6 +1,8 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
-    [ "crsf", "dir_b54ad175401859cda6baf4a7dd4c50f6.html", "dir_b54ad175401859cda6baf4a7dd4c50f6" ],
-    [ "sbus", "dir_38f80b1af38bb02d5a2a7d90e141af08.html", "dir_38f80b1af38bb02d5a2a7d90e141af08" ],
+    [ "crsf.h", "crsf_8h.html", "crsf_8h" ],
+    [ "crsf_protocol.h", "crsf__protocol_8h.html", "crsf__protocol_8h" ],
+    [ "sbus.h", "sbus_8h.html", "sbus_8h" ],
+    [ "serialIO.cpp", "serialIO_8cpp.html", null ],
     [ "serialIO.h", "serialIO_8h.html", "serialIO_8h" ]
 ];
