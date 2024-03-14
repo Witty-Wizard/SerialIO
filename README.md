@@ -1,5 +1,7 @@
-[![Doxygen CI](https://github.com/Witty-Wizard/SerialIO/actions/workflows/main.yaml/badge.svg)](https://github.com/Witty-Wizard/SerialIO/actions/workflows/main.yaml)
+![Doxygen CI](https://github.com/Witty-Wizard/SerialIO/actions/workflows/main.yaml/badge.svg)
 [![Doxygen](https://github.com/adafruit/ci-arduino/blob/master/assets/doxygen_badge.svg)](https://witty-wizard.github.io/SerialIO/)
+![GitHub License](https://img.shields.io/github/license/Witty-Wizard/SerialIO)
+
 # SerialIO Library
 
 A versatile Arduino library that provides support for decoding multiple RC protocols such as SBUS and CRSF.
