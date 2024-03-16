@@ -1,12 +1,12 @@
 <map id="src/crsf.h" name="src/crsf.h">
 <area shape="rect" id="Node000001" title="Header file for the CRSF protocol implementation." alt="" coords="58,5,134,31"/>
-<area shape="rect" id="Node000002" href="$serialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="96,79,173,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,30,123,64,118,66,100,32"/>
-<area shape="rect" id="Node000003" href="$crsf__protocol_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="5,153,112,178"/>
-<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="95,32,68,138,63,137,90,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="123,107,84,144,80,140,120,103"/>
+<area shape="rect" id="Node000002" href="$crsf__protocol_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="5,153,112,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,32,68,138,63,137,90,31"/>
+<area shape="rect" id="Node000004" href="$serialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="96,79,173,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="105,30,123,64,118,66,100,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="27,226,90,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="61,179,61,211,56,211,56,179"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="123,107,84,144,80,140,120,103"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="136,153,211,178"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="143,104,162,138,157,140,139,106"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="27,226,90,252"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="61,179,61,211,56,211,56,179"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="143,104,162,138,157,140,139,106"/>
 </map>
