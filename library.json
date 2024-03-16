@@ -1,6 +1,6 @@
 {
   "name": "SerialIO",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A common library that can decode multiple rc protocols",
   "keywords": "sbus, crsf",
   "repository": {
