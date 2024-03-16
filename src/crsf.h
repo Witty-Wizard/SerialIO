@@ -14,6 +14,8 @@
  * @brief A class for handling CRSF protocol communication.
  */
 class crsf : public serialIO {
+private:
+  uint8_t _rxData[CRSF_MAX_PACKET_SIZE];
 
 public:
   /**

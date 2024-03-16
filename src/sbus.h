@@ -19,6 +19,8 @@
  * @brief A class for handling SBUS protocol communication.
  */
 class sbus : public serialIO {
+private:
+  uint8_t _rxData[SBUS_MAX_PACKET_SIZE];
 
 public:
   /**

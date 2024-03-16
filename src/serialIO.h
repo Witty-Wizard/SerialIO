@@ -67,6 +67,5 @@ protected:
   int _txPin;       // The TX pin number.
   uint8_t _buffer;
   uint8_t _prevBuffer;
-  uint8_t *_rxData = NULL;
 };
 #endif

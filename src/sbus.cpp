@@ -1,11 +1,5 @@
 #include "sbus.h"
 
-explicit sbus::sbus(HardwareSerial &rxPort, int rxPin, int txPin,
-                    bool inverted = true)
-    : serialIO(&rxPort, rxPin, txPin, inverted) {
-  _rxData = new uint8_t[SBUS_MAX_PACKET_SIZE];
-}
-
 void sbus::begin() {
   _rxPort->begin(SBUS_BAUDRATE, SERIAL_8E2, _rxPin, _txPin, _inverted);
 }

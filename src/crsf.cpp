@@ -1,11 +1,5 @@
 #include "crsf.h"
 
-explicit crsf::crsf(HardwareSerial &rxPort, int rxPin, int txPin,
-                    bool inverted = true)
-    : serialIO(&rxPort, rxPin, txPin, inverted) {
-  _rxData = new uint8_t[CRSF_MAX_PACKET_SIZE];
-}
-
 void crsf::begin() {
   _rxPort->begin(CRSF_BAUDRATE, SERIAL_8N1, _rxPin, _txPin, _inverted);
 }
