@@ -117,32 +117,35 @@ $(function(){initNavTree('sbus_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classsbus.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="classsbus.html">sbus</a> : <span class="keyword">public</span> <a class="code hl_class" href="classserialIO.html">serialIO</a> {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classsbus.html#ac04349d7fb9d7072534c0117a36dc324">   32</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classsbus.html#ac04349d7fb9d7072534c0117a36dc324">sbus</a>(HardwareSerial &amp;rxPort, <span class="keywordtype">int</span> rxPin, <span class="keywordtype">int</span> txPin,</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                <span class="keywordtype">bool</span> inverted = <span class="keyword">true</span>)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      : <a class="code hl_class" href="classserialIO.html">serialIO</a>(&amp;rxPort, rxPin, txPin, inverted){};</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  uint8_t _rxData[<a class="code hl_define" href="sbus_8h.html#a663707452658145decf130f3f1ebd631">SBUS_MAX_PACKET_SIZE</a>];</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classsbus.html#ac04349d7fb9d7072534c0117a36dc324">   34</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classsbus.html#ac04349d7fb9d7072534c0117a36dc324">sbus</a>(HardwareSerial &amp;rxPort, <span class="keywordtype">int</span> rxPin, <span class="keywordtype">int</span> txPin,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="keywordtype">bool</span> inverted = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      : <a class="code hl_class" href="classserialIO.html">serialIO</a>(&amp;rxPort, rxPin, txPin, inverted){};</div>
 </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="classsbus.html">~sbus</a>(){};</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classsbus.html#a7232d82f864fe8cc32b39c0c1989f418">begin</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classsbus.html#a2051c763f60e7d74aae9c247ecd3345a">processIncoming</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classsbus.html#a9ed525622c08de34cbf9e3f166acd77f">getChannel</a>(<a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> *channelData) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="classsbus.html">~sbus</a>(){};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classsbus.html#a7232d82f864fe8cc32b39c0c1989f418">begin</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classsbus.html#a2051c763f60e7d74aae9c247ecd3345a">processIncoming</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classsbus.html#a9ed525622c08de34cbf9e3f166acd77f">getChannel</a>(<a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> *channelData) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
 </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif </span><span class="comment">// SBUS_H</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif </span><span class="comment">// SBUS_H</span></div>
 <div class="ttc" id="aclasssbus_html"><div class="ttname"><a href="classsbus.html">sbus</a></div><div class="ttdoc">A class for handling SBUS protocol communication.</div><div class="ttdef"><b>Definition</b> sbus.h:21</div></div>
-<div class="ttc" id="aclasssbus_html_a2051c763f60e7d74aae9c247ecd3345a"><div class="ttname"><a href="classsbus.html#a2051c763f60e7d74aae9c247ecd3345a">sbus::processIncoming</a></div><div class="ttdeci">void processIncoming() override</div><div class="ttdoc">Processes incoming SBUS data.</div><div class="ttdef"><b>Definition</b> sbus.cpp:13</div></div>
-<div class="ttc" id="aclasssbus_html_a7232d82f864fe8cc32b39c0c1989f418"><div class="ttname"><a href="classsbus.html#a7232d82f864fe8cc32b39c0c1989f418">sbus::begin</a></div><div class="ttdeci">void begin() override</div><div class="ttdoc">Initializes the SBUS communication.</div><div class="ttdef"><b>Definition</b> sbus.cpp:9</div></div>
-<div class="ttc" id="aclasssbus_html_a9ed525622c08de34cbf9e3f166acd77f"><div class="ttname"><a href="classsbus.html#a9ed525622c08de34cbf9e3f166acd77f">sbus::getChannel</a></div><div class="ttdeci">void getChannel(crsf_channels_t *channelData) override</div><div class="ttdoc">Gets the decoded RC channels from the SBUS data.</div><div class="ttdef"><b>Definition</b> sbus.cpp:40</div></div>
-<div class="ttc" id="aclasssbus_html_ac04349d7fb9d7072534c0117a36dc324"><div class="ttname"><a href="classsbus.html#ac04349d7fb9d7072534c0117a36dc324">sbus::sbus</a></div><div class="ttdeci">sbus(HardwareSerial &amp;rxPort, int rxPin, int txPin, bool inverted=true)</div><div class="ttdoc">Constructor for the SBUS class.</div><div class="ttdef"><b>Definition</b> sbus.h:32</div></div>
+<div class="ttc" id="aclasssbus_html_a2051c763f60e7d74aae9c247ecd3345a"><div class="ttname"><a href="classsbus.html#a2051c763f60e7d74aae9c247ecd3345a">sbus::processIncoming</a></div><div class="ttdeci">void processIncoming() override</div><div class="ttdoc">Processes incoming SBUS data.</div><div class="ttdef"><b>Definition</b> sbus.cpp:7</div></div>
+<div class="ttc" id="aclasssbus_html_a7232d82f864fe8cc32b39c0c1989f418"><div class="ttname"><a href="classsbus.html#a7232d82f864fe8cc32b39c0c1989f418">sbus::begin</a></div><div class="ttdeci">void begin() override</div><div class="ttdoc">Initializes the SBUS communication.</div><div class="ttdef"><b>Definition</b> sbus.cpp:3</div></div>
+<div class="ttc" id="aclasssbus_html_a9ed525622c08de34cbf9e3f166acd77f"><div class="ttname"><a href="classsbus.html#a9ed525622c08de34cbf9e3f166acd77f">sbus::getChannel</a></div><div class="ttdeci">void getChannel(crsf_channels_t *channelData) override</div><div class="ttdoc">Gets the decoded RC channels from the SBUS data.</div><div class="ttdef"><b>Definition</b> sbus.cpp:34</div></div>
+<div class="ttc" id="aclasssbus_html_ac04349d7fb9d7072534c0117a36dc324"><div class="ttname"><a href="classsbus.html#ac04349d7fb9d7072534c0117a36dc324">sbus::sbus</a></div><div class="ttdeci">sbus(HardwareSerial &amp;rxPort, int rxPin, int txPin, bool inverted=true)</div><div class="ttdoc">Constructor for the SBUS class.</div><div class="ttdef"><b>Definition</b> sbus.h:34</div></div>
 <div class="ttc" id="aclassserialIO_html"><div class="ttname"><a href="classserialIO.html">serialIO</a></div><div class="ttdoc">Class that stores state and functions for initialising and decoding rc protocol.</div><div class="ttdef"><b>Definition</b> serialIO.h:17</div></div>
 <div class="ttc" id="acrsf__protocol_8h_html"><div class="ttname"><a href="crsf__protocol_8h.html">crsf_protocol.h</a></div><div class="ttdoc">Header file for the CRSF protocol implementation.</div></div>
+<div class="ttc" id="asbus_8h_html_a663707452658145decf130f3f1ebd631"><div class="ttname"><a href="sbus_8h.html#a663707452658145decf130f3f1ebd631">SBUS_MAX_PACKET_SIZE</a></div><div class="ttdeci">#define SBUS_MAX_PACKET_SIZE</div><div class="ttdoc">SBUS packet length.</div><div class="ttdef"><b>Definition</b> sbus.h:16</div></div>
 <div class="ttc" id="aserialIO_8h_html"><div class="ttname"><a href="serialIO_8h.html">serialIO.h</a></div><div class="ttdoc">Header file for serial input/output (IO) functionality.</div></div>
 <div class="ttc" id="astructcrsf__channels__s_html"><div class="ttname"><a href="structcrsf__channels__s.html">crsf_channels_s</a></div><div class="ttdef"><b>Definition</b> crsf_protocol.h:102</div></div>
 </div><!-- fragment --></div><!-- contents -->
