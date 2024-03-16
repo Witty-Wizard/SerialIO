@@ -1,0 +1,7 @@
+<map id="src/sbus.h" name="src/sbus.h">
+<area shape="rect" id="Node000001" title="Header file for the SBUS protocol implementation." alt="" coords="119,5,200,31"/>
+<area shape="rect" id="Node000002" href="$crsf__basic_8ino.html" title=" " alt="" coords="5,79,146,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,44,98,81,94,77,134,40"/>
+<area shape="rect" id="Node000003" href="$sbus__basic_8ino.html" title=" " alt="" coords="170,79,317,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,40,225,77,221,81,181,44"/>
+</map>

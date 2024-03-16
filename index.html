@@ -192,42 +192,39 @@ Tutorial</h1>
 Examples</h1>
 <h2><a class="anchor" id="autotoc_md6"></a>
 CRSF Basic Example</h2>
-<div class="fragment"><div class="line">/*!</div>
-<div class="line"> * @file crsf_basic.ino</div>
-<div class="line"> */</div>
-<div class="line">#include &lt;sbus.h&gt;</div>
-<div class="line">#include &lt;crsf.h&gt;</div>
-<div class="line">#include &lt;serialIO.h&gt;</div>
+<div class="fragment"><div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="sbus_8h.html">sbus.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="crsf_8h.html">crsf.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="serialIO_8h.html">serialIO.h</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line">crsf_channels_t channelData;</div>
+<div class="line"><a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> channelData;</div>
 <div class="line"> </div>
-<div class="line">serialIO *receiver = new crsf(Serial1, 16, 17);</div>
+<div class="line"><a class="code hl_class" href="classserialIO.html">serialIO</a> *receiver = <span class="keyword">new</span> <a class="code hl_class" href="classcrsf.html">crsf</a>(Serial1, 16, 17);</div>
 <div class="line"> </div>
-<div class="line">void setup() { receiver-&gt;begin(); }</div>
+<div class="line"><span class="keywordtype">void</span> setup() { receiver-&gt;<a class="code hl_function" href="classserialIO.html#a5a4eddda14bb5c1a56f8470850ccf409">begin</a>(); }</div>
 <div class="line"> </div>
-<div class="line">void loop() {</div>
-<div class="line">  receiver-&gt;processIncoming();</div>
-<div class="line">  receiver-&gt;getChannel(&amp;channelData);</div>
+<div class="line"><span class="keywordtype">void</span> loop() {</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classserialIO.html#aa1c85eb818f86988c7d5e8d00b5fc0f5">processIncoming</a>();</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classserialIO.html#a69b9dfd3d97b23f0973352792342a269">getChannel</a>(&amp;channelData);</div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
 SBUS Basic Example</h2>
-<div class="fragment"><div class="line">/*!</div>
-<div class="line"> * @file sbus_basic.ino</div>
-<div class="line"> */</div>
-<div class="line">#include &lt;sbus.h&gt;</div>
-<div class="line">#include &lt;crsf.h&gt;</div>
-<div class="line">#include &lt;serialIO.h&gt;</div>
+<div class="fragment"><div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="sbus_8h.html">sbus.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="crsf_8h.html">crsf.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="serialIO_8h.html">serialIO.h</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line">crsf_channels_t channelData;</div>
+<div class="line"><a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> channelData;</div>
 <div class="line"> </div>
-<div class="line">serialIO *receiver = new sbus(Serial1, 16, 17);</div>
+<div class="line"><a class="code hl_class" href="classserialIO.html">serialIO</a> *receiver = <span class="keyword">new</span> <a class="code hl_class" href="classsbus.html">sbus</a>(Serial1, 16, 17);</div>
 <div class="line"> </div>
-<div class="line">void setup() { receiver-&gt;begin(); }</div>
+<div class="line"><span class="keywordtype">void</span> setup() { receiver-&gt;<a class="code hl_function" href="classserialIO.html#a5a4eddda14bb5c1a56f8470850ccf409">begin</a>(); }</div>
 <div class="line"> </div>
-<div class="line">void loop() {</div>
-<div class="line">  receiver-&gt;processIncoming();</div>
-<div class="line">  receiver-&gt;getChannel(&amp;channelData);</div>
+<div class="line"><span class="keywordtype">void</span> loop() {</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classserialIO.html#aa1c85eb818f86988c7d5e8d00b5fc0f5">processIncoming</a>();</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classserialIO.html#a69b9dfd3d97b23f0973352792342a269">getChannel</a>(&amp;channelData);</div>
 <div class="line">}</div>
+<div class="ttc" id="aclasssbus_html"><div class="ttname"><a href="classsbus.html">sbus</a></div><div class="ttdoc">A class for handling SBUS protocol communication.</div><div class="ttdef"><b>Definition</b> sbus.h:21</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
 Guide to Adding More Protocols</h1>
 <h2><a class="anchor" id="autotoc_md9"></a>
