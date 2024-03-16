@@ -52,7 +52,7 @@ To use the SerialIO library in your Arduino projects, follow these installation 
 If you are using PlatformIO, you can install the SerialIO library directly from the PlatformIO Library Manager. Add the following line to your `platformio.ini` file:
 
 ```ini
-lib_deps = Witty-Wizard/SerialIO @ ^0.0.3
+lib_deps = Witty-Wizard/SerialIO @ ^0.1.0
 ```
 
 # Tutorial {#tutorial}
