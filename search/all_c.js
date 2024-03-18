@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['sbus_0',['sbus',['../classsbus.html',1,'sbus'],['../classsbus.html#ac04349d7fb9d7072534c0117a36dc324',1,'sbus::sbus()']]],
+  ['sbus_0',['sbus',['../classsbus.html',1,'sbus'],['../classsbus.html#a93b49bb867b576c735e31c892e061cff',1,'sbus::sbus()']]],
   ['sbus_1',['SBUS',['../index.html#sbusintro',1,'']]],
   ['sbus_20basic_20example_2',['SBUS Basic Example',['../index.html#autotoc_md7',1,'']]],
   ['sbus_2eh_3',['sbus.h',['../sbus_8h.html',1,'']]],

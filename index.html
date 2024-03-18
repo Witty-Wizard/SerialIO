@@ -197,9 +197,12 @@ CRSF Basic Example</h2>
 <div class="line"> </div>
 <div class="line"><a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> channelData;</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_class" href="classserialIO.html">serialIO</a> *receiver = <span class="keyword">new</span> <a class="code hl_class" href="classcrsf.html">crsf</a>(Serial1, 16, 17);</div>
+<div class="line"><a class="code hl_class" href="classserialIO.html">serialIO</a> *receiver = <span class="keyword">nullptr</span>;</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> setup() { receiver-&gt;<a class="code hl_function" href="classserialIO.html#a5a4eddda14bb5c1a56f8470850ccf409">begin</a>(); }</div>
+<div class="line"><span class="keywordtype">void</span> setup() { </div>
+<div class="line">  receiver = <span class="keyword">new</span> <a class="code hl_class" href="classcrsf.html">crsf</a>(Serial1, 16);</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classserialIO.html#a5a4eddda14bb5c1a56f8470850ccf409">begin</a>();</div>
+<div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> loop() {</div>
 <div class="line">  receiver-&gt;<a class="code hl_function" href="classserialIO.html#aa1c85eb818f86988c7d5e8d00b5fc0f5">processIncoming</a>();</div>
@@ -214,9 +217,12 @@ SBUS Basic Example</h2>
 <div class="line"> </div>
 <div class="line"><a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> channelData;</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_class" href="classserialIO.html">serialIO</a> *receiver = <span class="keyword">new</span> <a class="code hl_class" href="classsbus.html">sbus</a>(Serial1, 16, 17);</div>
+<div class="line"><a class="code hl_class" href="classserialIO.html">serialIO</a> *receiver = <span class="keyword">nullptr</span>;</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> setup() { receiver-&gt;<a class="code hl_function" href="classserialIO.html#a5a4eddda14bb5c1a56f8470850ccf409">begin</a>(); }</div>
+<div class="line"><span class="keywordtype">void</span> setup() { </div>
+<div class="line">  receiver = <span class="keyword">new</span> <a class="code hl_class" href="classsbus.html">sbus</a>(Serial1, 16)</div>
+<div class="line">  receiver-&gt;begin();</div>
+<div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> loop() {</div>
 <div class="line">  receiver-&gt;<a class="code hl_function" href="classserialIO.html#aa1c85eb818f86988c7d5e8d00b5fc0f5">processIncoming</a>();</div>
