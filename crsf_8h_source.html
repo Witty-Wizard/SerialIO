@@ -108,34 +108,38 @@ $(function(){initNavTree('crsf_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="crsf__protocol_8h.html">crsf_protocol.h</a>&quot;</span> <span class="comment">// Include header file for CRSF protocol</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="serialIO_8h.html">serialIO.h</a>&quot;</span>      <span class="comment">// Include header file for the serial IO class</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classcrsf.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="classcrsf.html">crsf</a> : <span class="keyword">public</span> <a class="code hl_class" href="classserialIO.html">serialIO</a> {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  uint8_t _rxData[<a class="code hl_define" href="crsf__protocol_8h.html#abd0505e85d02f142757c5d98d657cf4f">CRSF_MAX_PACKET_SIZE</a>];</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classcrsf.html#ac7da7ec96c1b8a889f5e30ebc948f1fa">   29</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classcrsf.html#ac7da7ec96c1b8a889f5e30ebc948f1fa">crsf</a>(HardwareSerial &amp;rxPort, <span class="keywordtype">int</span> rxPin, <span class="keywordtype">int</span> txPin = -1,</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                <span class="keywordtype">bool</span> inverted = <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      : <a class="code hl_class" href="classserialIO.html">serialIO</a>(&amp;rxPort, rxPin, txPin, inverted){};</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define CRC8_POLY_D5 0xD5</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classcrsf.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classcrsf.html">crsf</a> : <span class="keyword">public</span> <a class="code hl_class" href="classserialIO.html">serialIO</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  uint8_t _rxData[<a class="code hl_define" href="crsf__protocol_8h.html#abd0505e85d02f142757c5d98d657cf4f">CRSF_MAX_PACKET_SIZE</a>];</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classcrsf.html#ac7da7ec96c1b8a889f5e30ebc948f1fa">   31</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classcrsf.html#ac7da7ec96c1b8a889f5e30ebc948f1fa">crsf</a>(HardwareSerial &amp;rxPort, <span class="keywordtype">int</span> rxPin, <span class="keywordtype">int</span> txPin = -1,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                <span class="keywordtype">bool</span> inverted = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      : <a class="code hl_class" href="classserialIO.html">serialIO</a>(&amp;rxPort, rxPin, txPin, inverted){};</div>
 </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="classcrsf.html">~crsf</a>(){};</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classcrsf.html#a86bfe46e0bdbf447885dd1614ed939d0">begin</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classcrsf.html#aa3ab8580352dff53f78cfec944f05db2">processIncoming</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classcrsf.html#a64c0d7fdcf2da2b7d37e4e373003f24a">getChannel</a>(<a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> *channelData) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="classcrsf.html">~crsf</a>(){};</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classcrsf.html#a86bfe46e0bdbf447885dd1614ed939d0">begin</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classcrsf.html#aa3ab8580352dff53f78cfec944f05db2">processIncoming</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classcrsf.html#a64c0d7fdcf2da2b7d37e4e373003f24a">getChannel</a>(<a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> *channelData) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  uint8_t crc8(uint8_t *data, uint8_t len);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif </span><span class="comment">// CRSF_H</span></div>
-<div class="ttc" id="aclasscrsf_html"><div class="ttname"><a href="classcrsf.html">crsf</a></div><div class="ttdoc">A class for handling CRSF protocol communication.</div><div class="ttdef"><b>Definition</b> crsf.h:16</div></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">// CRSF_H</span></div>
+<div class="ttc" id="aclasscrsf_html"><div class="ttname"><a href="classcrsf.html">crsf</a></div><div class="ttdoc">A class for handling CRSF protocol communication.</div><div class="ttdef"><b>Definition</b> crsf.h:18</div></div>
 <div class="ttc" id="aclasscrsf_html_a64c0d7fdcf2da2b7d37e4e373003f24a"><div class="ttname"><a href="classcrsf.html#a64c0d7fdcf2da2b7d37e4e373003f24a">crsf::getChannel</a></div><div class="ttdeci">void getChannel(crsf_channels_t *channelData) override</div><div class="ttdoc">Retrieves the decoded RC channels from the received CRSF data.</div><div class="ttdef"><b>Definition</b> crsf.cpp:35</div></div>
 <div class="ttc" id="aclasscrsf_html_a86bfe46e0bdbf447885dd1614ed939d0"><div class="ttname"><a href="classcrsf.html#a86bfe46e0bdbf447885dd1614ed939d0">crsf::begin</a></div><div class="ttdeci">void begin() override</div><div class="ttdoc">Initializes the CRSF communication.</div><div class="ttdef"><b>Definition</b> crsf.cpp:3</div></div>
 <div class="ttc" id="aclasscrsf_html_aa3ab8580352dff53f78cfec944f05db2"><div class="ttname"><a href="classcrsf.html#aa3ab8580352dff53f78cfec944f05db2">crsf::processIncoming</a></div><div class="ttdeci">void processIncoming() override</div><div class="ttdoc">Processes incoming CRSF data.</div><div class="ttdef"><b>Definition</b> crsf.cpp:7</div></div>
-<div class="ttc" id="aclasscrsf_html_ac7da7ec96c1b8a889f5e30ebc948f1fa"><div class="ttname"><a href="classcrsf.html#ac7da7ec96c1b8a889f5e30ebc948f1fa">crsf::crsf</a></div><div class="ttdeci">crsf(HardwareSerial &amp;rxPort, int rxPin, int txPin=-1, bool inverted=false)</div><div class="ttdoc">Constructor for the CRSF class.</div><div class="ttdef"><b>Definition</b> crsf.h:29</div></div>
+<div class="ttc" id="aclasscrsf_html_ac7da7ec96c1b8a889f5e30ebc948f1fa"><div class="ttname"><a href="classcrsf.html#ac7da7ec96c1b8a889f5e30ebc948f1fa">crsf::crsf</a></div><div class="ttdeci">crsf(HardwareSerial &amp;rxPort, int rxPin, int txPin=-1, bool inverted=false)</div><div class="ttdoc">Constructor for the CRSF class.</div><div class="ttdef"><b>Definition</b> crsf.h:31</div></div>
 <div class="ttc" id="aclassserialIO_html"><div class="ttname"><a href="classserialIO.html">serialIO</a></div><div class="ttdoc">Class that stores state and functions for initialising and decoding rc protocol.</div><div class="ttdef"><b>Definition</b> serialIO.h:17</div></div>
 <div class="ttc" id="acrsf__protocol_8h_html"><div class="ttname"><a href="crsf__protocol_8h.html">crsf_protocol.h</a></div><div class="ttdoc">Header file for the CRSF protocol implementation.</div></div>
 <div class="ttc" id="acrsf__protocol_8h_html_abd0505e85d02f142757c5d98d657cf4f"><div class="ttname"><a href="crsf__protocol_8h.html#abd0505e85d02f142757c5d98d657cf4f">CRSF_MAX_PACKET_SIZE</a></div><div class="ttdeci">#define CRSF_MAX_PACKET_SIZE</div><div class="ttdoc">max declared len is 62+DEST+LEN on top of that = 64</div><div class="ttdef"><b>Definition</b> crsf_protocol.h:22</div></div>
