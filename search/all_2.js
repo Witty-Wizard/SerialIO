@@ -1,7 +1,7 @@
 var searchData=
 [
   ['configuration_0',['Configuration',['../index.html#autotoc_md1',1,'Configuration'],['../index.html#autotoc_md2',1,'Configuration']]],
-  ['crsf_1',['crsf',['../classcrsf.html',1,'crsf'],['../classcrsf.html#a37f354c2c9b6b20a5f211405ad508f46',1,'crsf::crsf()']]],
+  ['crsf_1',['crsf',['../classcrsf.html',1,'crsf'],['../classcrsf.html#ac7da7ec96c1b8a889f5e30ebc948f1fa',1,'crsf::crsf()']]],
   ['crsf_2',['CRSF',['../index.html#crsfintro',1,'']]],
   ['crsf_20basic_20example_3',['CRSF Basic Example',['../index.html#autotoc_md6',1,'']]],
   ['crsf_2eh_4',['crsf.h',['../crsf_8h.html',1,'']]],

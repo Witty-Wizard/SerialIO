@@ -116,9 +116,9 @@ Collaboration diagram for crsf:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a37f354c2c9b6b20a5f211405ad508f46" id="r_a37f354c2c9b6b20a5f211405ad508f46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37f354c2c9b6b20a5f211405ad508f46">crsf</a> (HardwareSerial &amp;rxPort, int rxPin, int txPin, bool inverted=false)</td></tr>
-<tr class="memdesc:a37f354c2c9b6b20a5f211405ad508f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the CRSF class.  <br /></td></tr>
-<tr class="separator:a37f354c2c9b6b20a5f211405ad508f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7da7ec96c1b8a889f5e30ebc948f1fa" id="r_ac7da7ec96c1b8a889f5e30ebc948f1fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7da7ec96c1b8a889f5e30ebc948f1fa">crsf</a> (HardwareSerial &amp;rxPort, int rxPin, int txPin=-1, bool inverted=false)</td></tr>
+<tr class="memdesc:ac7da7ec96c1b8a889f5e30ebc948f1fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the CRSF class.  <br /></td></tr>
+<tr class="separator:ac7da7ec96c1b8a889f5e30ebc948f1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86bfe46e0bdbf447885dd1614ed939d0" id="r_a86bfe46e0bdbf447885dd1614ed939d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86bfe46e0bdbf447885dd1614ed939d0">begin</a> () override</td></tr>
 <tr class="memdesc:a86bfe46e0bdbf447885dd1614ed939d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the CRSF communication.  <br /></td></tr>
 <tr class="separator:a86bfe46e0bdbf447885dd1614ed939d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,8 +164,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class for handling CRSF protocol communication. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a37f354c2c9b6b20a5f211405ad508f46" name="a37f354c2c9b6b20a5f211405ad508f46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37f354c2c9b6b20a5f211405ad508f46">&#9670;&#160;</a></span>crsf()</h2>
+<a id="ac7da7ec96c1b8a889f5e30ebc948f1fa" name="ac7da7ec96c1b8a889f5e30ebc948f1fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7da7ec96c1b8a889f5e30ebc948f1fa">&#9670;&#160;</a></span>crsf()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,7 +186,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>txPin</em>, </span></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>txPin</em><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
