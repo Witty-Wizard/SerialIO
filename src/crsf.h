@@ -10,6 +10,8 @@
 #include "crsf_protocol.h" // Include header file for CRSF protocol
 #include "serialIO.h"      // Include header file for the serial IO class
 
+#define CRC8_POLY_D5 0xD5
+
 /**
  * @brief A class for handling CRSF protocol communication.
  */
@@ -48,6 +50,8 @@ public:
    * channel data will be stored.
    */
   void getChannel(crsf_channels_t *channelData) override;
+
+  uint8_t crc8(uint8_t *data, uint8_t len);
 };
 
 #endif // CRSF_H
