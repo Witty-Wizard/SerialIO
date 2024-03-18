@@ -26,7 +26,7 @@ public:
    * @param inverted Whether the serial signal is inverted (true) or not
    * (false).
    */
-  explicit crsf(HardwareSerial &rxPort, int rxPin, int txPin,
+  explicit crsf(HardwareSerial &rxPort, int rxPin, int txPin = -1,
                 bool inverted = false)
       : serialIO(&rxPort, rxPin, txPin, inverted){};
 

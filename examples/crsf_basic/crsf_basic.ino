@@ -7,9 +7,12 @@
 
 crsf_channels_t channelData;
 
-serialIO *receiver = new crsf(Serial1, 16, 17);
+serialIO *receiver = nullptr;
 
-void setup() { receiver->begin(); }
+void setup() { 
+  receiver = new crsf(Serial1, 16);
+  receiver->begin();
+}
 
 void loop() {
   receiver->processIncoming();
