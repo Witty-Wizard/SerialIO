@@ -1,3 +1,4 @@
+![GitHub Release](https://img.shields.io/github/v/release/Witty-Wizard/SerialIO)
 ![Doxygen CI](https://github.com/Witty-Wizard/SerialIO/actions/workflows/main.yaml/badge.svg)
 [![Doxygen](https://github.com/adafruit/ci-arduino/blob/master/assets/doxygen_badge.svg)](https://witty-wizard.github.io/SerialIO/)
 ![GitHub License](https://img.shields.io/github/license/Witty-Wizard/SerialIO)
@@ -22,5 +23,5 @@ To use the SerialIO library in your Arduino projects, follow these installation 
 1. Install the library directly from PlatformIO by adding the following line to your `platformio.ini` file:
 
    ```ini
-   lib_deps = Witty-Wizard/SerialIO @ ^0.0.2
+   lib_deps = Witty-Wizard/SerialIO @ ^0.1.0
    ```
