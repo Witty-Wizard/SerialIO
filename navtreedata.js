@@ -38,9 +38,17 @@ var NAVTREE =
         [ "Arduino Installation", "index.html#autotoc_md4", null ],
         [ "PlatformIO Installation", "index.html#autotoc_md5", null ]
       ] ],
-      [ "Tutorial", "index.html#tutorial", null ]
+      [ "Tutorial", "index.html#tutorial", null ],
+      [ "Examples", "index.html#example", [
+        [ "CRSF Basic Example", "index.html#autotoc_md6", null ],
+        [ "SBUS Basic Example", "index.html#autotoc_md7", null ]
+      ] ]
     ] ],
-    [ "License", "index.html#autotoc_md6", null ],
+    [ "Guide to Adding More Protocols", "index.html#autotoc_md8", [
+      [ "Steps", "index.html#autotoc_md9", null ],
+      [ "Basic Functions Required", "index.html#autotoc_md10", null ]
+    ] ],
+    [ "License", "index.html#autotoc_md11", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['arduino_20installation_0',['Arduino Installation',['../index.html#autotoc_md4',1,'']]]
+  ['adding_20more_20protocols_0',['Guide to Adding More Protocols',['../index.html#autotoc_md8',1,'']]],
+  ['arduino_20installation_1',['Arduino Installation',['../index.html#autotoc_md4',1,'']]]
 ];
