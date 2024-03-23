@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['footer_5fsbus_0',['FOOTER_SBUS',['../sbus_8h.html#a7a98b3e4d029e60d0e1a1602f31ba4fe',1,'sbus.h']]],
-  ['functions_20required_1',['Basic Functions Required',['../index.html#autotoc_md10',1,'']]]
+  ['getchannel_0',['getChannel',['../classcrsf.html#a64c0d7fdcf2da2b7d37e4e373003f24a',1,'crsf::getChannel()'],['../classsbus.html#a9ed525622c08de34cbf9e3f166acd77f',1,'sbus::getChannel()'],['../classserialIO.html#a69b9dfd3d97b23f0973352792342a269',1,'serialIO::getChannel()']]],
+  ['getting_20started_1',['Getting Started',['../index.html#autotoc_md3',1,'']]]
 ];
