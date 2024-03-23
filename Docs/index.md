@@ -35,9 +35,9 @@ CRSF (Crossfire Serial Protocol) is a digital communication protocol designed fo
 - [Tutorial](#tutorial)
 - [Examples](#example)
 
-# Installation {#installation}
+## Installation {#installation}
 
-## Arduino Installation
+### Arduino Installation
 
 To use the SerialIO library in your Arduino projects, follow these installation steps:
 
@@ -47,7 +47,7 @@ To use the SerialIO library in your Arduino projects, follow these installation 
 4. Restart the Arduino IDE.
 5. You should now be able to include the SerialIO library in your Arduino sketches.
 
-## PlatformIO Installation
+### PlatformIO Installation
 
 If you are using PlatformIO, you can install the SerialIO library directly from the PlatformIO Library Manager. Add the following line to your `platformio.ini` file:
 
@@ -55,7 +55,7 @@ If you are using PlatformIO, you can install the SerialIO library directly from 
 lib_deps = Witty-Wizard/SerialIO @ ^0.1.0
 ```
 
-# Tutorial {#tutorial}
+## Tutorial {#tutorial}
 
 To use the library for decoding RC protocols in your Arduino project, follow these steps:
 
@@ -101,12 +101,12 @@ To retrieve the decoded RC channel data, call the getChannel() method, passing a
     - @ref sbus
     - @ref crsf
 
-# Examples {#example}
+## Examples {#example}
 
-## CRSF Basic Example
+### CRSF Basic Example
 @include "./examples/crsf_basic/crsf_basic.ino"
 
-## SBUS Basic Example
+### SBUS Basic Example
 @include "./examples/sbus_basic/sbus_basic.ino"
 
 
