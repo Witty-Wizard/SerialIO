@@ -77,7 +77,7 @@ To use the library for decoding RC protocols in your Arduino project, follow the
    To instantiate a SerialIO object for receiving data only, you can create an instance of the crsf class specifying the serial port, RX pin:
    ```cpp
    serialIO *receiver = new crsf(Serial1, pinRX);
-   
+   ```
 4. **Initialize Communication**:
    Call the begin() method to initialize communication with the specified serial port:
    ```cpp
