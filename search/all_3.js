@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['example_0',['Example',['../index.html#autotoc_md6',1,'CRSF Basic Example'],['../index.html#autotoc_md7',1,'SBUS Basic Example']]],
-  ['examples_1',['Examples',['../index.html#example',1,'']]]
+  ['footer_5fsbus_0',['FOOTER_SBUS',['../sbus_8h.html#a7a98b3e4d029e60d0e1a1602f31ba4fe',1,'sbus.h']]]
 ];

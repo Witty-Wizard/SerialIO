@@ -1,19 +1,19 @@
 <map id="examples/crsf_basic/crsf_basic.ino" name="examples/crsf_basic/crsf_basic.ino">
-<area shape="rect" id="Node000001" title=" " alt="" coords="45,5,185,46"/>
-<area shape="rect" id="Node000002" href="$sbus_8h.html" title="Header file for the SBUS protocol implementation." alt="" coords="5,94,65,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,48,60,85,56,81,93,45"/>
-<area shape="rect" id="Node000005" href="$serialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="124,168,200,193"/>
-<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="132,45,145,67,156,93,163,123,165,152,159,152,157,124,151,95,140,70,127,48"/>
-<area shape="rect" id="Node000007" href="$crsf_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="88,94,142,120"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="118,46,118,78,112,78,112,46"/>
-<area shape="rect" id="Node000003" href="$crsf__protocol_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="13,241,119,267"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="40,119,63,225,57,226,35,121"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="58,118,128,157,126,162,55,123"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="34,315,97,341"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="68,267,68,299,63,299,63,267"/>
-<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="147,196,95,234,92,230,144,192"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="143,241,218,267"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="167,193,176,226,171,227,162,194"/>
-<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="113,121,77,227,72,225,108,119"/>
-<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="125,118,148,153,143,156,120,121"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="83,5,223,46"/>
+<area shape="rect" id="Node000002" href="$serialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="115,94,191,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,46,156,78,150,78,150,46"/>
+<area shape="rect" id="Node000003" href="$crsf__protocol_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="100,241,206,267"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,115,88,122,60,132,34,148,14,169,9,181,9,191,14,200,24,209,52,225,86,236,84,241,49,229,20,214,10,204,4,192,3,180,9,166,31,143,58,127,86,117,114,110"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="23,168,99,193"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="139,122,90,160,87,156,136,118"/>
+<area shape="rect" id="Node000006" href="$sbus_8h.html" title="Header file for the SBUS protocol implementation." alt="" coords="123,168,183,193"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="149,120,147,152,141,152,143,120"/>
+<area shape="rect" id="Node000007" href="$crsf_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="206,168,260,193"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="161,118,202,156,199,160,157,122"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="121,315,185,341"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="156,267,156,299,150,299,150,267"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="157,167,159,135,164,135,162,167"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="156,194,156,226,150,226,150,194"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="225,169,183,131,187,127,228,165"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="221,196,179,233,176,229,218,192"/>
 </map>
