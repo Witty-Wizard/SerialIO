@@ -1,8 +1,6 @@
 /*!
  * @file sbus_basic.ino
  */
-#include <sbus.h>
-#include <crsf.h>
 #include <serialIO.h>
 
 crsf_channels_t channelData;

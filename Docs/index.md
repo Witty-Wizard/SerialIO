@@ -62,8 +62,6 @@ To use the library for decoding RC protocols in your Arduino project, follow the
 1. **Include Necessary Libraries**:
    Include the required libraries at the beginning of your sketch:
    ```cpp
-   #include <crsf.h>
-   #include <sbus.h>
    #include <serialIO.h>
    ```
 2. **Define Channel Data Structure**:
@@ -76,6 +74,10 @@ To use the library for decoding RC protocols in your Arduino project, follow the
    ```cpp
    serialIO *receiver = new crsf(Serial1, pinRX, pinTX);
    ```
+   To instantiate a SerialIO object for receiving data only, you can create an instance of the crsf class specifying the serial port, RX pin:
+   ```cpp
+   serialIO *receiver = new crsf(Serial1, pinRX);
+   
 4. **Initialize Communication**:
    Call the begin() method to initialize communication with the specified serial port:
    ```cpp
