@@ -38,7 +38,7 @@ void crsf::getChannel(crsf_channels_t *channelData) {
     memcpy(channelData, _rxData + 3, sizeof(*channelData));
 }
 
-uint8_t crc8(uint8_t *data, uint8_t len) {
+uint8_t crsf::crc8(uint8_t *data, uint8_t len) {
     uint8_t crc = 0;
     for (uint8_t i = 0; i < len-2; i++) {
         crc ^= data[i];
