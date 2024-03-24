@@ -33,12 +33,12 @@ void crsf::processIncoming() {
 }
 
 void crsf::getChannel(crsf_channels_t *channelData) {
-  uint8_t data_len = sizeof(data) / sizeof(data[0]);
-  if(crc8_d5(_rxData,data_len) == 0)
+  uint8_t data_len = sizeof(_rxData) / sizeof(_rxData[0]);
+  if(crc8(_rxData,data_len) == 0)
     memcpy(channelData, _rxData + 3, sizeof(*channelData));
 }
 
-uint8_t crc8_d5(uint8_t *data, uint8_t len) {
+uint8_t crc8(uint8_t *data, uint8_t len) {
     uint8_t crc = 0;
     for (uint8_t i = 0; i < len-2; i++) {
         crc ^= data[i];
