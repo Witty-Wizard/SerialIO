@@ -1,5 +1,8 @@
 var NAVTREEINDEX0 =
 {
+"SerialIO_8cpp.html":[5,0,1,3],
+"SerialIO_8h.html":[5,0,1,4],
+"SerialIO_8h_source.html":[5,0,1,4],
 "annotated.html":[4,0],
 "classcrsf.html":[4,0,0],
 "classcrsf.html#a64c0d7fdcf2da2b7d37e4e373003f24a":[4,0,0,2],
@@ -104,9 +107,6 @@ var NAVTREEINDEX0 =
 "sbus_8h.html#a7a98b3e4d029e60d0e1a1602f31ba4fe":[5,0,1,2,1],
 "sbus_8h_source.html":[5,0,1,2],
 "sbus__basic_8ino.html":[5,0,0,1,0],
-"serialIO_8cpp.html":[5,0,1,3],
-"serialIO_8h.html":[5,0,1,4],
-"serialIO_8h_source.html":[5,0,1,4],
 "structcrsfPayloadLinkstatistics__s.html":[4,0,5],
 "structcrsf__channels__s.html":[4,0,1],
 "structcrsf__header__s.html":[4,0,2],

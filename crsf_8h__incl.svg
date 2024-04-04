@@ -38,9 +38,9 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="serialIO_8h.html" target="_top" xlink:title="Header file for serial input/output (IO) functionality.">
-<polygon fill="white" stroke="#666666" points="124.5,-185 67.25,-185 67.25,-165.75 124.5,-165.75 124.5,-185"/>
-<text text-anchor="middle" x="95.88" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00">serialIO.h</text>
+<g id="a_Node000004"><a xlink:href="SerialIO_8h.html" target="_top" xlink:title="Header file for serial input/output (IO) functionality.">
+<polygon fill="white" stroke="#666666" points="125.25,-185 66.5,-185 66.5,-165.75 125.25,-165.75 125.25,-185"/>
+<text text-anchor="middle" x="95.88" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00">SerialIO.h</text>
 </a>
 </g>
 </g>

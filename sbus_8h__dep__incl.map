@@ -1,6 +1,6 @@
 <map id="src/sbus.h" name="src/sbus.h">
 <area shape="rect" id="Node000001" title="Header file for the SBUS protocol implementation." alt="" coords="270,5,351,31"/>
-<area shape="rect" id="Node000002" href="$serialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="261,79,359,105"/>
+<area shape="rect" id="Node000002" href="$SerialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="260,79,360,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="304,46,306,78,301,79,299,46"/>
 <area shape="poly" id="edge6_Node000002_Node000001" title=" " alt="" coords="316,64,314,31,320,31,322,63"/>
 <area shape="rect" id="Node000003" href="$crsf__basic_8ino.html" title=" " alt="" coords="5,153,146,193"/>

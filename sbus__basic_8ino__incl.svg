@@ -21,9 +21,9 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="serialIO_8h.html" target="_top" xlink:title="Header file for serial input/output (IO) functionality.">
-<polygon fill="white" stroke="#666666" points="139.29,-185 82.04,-185 82.04,-165.75 139.29,-165.75 139.29,-185"/>
-<text text-anchor="middle" x="110.66" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00">serialIO.h</text>
+<g id="a_Node000002"><a xlink:href="SerialIO_8h.html" target="_top" xlink:title="Header file for serial input/output (IO) functionality.">
+<polygon fill="white" stroke="#666666" points="140.04,-185 81.29,-185 81.29,-165.75 140.04,-165.75 140.04,-185"/>
+<text text-anchor="middle" x="110.66" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00">SerialIO.h</text>
 </a>
 </g>
 </g>
@@ -49,7 +49,7 @@
 <g id="edge2_Node000002_Node000003" class="edge">
 <title>Node2&#45;&gt;Node3</title>
 <g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M81.69,-170.97C56.57,-166.31 21.67,-155.37 4.66,-129.75 -12.79,-103.47 24.64,-86.33 59.74,-76.48"/>
+<path fill="none" stroke="#63b8ff" d="M81.2,-170.88C56.12,-166.17 21.56,-155.2 4.66,-129.75 -12.79,-103.47 24.64,-86.33 59.74,-76.48"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="60.25,-79.97 69.03,-74.04 58.47,-73.2 60.25,-79.97"/>
 </a>
 </g>

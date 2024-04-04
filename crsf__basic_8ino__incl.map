@@ -1,9 +1,9 @@
 <map id="examples/crsf_basic/crsf_basic.ino" name="examples/crsf_basic/crsf_basic.ino">
 <area shape="rect" id="Node000001" title=" " alt="" coords="83,5,223,46"/>
-<area shape="rect" id="Node000002" href="$serialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="115,94,191,120"/>
+<area shape="rect" id="Node000002" href="$SerialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="114,94,192,120"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,46,156,78,150,78,150,46"/>
 <area shape="rect" id="Node000003" href="$crsf__protocol_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="100,241,206,267"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,115,88,122,60,132,34,148,14,169,9,181,9,191,14,200,24,209,52,225,86,236,84,241,49,229,20,214,10,204,4,192,3,180,9,166,31,143,58,127,86,117,114,110"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,115,87,122,60,132,34,148,14,169,9,181,9,191,14,200,24,209,52,225,86,236,84,241,49,229,20,214,10,204,4,192,3,180,9,166,31,144,57,127,86,117,113,110"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="23,168,99,193"/>
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="139,122,90,160,87,156,136,118"/>
 <area shape="rect" id="Node000006" href="$sbus_8h.html" title="Header file for the SBUS protocol implementation." alt="" coords="123,168,183,193"/>

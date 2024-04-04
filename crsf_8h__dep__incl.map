@@ -1,6 +1,6 @@
 <map id="src/crsf.h" name="src/crsf.h">
 <area shape="rect" id="Node000001" title="Header file for the CRSF protocol implementation." alt="" coords="274,5,349,31"/>
-<area shape="rect" id="Node000002" href="$serialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="262,79,361,105"/>
+<area shape="rect" id="Node000002" href="$SerialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="261,79,362,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="305,46,307,78,302,79,300,46"/>
 <area shape="poly" id="edge4_Node000002_Node000001" title=" " alt="" coords="318,64,316,31,321,31,323,63"/>
 <area shape="rect" id="Node000003" href="$crsf__basic_8ino.html" title=" " alt="" coords="5,153,146,193"/>

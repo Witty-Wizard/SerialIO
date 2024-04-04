@@ -9,8 +9,8 @@ var searchData=
   ['sbus_5fmax_5fpacket_5fsize_6',['SBUS_MAX_PACKET_SIZE',['../sbus_8h.html#a663707452658145decf130f3f1ebd631',1,'sbus.h']]],
   ['serialio_7',['serialIO',['../classserialIO.html',1,'serialIO'],['../classserialIO.html#adcdd78a568e0f27449becb25f74f6530',1,'serialIO::serialIO()']]],
   ['serialio_8',['SerialIO',['../index.html',1,'']]],
-  ['serialio_2ecpp_9',['serialIO.cpp',['../serialIO_8cpp.html',1,'']]],
-  ['serialio_2eh_10',['serialIO.h',['../serialIO_8h.html',1,'']]],
+  ['serialio_2ecpp_9',['SerialIO.cpp',['../SerialIO_8cpp.html',1,'']]],
+  ['serialio_2eh_10',['SerialIO.h',['../SerialIO_8h.html',1,'']]],
   ['started_11',['Getting Started',['../index.html#autotoc_md3',1,'']]],
   ['steps_12',['Steps',['../index.html#autotoc_md9',1,'']]],
   ['supported_20protocol_13',['Supported Protocol',['../index.html#autotoc_md0',1,'']]]
