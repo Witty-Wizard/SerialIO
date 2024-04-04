@@ -15,7 +15,7 @@
 /**
  * @brief A class for handling CRSF protocol communication.
  */
-class crsf : public serialIO {
+class crsf : public SerialIO {
 private:
   uint8_t _rxData[CRSF_MAX_PACKET_SIZE];
 
@@ -30,7 +30,7 @@ public:
    */
   explicit crsf(HardwareSerial &rxPort, int rxPin, int txPin = -1,
                 bool inverted = false)
-      : serialIO(&rxPort, rxPin, txPin, inverted){};
+      : SerialIO(&rxPort, rxPin, txPin, inverted){};
 
   virtual ~crsf(){};
 

@@ -70,13 +70,13 @@ To use the library for decoding RC protocols in your Arduino project, follow the
    crsf_channels_t channelData;
    ```
 3. **Instantiate SerialIO Object**:
-   Create an instance of the serialIO class, specifying the serial port, RX pin, and TX pin:
+   Create an instance of the SerialIO class, specifying the serial port, RX pin, and TX pin:
    ```cpp
-   serialIO *receiver = new crsf(Serial1, pinRX, pinTX);
+   SerialIO *receiver = new crsf(Serial1, pinRX, pinTX);
    ```
    To instantiate a SerialIO object for receiving data only, you can create an instance of the crsf class specifying the serial port, RX pin:
    ```cpp
-   serialIO *receiver = new crsf(Serial1, pinRX);
+   SerialIO *receiver = new crsf(Serial1, pinRX);
    ```
 4. **Initialize Communication**:
    Call the begin() method to initialize communication with the specified serial port:
@@ -99,7 +99,7 @@ To retrieve the decoded RC channel data, call the getChannel() method, passing a
         receiver->getChannel(&channelData);
     ```
 **see also**:
-    - @ref serialIO
+    - @ref SerialIO
     - @ref sbus
     - @ref crsf
 
@@ -152,11 +152,11 @@ Here's a basic template for the header of a new protocol:
 
 // Define any constants or data structures specific to the protocol
 
-class XYZProtocol : public serialIO {
+class XYZProtocol : public SerialIO {
 public:
   explicit XYZProtocol(HardwareSerial &rxPort, int rxPin, int txPin,
                        bool inverted = false)
-      : serialIO(&rxPort, rxPin, txPin, inverted){};
+      : SerialIO(&rxPort, rxPin, txPin, inverted){};
   ;
   ~XYZProtocol();
 

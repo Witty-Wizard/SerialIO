@@ -5,7 +5,7 @@
 
 crsf_channels_t channelData;
 
-serialIO *receiver = nullptr;
+SerialIO *receiver = nullptr;
 
 void setup() { 
   receiver = new crsf(Serial1, 16);

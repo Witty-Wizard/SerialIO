@@ -18,7 +18,7 @@
 /**
  * @brief A class for handling SBUS protocol communication.
  */
-class sbus : public serialIO {
+class sbus : public SerialIO {
 private:
   uint8_t _rxData[SBUS_MAX_PACKET_SIZE];
 
@@ -33,7 +33,7 @@ public:
    */
   explicit sbus(HardwareSerial &rxPort, int rxPin, int txPin = -1,
                 bool inverted = true)
-      : serialIO(&rxPort, rxPin, txPin, inverted){};
+      : SerialIO(&rxPort, rxPin, txPin, inverted){};
 
   virtual ~sbus(){};
 

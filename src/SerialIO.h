@@ -3,8 +3,8 @@
  * @brief Header file for serial input/output (IO) functionality.
  */
 #pragma once
-#ifndef SERIALIO_H
-#define SERIALIO_H
+#ifndef SerialIO_H
+#define SerialIO_H
 #include "crsf_protocol.h"
 #include <Arduino.h>
 
@@ -14,10 +14,10 @@
    rc protocol
 */
 /**************************************************************************/
-class serialIO {
+class SerialIO {
 public:
   /**
-   * @brief Constructor for the serialIO class.
+   * @brief Constructor for the SerialIO class.
    *
    * Initializes the pins and sets up the serial port.
    *
@@ -27,10 +27,10 @@ public:
    * @param inverted Whether the serial signal is inverted (true) or not
    * (false).
    */
-  serialIO(HardwareSerial *rxPort, int rxPin, int txPin, bool inverted)
+  SerialIO(HardwareSerial *rxPort, int rxPin, int txPin, bool inverted)
       : _rxPort(rxPort), _rxPin(rxPin), _txPin(txPin), _inverted(inverted){};
 
-  virtual ~serialIO(){};
+  virtual ~SerialIO(){};
 
   /**************************************************************************/
   /*!
