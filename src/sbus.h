@@ -8,7 +8,7 @@
 #define SBUS_H
 
 #include "crsf_protocol.h" // Include header file for CRSF protocol
-#include "serialIO.h"      // Include header file for the serial IO class
+#include "SerialIO.h"      // Include header file for the serial IO class
 
 #define HEADER_SBUS 0X0F        ///< SBUS Header Byte
 #define FOOTER_SBUS 0X00        ///< SBUS Footer Byte

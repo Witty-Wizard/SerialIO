@@ -1,5 +1,5 @@
 /*!
- * @file serialIO.h
+ * @file SerialIO.h
  * @brief Header file for serial input/output (IO) functionality.
  */
 #pragma once

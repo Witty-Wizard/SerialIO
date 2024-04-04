@@ -1,7 +1,7 @@
 /*!
  * @file crsf_basic.ino
  */
-#include <serialIO.h>
+#include <SerialIO.h>
 
 crsf_channels_t channelData;
 
