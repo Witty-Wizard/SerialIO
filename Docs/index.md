@@ -62,7 +62,7 @@ To use the library for decoding RC protocols in your Arduino project, follow the
 1. **Include Necessary Libraries**:
    Include the required libraries at the beginning of your sketch:
    ```cpp
-   #include <serialIO.h>
+   #include <SerialIO.h>
    ```
 2. **Define Channel Data Structure**:
    Define a structure to hold the decoded RC channel data.
