@@ -1,5 +1,5 @@
-<map id="src/serialIO.h" name="src/serialIO.h">
-<area shape="rect" id="Node000001" title="Header file for serial input/output (IO) functionality." alt="" coords="329,5,427,31"/>
+<map id="src/SerialIO.h" name="src/SerialIO.h">
+<area shape="rect" id="Node000001" title="Header file for serial input/output (IO) functionality." alt="" coords="328,5,428,31"/>
 <area shape="rect" id="Node000002" href="$crsf__basic_8ino.html" title=" " alt="" coords="5,79,146,120"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="318,38,146,82,145,77,316,33"/>
 <area shape="rect" id="Node000003" href="$sbus__basic_8ino.html" title=" " alt="" coords="170,79,317,120"/>
