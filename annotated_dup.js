@@ -7,5 +7,5 @@ var annotated_dup =
     [ "crsf_sensor_gps_s", "structcrsf__sensor__gps__s.html", null ],
     [ "crsfPayloadLinkstatistics_s", "structcrsfPayloadLinkstatistics__s.html", null ],
     [ "sbus", "classsbus.html", "classsbus" ],
-    [ "serialIO", "classserialIO.html", "classserialIO" ]
+    [ "SerialIO", "classSerialIO.html", "classSerialIO" ]
 ];

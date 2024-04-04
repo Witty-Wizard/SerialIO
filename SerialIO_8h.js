@@ -1,4 +1,4 @@
 var SerialIO_8h =
 [
-    [ "serialIO", "classserialIO.html", "classserialIO" ]
+    [ "SerialIO", "classSerialIO.html", "classSerialIO" ]
 ];

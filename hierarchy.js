@@ -5,7 +5,7 @@ var hierarchy =
     [ "crsf_sensor_battery_s", "structcrsf__sensor__battery__s.html", null ],
     [ "crsf_sensor_gps_s", "structcrsf__sensor__gps__s.html", null ],
     [ "crsfPayloadLinkstatistics_s", "structcrsfPayloadLinkstatistics__s.html", null ],
-    [ "serialIO", "classserialIO.html", [
+    [ "SerialIO", "classSerialIO.html", [
       [ "crsf", "classcrsf.html", null ],
       [ "sbus", "classsbus.html", null ]
     ] ]
