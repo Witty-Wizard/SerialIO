@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structcrsfPayloadLinkstatistics__s" kind="struct" language="C++" prot="public">
+    <compoundname>crsfPayloadLinkstatistics_s</compoundname>
+    <includes refid="crsf__protocol_8h" local="no">crsf_protocol.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcrsfPayloadLinkstatistics__s_1a4fc09460587423046d9640fe86bf672e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t crsfPayloadLinkstatistics_s::uplink_RSSI_1</definition>
+        <argsstring></argsstring>
+        <name>uplink_RSSI_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="123" column="11" bodyfile="src/crsf_protocol.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsfPayloadLinkstatistics__s_1af6d163fc809b5b1f7b8f2323b2c86a21" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t crsfPayloadLinkstatistics_s::uplink_RSSI_2</definition>
+        <argsstring></argsstring>
+        <name>uplink_RSSI_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="124" column="11" bodyfile="src/crsf_protocol.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsfPayloadLinkstatistics__s_1ab7e5e91e41ba99763d63ba5428ebc30d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t crsfPayloadLinkstatistics_s::uplink_Link_quality</definition>
+        <argsstring></argsstring>
+        <name>uplink_Link_quality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="125" column="11" bodyfile="src/crsf_protocol.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsfPayloadLinkstatistics__s_1a62b4af3e3021dfa68d44bb585faf7528" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t crsfPayloadLinkstatistics_s::uplink_SNR</definition>
+        <argsstring></argsstring>
+        <name>uplink_SNR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="126" column="10" bodyfile="src/crsf_protocol.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsfPayloadLinkstatistics__s_1af0821c32b0101bfa7dc3f63cc56ea890" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t crsfPayloadLinkstatistics_s::active_antenna</definition>
+        <argsstring></argsstring>
+        <name>active_antenna</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="127" column="11" bodyfile="src/crsf_protocol.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsfPayloadLinkstatistics__s_1a687e67852d99ecdd19034d019f1e9d9d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t crsfPayloadLinkstatistics_s::rf_Mode</definition>
+        <argsstring></argsstring>
+        <name>rf_Mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="128" column="11" bodyfile="src/crsf_protocol.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsfPayloadLinkstatistics__s_1acb7669761901091bff040a5134b02c7b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t crsfPayloadLinkstatistics_s::uplink_TX_Power</definition>
+        <argsstring></argsstring>
+        <name>uplink_TX_Power</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="129" column="11" bodyfile="src/crsf_protocol.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsfPayloadLinkstatistics__s_1a8aafa5963569a6c67f694123b3623f9b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t crsfPayloadLinkstatistics_s::downlink_RSSI</definition>
+        <argsstring></argsstring>
+        <name>downlink_RSSI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="130" column="11" bodyfile="src/crsf_protocol.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsfPayloadLinkstatistics__s_1ac421daabfabfeea22bf1ea3a6dbe69e0" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t crsfPayloadLinkstatistics_s::downlink_Link_quality</definition>
+        <argsstring></argsstring>
+        <name>downlink_Link_quality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="131" column="11" bodyfile="src/crsf_protocol.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsfPayloadLinkstatistics__s_1a6d818168b7b9ce5fd8c75baad3a0e32e" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t crsfPayloadLinkstatistics_s::downlink_SNR</definition>
+        <argsstring></argsstring>
+        <name>downlink_SNR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="132" column="10" bodyfile="src/crsf_protocol.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Payload Statics </para>
+    </detaileddescription>
+    <location file="src/crsf_protocol.h" line="122" column="1" bodyfile="src/crsf_protocol.h" bodystart="122" bodyend="133"/>
+    <listofallmembers>
+      <member refid="structcrsfPayloadLinkstatistics__s_1af0821c32b0101bfa7dc3f63cc56ea890" prot="public" virt="non-virtual"><scope>crsfPayloadLinkstatistics_s</scope><name>active_antenna</name></member>
+      <member refid="structcrsfPayloadLinkstatistics__s_1ac421daabfabfeea22bf1ea3a6dbe69e0" prot="public" virt="non-virtual"><scope>crsfPayloadLinkstatistics_s</scope><name>downlink_Link_quality</name></member>
+      <member refid="structcrsfPayloadLinkstatistics__s_1a8aafa5963569a6c67f694123b3623f9b" prot="public" virt="non-virtual"><scope>crsfPayloadLinkstatistics_s</scope><name>downlink_RSSI</name></member>
+      <member refid="structcrsfPayloadLinkstatistics__s_1a6d818168b7b9ce5fd8c75baad3a0e32e" prot="public" virt="non-virtual"><scope>crsfPayloadLinkstatistics_s</scope><name>downlink_SNR</name></member>
+      <member refid="structcrsfPayloadLinkstatistics__s_1a687e67852d99ecdd19034d019f1e9d9d" prot="public" virt="non-virtual"><scope>crsfPayloadLinkstatistics_s</scope><name>rf_Mode</name></member>
+      <member refid="structcrsfPayloadLinkstatistics__s_1ab7e5e91e41ba99763d63ba5428ebc30d" prot="public" virt="non-virtual"><scope>crsfPayloadLinkstatistics_s</scope><name>uplink_Link_quality</name></member>
+      <member refid="structcrsfPayloadLinkstatistics__s_1a4fc09460587423046d9640fe86bf672e" prot="public" virt="non-virtual"><scope>crsfPayloadLinkstatistics_s</scope><name>uplink_RSSI_1</name></member>
+      <member refid="structcrsfPayloadLinkstatistics__s_1af6d163fc809b5b1f7b8f2323b2c86a21" prot="public" virt="non-virtual"><scope>crsfPayloadLinkstatistics_s</scope><name>uplink_RSSI_2</name></member>
+      <member refid="structcrsfPayloadLinkstatistics__s_1a62b4af3e3021dfa68d44bb585faf7528" prot="public" virt="non-virtual"><scope>crsfPayloadLinkstatistics_s</scope><name>uplink_SNR</name></member>
+      <member refid="structcrsfPayloadLinkstatistics__s_1acb7669761901091bff040a5134b02c7b" prot="public" virt="non-virtual"><scope>crsfPayloadLinkstatistics_s</scope><name>uplink_TX_Power</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

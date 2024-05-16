@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Struct crsf_channels_s - Serial IO</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Struct crsf_channels_s";
+        var mkdocs_page_input_path = "SerialIO/structcrsf__channels__s.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Serial IO
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">SerialIO</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../LICENSE/">LICENSE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../crsf/">CRSF Protocol</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../sbus/">SBUS Protocol</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../tutorial/">Tutorial</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">SerialIO</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../SerialIO_8cpp/">File SerialIO.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SerialIO_8cpp_source/">File SerialIO.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SerialIO_8h/">File SerialIO.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SerialIO_8h_source/">File SerialIO.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../annotated/">Class List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../classSerialIO/">Class SerialIO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_member_enums/">Class Member Enums</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_member_functions/">Class Member Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_member_typedefs/">Class Member Typedefs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_member_variables/">Class Member Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_members/">Class Members</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../classcrsf/">Class crsf</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../classes/">Class Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../classsbus/">Class sbus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf_8cpp/">File crsf.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf_8cpp_source/">File crsf.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf_8h/">File crsf.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf_8h_source/">File crsf.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf__basic_8ino/">File crsf_basic.ino</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf__basic_8ino_source/">File crsf_basic.ino</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf__protocol_8h/">File crsf_protocol.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf__protocol_8h_source/">File crsf_protocol.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_55843c87c0f105b5d66edf3dd90084e2/">Dir examples/sbus_basic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_68267d1309a1af8e8297ef4c3efbcdba/">Dir src</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_d28a4824dc47e487b107a5db32ef43c4/">Dir examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_e1cdda853dfed1aec62f8d7bad60d1ed/">Dir examples/crsf_basic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../files/">File List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hierarchy/">Class Hierarchy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../links/">Links</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/">Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_member_enums/">Namespace Member Enums</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_member_functions/">Namespace Member Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_member_typedefs/">Namespace Member Typedefs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_member_variables/">Namespace Member Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_members/">Namespace Members</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespaces/">Namespace List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pages/">Related Pages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sbus_8cpp/">File sbus.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sbus_8cpp_source/">File sbus.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sbus_8h/">File sbus.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sbus_8h_source/">File sbus.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sbus__basic_8ino/">File sbus_basic.ino</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sbus__basic_8ino_source/">File sbus_basic.ino</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structcrsfPayloadLinkstatistics__s/">Struct crsfPayloadLinkstatistics_s</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Struct crsf_channels_s</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#public-attributes">Public Attributes</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structcrsf__header__s/">Struct crsf_header_s</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structcrsf__sensor__battery__s/">Struct crsf_sensor_battery_s</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structcrsf__sensor__gps__s/">Struct crsf_sensor_gps_s</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../variables/">Variables</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Serial IO</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">SerialIO</li>
+      <li class="breadcrumb-item active">Struct crsf_channels_s</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="struct-crsf_channels_s">Struct crsf_channels_s</h1>
+<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="./"><strong>crsf_channels_s</strong></a></p>
+<p><a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;crsf_protocol.h&gt;</code></li>
+</ul>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel1"><strong>channel1</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel10"><strong>channel10</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel11"><strong>channel11</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel12"><strong>channel12</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel13"><strong>channel13</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel14"><strong>channel14</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel15"><strong>channel15</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel16"><strong>channel16</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel2"><strong>channel2</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel3"><strong>channel3</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel4"><strong>channel4</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel5"><strong>channel5</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel6"><strong>channel6</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel7"><strong>channel7</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel8"><strong>channel8</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned</td>
+<td style="text-align: left;"><a href="#variable-channel9"><strong>channel9</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h1 id="detailed-description">Detailed Description</h1>
+<p>RC Packet Frame </p>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-channel1">variable channel1</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel1;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel10">variable channel10</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel10;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel11">variable channel11</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel11;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel12">variable channel12</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel12;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel13">variable channel13</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel13;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel14">variable channel14</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel14;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel15">variable channel15</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel15;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel16">variable channel16</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel16;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel2">variable channel2</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel2;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel3">variable channel3</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel3;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel4">variable channel4</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel4;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel5">variable channel5</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel5;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel6">variable channel6</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel6;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel7">variable channel7</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel7;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel8">variable channel8</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel8;
+</code></pre>
+<hr>
+
+<h3 id="variable-channel9">variable channel9</h3>
+<pre><code class="language-C++">unsigned crsf_channels_s::channel9;
+</code></pre>
+<hr>
+
+<hr />
+<p>The documentation for this class was generated from the following file <code>src/crsf_protocol.h</code></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../structcrsfPayloadLinkstatistics__s/" class="btn btn-neutral float-left" title="Struct crsfPayloadLinkstatistics_s"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../structcrsf__header__s/" class="btn btn-neutral float-right" title="Struct crsf_header_s">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../structcrsfPayloadLinkstatistics__s/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../structcrsf__header__s/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

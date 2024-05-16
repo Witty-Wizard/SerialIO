@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Class sbus - Serial IO</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Class sbus";
+        var mkdocs_page_input_path = "SerialIO/classsbus.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Serial IO
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">SerialIO</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../LICENSE/">LICENSE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../crsf/">CRSF Protocol</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../sbus/">SBUS Protocol</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../tutorial/">Tutorial</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">SerialIO</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../SerialIO_8cpp/">File SerialIO.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SerialIO_8cpp_source/">File SerialIO.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SerialIO_8h/">File SerialIO.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SerialIO_8h_source/">File SerialIO.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../annotated/">Class List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../classSerialIO/">Class SerialIO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_member_enums/">Class Member Enums</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_member_functions/">Class Member Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_member_typedefs/">Class Member Typedefs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_member_variables/">Class Member Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class_members/">Class Members</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../classcrsf/">Class crsf</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../classes/">Class Index</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Class sbus</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#public-functions">Public Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#public-functions-inherited-from-serialio">Public Functions inherited from SerialIO</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#protected-attributes-inherited-from-serialio">Protected Attributes inherited from SerialIO</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#public-functions-documentation">Public Functions Documentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#function-begin">function begin</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#function-getchannel">function getChannel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#function-processincoming">function processIncoming</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#function-sbus">function sbus</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#function-sbus_1">function ~sbus</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf_8cpp/">File crsf.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf_8cpp_source/">File crsf.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf_8h/">File crsf.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf_8h_source/">File crsf.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf__basic_8ino/">File crsf_basic.ino</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf__basic_8ino_source/">File crsf_basic.ino</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf__protocol_8h/">File crsf_protocol.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../crsf__protocol_8h_source/">File crsf_protocol.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_55843c87c0f105b5d66edf3dd90084e2/">Dir examples/sbus_basic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_68267d1309a1af8e8297ef4c3efbcdba/">Dir src</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_d28a4824dc47e487b107a5db32ef43c4/">Dir examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dir_e1cdda853dfed1aec62f8d7bad60d1ed/">Dir examples/crsf_basic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../files/">File List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../hierarchy/">Class Hierarchy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../links/">Links</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/">Modules</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_member_enums/">Namespace Member Enums</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_member_functions/">Namespace Member Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_member_typedefs/">Namespace Member Typedefs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_member_variables/">Namespace Member Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespace_members/">Namespace Members</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../namespaces/">Namespace List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pages/">Related Pages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sbus_8cpp/">File sbus.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sbus_8cpp_source/">File sbus.cpp</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sbus_8h/">File sbus.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sbus_8h_source/">File sbus.h</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sbus__basic_8ino/">File sbus_basic.ino</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sbus__basic_8ino_source/">File sbus_basic.ino</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structcrsfPayloadLinkstatistics__s/">Struct crsfPayloadLinkstatistics_s</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structcrsf__channels__s/">Struct crsf_channels_s</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structcrsf__header__s/">Struct crsf_header_s</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structcrsf__sensor__battery__s/">Struct crsf_sensor_battery_s</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structcrsf__sensor__gps__s/">Struct crsf_sensor_gps_s</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../variables/">Variables</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Serial IO</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">SerialIO</li>
+      <li class="breadcrumb-item active">Class sbus</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="class-sbus">Class sbus</h1>
+<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="./"><strong>sbus</strong></a></p>
+<p><em>A class for handling SBUS protocol communication.</em> </p>
+<ul>
+<li><code>#include &lt;sbus.h&gt;</code></li>
+</ul>
+<p>Inherits the following classes: <a href="../classSerialIO/">SerialIO</a></p>
+<h2 id="public-functions">Public Functions</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="#function-begin"><strong>begin</strong></a> () override<br><em>Initializes the SBUS communication.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="#function-getchannel"><strong>getChannel</strong></a> (<a href="../crsf__protocol_8h/#typedef-crsf_channels_t"><strong>crsf_channels_t</strong></a> * channelData) override<br><em>Gets the decoded RC channels from the SBUS data.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="#function-processincoming"><strong>processIncoming</strong></a> () override<br><em>Processes incoming SBUS data.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><a href="#function-sbus"><strong>sbus</strong></a> (HardwareSerial &amp; rxPort, int rxPin, int txPin=-1, bool inverted=true) <br><em>Constructor for the SBUS class.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual</td>
+<td style="text-align: left;"><a href="#function-sbus"><strong>~sbus</strong></a> () <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions-inherited-from-serialio">Public Functions inherited from SerialIO</h2>
+<p>See <a href="../classSerialIO/">SerialIO</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><a href="../classSerialIO/#function-serialio"><strong>SerialIO</strong></a> (HardwareSerial * rxPort, int rxPin, int txPin, bool inverted) <br><em>Constructor for the</em> <a href="../classSerialIO/"><em><strong>SerialIO</strong></em></a> <em>class.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="../classSerialIO/#function-begin"><strong>begin</strong></a> () <br><em>Initialises the pins and setup serial port.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="../classSerialIO/#function-getchannel"><strong>getChannel</strong></a> (<a href="../crsf__protocol_8h/#typedef-crsf_channels_t"><strong>crsf_channels_t</strong></a> * channelData) <br><em>Gives the decoded rc channels.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="../classSerialIO/#function-processincoming"><strong>processIncoming</strong></a> () <br><em>decode the incoming serial data.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual</td>
+<td style="text-align: left;"><a href="../classSerialIO/#function-serialio"><strong>~SerialIO</strong></a> () <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="protected-attributes-inherited-from-serialio">Protected Attributes inherited from SerialIO</h2>
+<p>See <a href="../classSerialIO/">SerialIO</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">uint8_t</td>
+<td style="text-align: left;"><a href="../classSerialIO/#variable-_buffer"><strong>_buffer</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">bool</td>
+<td style="text-align: left;"><a href="../classSerialIO/#variable-_headerdetected"><strong>_headerDetected</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">bool</td>
+<td style="text-align: left;"><a href="../classSerialIO/#variable-_inverted"><strong>_inverted</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint8_t</td>
+<td style="text-align: left;"><a href="../classSerialIO/#variable-_prevbuffer"><strong>_prevBuffer</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">uint8_t</td>
+<td style="text-align: left;"><a href="../classSerialIO/#variable-_rxindex"><strong>_rxIndex</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">int</td>
+<td style="text-align: left;"><a href="../classSerialIO/#variable-_rxpin"><strong>_rxPin</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">HardwareSerial *</td>
+<td style="text-align: left;"><a href="../classSerialIO/#variable-_rxport"><strong>_rxPort</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">int</td>
+<td style="text-align: left;"><a href="../classSerialIO/#variable-_txpin"><strong>_txPin</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-begin">function begin</h3>
+<pre><code class="language-C++">virtual void sbus::begin () override
+</code></pre>
+<p>Implements <a href="../classSerialIO/#function-begin"><em>SerialIO::begin</em></a></p>
+<hr>
+
+<h3 id="function-getchannel">function getChannel</h3>
+<p><em>Gets the decoded RC channels from the SBUS data.</em> </p>
+<pre><code class="language-C++">virtual void sbus::getChannel (
+    crsf_channels_t * channelData
+) override
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>channelData</code> Pointer to a crsf_channels_t struct where the decoded channel data will be stored. </li>
+</ul>
+<p>Implements <a href="../classSerialIO/#function-getchannel"><em>SerialIO::getChannel</em></a></p>
+<hr>
+
+<h3 id="function-processincoming">function processIncoming</h3>
+<pre><code class="language-C++">virtual void sbus::processIncoming () override
+</code></pre>
+<p>Implements <a href="../classSerialIO/#function-processincoming"><em>SerialIO::processIncoming</em></a></p>
+<hr>
+
+<h3 id="function-sbus">function sbus</h3>
+<p><em>Constructor for the SBUS class.</em> </p>
+<pre><code class="language-C++">inline explicit sbus::sbus (
+    HardwareSerial &amp; rxPort,
+    int rxPin,
+    int txPin=-1,
+    bool inverted=true
+) 
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>rxPort</code> Reference to the hardware serial port for RX communication. </li>
+<li><code>rxPin</code> The RX pin number. </li>
+<li><code>txPin</code> The TX pin number. </li>
+<li><code>inverted</code> Whether the serial signal is inverted (true) or not (false). </li>
+</ul>
+<hr>
+
+<h3 id="function-sbus_1">function ~sbus</h3>
+<pre><code class="language-C++">inline virtual sbus::~sbus () 
+</code></pre>
+<hr>
+
+<hr />
+<p>The documentation for this class was generated from the following file <code>src/sbus.h</code></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../classes/" class="btn btn-neutral float-left" title="Class Index"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../crsf_8cpp/" class="btn btn-neutral float-right" title="File crsf.cpp">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../classes/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../crsf_8cpp/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
