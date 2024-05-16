@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classSerialIO" kind="class" language="C++" prot="public">
+    <compoundname>SerialIO</compoundname>
+    <derivedcompoundref refid="classcrsf" prot="public" virt="non-virtual">crsf</derivedcompoundref>
+    <derivedcompoundref refid="classsbus" prot="public" virt="non-virtual">sbus</derivedcompoundref>
+    <includes refid="SerialIO_8h" local="no">SerialIO.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classSerialIO_1ae5af4a41c44fb81263281e64b37f898b" prot="protected" static="no" mutable="no">
+        <type>HardwareSerial *</type>
+        <definition>HardwareSerial* SerialIO::_rxPort</definition>
+        <argsstring></argsstring>
+        <name>_rxPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SerialIO.h" line="60" column="7" bodyfile="src/SerialIO.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSerialIO_1adc076a55e77604224dd861ef8130244f" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SerialIO::_headerDetected</definition>
+        <argsstring></argsstring>
+        <name>_headerDetected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SerialIO.h" line="61" column="8" bodyfile="src/SerialIO.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSerialIO_1a991be4261eddcd953551d73cf2feeb31" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SerialIO::_inverted</definition>
+        <argsstring></argsstring>
+        <name>_inverted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SerialIO.h" line="63" column="8" bodyfile="src/SerialIO.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSerialIO_1a7180c0fc108ed2e41d926dd3ae67b1d6" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SerialIO::_rxIndex</definition>
+        <argsstring></argsstring>
+        <name>_rxIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SerialIO.h" line="65" column="11" bodyfile="src/SerialIO.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSerialIO_1a874e6357c323f6ec3f5a0f180889d05a" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SerialIO::_rxPin</definition>
+        <argsstring></argsstring>
+        <name>_rxPin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SerialIO.h" line="66" column="7" bodyfile="src/SerialIO.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSerialIO_1a8a8eb08945846fc9962b6a6140436c13" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SerialIO::_txPin</definition>
+        <argsstring></argsstring>
+        <name>_txPin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SerialIO.h" line="67" column="7" bodyfile="src/SerialIO.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSerialIO_1ac0bbebbb77c061ec85f1b2d10820ecbe" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SerialIO::_buffer</definition>
+        <argsstring></argsstring>
+        <name>_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SerialIO.h" line="68" column="11" bodyfile="src/SerialIO.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSerialIO_1a5c491e997496bf201aa03731f3a548d7" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SerialIO::_prevBuffer</definition>
+        <argsstring></argsstring>
+        <name>_prevBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SerialIO.h" line="69" column="11" bodyfile="src/SerialIO.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSerialIO_1a0781ef98a22989c46bd7f6dbcfcc37d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SerialIO::SerialIO</definition>
+        <argsstring>(HardwareSerial *rxPort, int rxPin, int txPin, bool inverted)</argsstring>
+        <name>SerialIO</name>
+        <param>
+          <type>HardwareSerial *</type>
+          <declname>rxPort</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rxPin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>txPin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>inverted</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the <ref refid="classSerialIO" kindref="compound">SerialIO</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the pins and sets up the serial port.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rxPort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the hardware serial port to use. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rxPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RX pin number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>txPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The TX pin number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inverted</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the serial signal is inverted (true) or not (false). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SerialIO.h" line="30" column="3" bodyfile="src/SerialIO.h" bodystart="30" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classSerialIO_1a5750c74798707c402ade5b4aadd66ae9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual SerialIO::~SerialIO</definition>
+        <argsstring>()</argsstring>
+        <name>~SerialIO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SerialIO.h" line="33" column="11" bodyfile="src/SerialIO.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classSerialIO_1a8d7b00745bb220b8675c15dbc2f5dcdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SerialIO::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <reimplementedby refid="classcrsf_1a86bfe46e0bdbf447885dd1614ed939d0">begin</reimplementedby>
+        <reimplementedby refid="classsbus_1a7232d82f864fe8cc32b39c0c1989f418">begin</reimplementedby>
+        <briefdescription>
+<para>Initialises the pins and setup serial port. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SerialIO.h" line="40" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classSerialIO_1abd10b04f6648190c8a5c05757ab029d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SerialIO::processIncoming</definition>
+        <argsstring>()</argsstring>
+        <name>processIncoming</name>
+        <reimplementedby refid="classcrsf_1aa3ab8580352dff53f78cfec944f05db2">processIncoming</reimplementedby>
+        <reimplementedby refid="classsbus_1a2051c763f60e7d74aae9c247ecd3345a">processIncoming</reimplementedby>
+        <briefdescription>
+<para>decode the incoming serial data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SerialIO.h" line="46" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classSerialIO_1a6bae13b73fa25c1d17ad7712a51c2cf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SerialIO::getChannel</definition>
+        <argsstring>(crsf_channels_t *channelData)</argsstring>
+        <name>getChannel</name>
+        <reimplementedby refid="classcrsf_1a64c0d7fdcf2da2b7d37e4e373003f24a">getChannel</reimplementedby>
+        <reimplementedby refid="classsbus_1a9ed525622c08de34cbf9e3f166acd77f">getChannel</reimplementedby>
+        <param>
+          <type><ref refid="crsf__protocol_8h_1acc70938025350136337a247b487027a6" kindref="member">crsf_channels_t</ref> *</type>
+          <declname>channelData</declname>
+        </param>
+        <briefdescription>
+<para>Gives the decoded rc channels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channelData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a crsf_channels_t struct where the decoded channel data will be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SerialIO.h" line="56" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class that stores state and functions for initialising and decoding rc protocol. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>sbus</label>
+        <link refid="classsbus"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SerialIO</label>
+        <link refid="classSerialIO"/>
+      </node>
+      <node id="2">
+        <label>crsf</label>
+        <link refid="classcrsf"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/SerialIO.h" line="17" column="1" bodyfile="src/SerialIO.h" bodystart="17" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classSerialIO_1ac0bbebbb77c061ec85f1b2d10820ecbe" prot="protected" virt="non-virtual"><scope>SerialIO</scope><name>_buffer</name></member>
+      <member refid="classSerialIO_1adc076a55e77604224dd861ef8130244f" prot="protected" virt="non-virtual"><scope>SerialIO</scope><name>_headerDetected</name></member>
+      <member refid="classSerialIO_1a991be4261eddcd953551d73cf2feeb31" prot="protected" virt="non-virtual"><scope>SerialIO</scope><name>_inverted</name></member>
+      <member refid="classSerialIO_1a5c491e997496bf201aa03731f3a548d7" prot="protected" virt="non-virtual"><scope>SerialIO</scope><name>_prevBuffer</name></member>
+      <member refid="classSerialIO_1a7180c0fc108ed2e41d926dd3ae67b1d6" prot="protected" virt="non-virtual"><scope>SerialIO</scope><name>_rxIndex</name></member>
+      <member refid="classSerialIO_1a874e6357c323f6ec3f5a0f180889d05a" prot="protected" virt="non-virtual"><scope>SerialIO</scope><name>_rxPin</name></member>
+      <member refid="classSerialIO_1ae5af4a41c44fb81263281e64b37f898b" prot="protected" virt="non-virtual"><scope>SerialIO</scope><name>_rxPort</name></member>
+      <member refid="classSerialIO_1a8a8eb08945846fc9962b6a6140436c13" prot="protected" virt="non-virtual"><scope>SerialIO</scope><name>_txPin</name></member>
+      <member refid="classSerialIO_1a8d7b00745bb220b8675c15dbc2f5dcdc" prot="public" virt="virtual"><scope>SerialIO</scope><name>begin</name></member>
+      <member refid="classSerialIO_1a6bae13b73fa25c1d17ad7712a51c2cf5" prot="public" virt="virtual"><scope>SerialIO</scope><name>getChannel</name></member>
+      <member refid="classSerialIO_1abd10b04f6648190c8a5c05757ab029d6" prot="public" virt="virtual"><scope>SerialIO</scope><name>processIncoming</name></member>
+      <member refid="classSerialIO_1a0781ef98a22989c46bd7f6dbcfcc37d3" prot="public" virt="non-virtual"><scope>SerialIO</scope><name>SerialIO</name></member>
+      <member refid="classSerialIO_1a5750c74798707c402ade5b4aadd66ae9" prot="public" virt="virtual"><scope>SerialIO</scope><name>~SerialIO</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

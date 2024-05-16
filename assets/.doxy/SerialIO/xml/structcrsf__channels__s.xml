@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structcrsf__channels__s" kind="struct" language="C++" prot="public">
+    <compoundname>crsf_channels_s</compoundname>
+    <includes refid="crsf__protocol_8h" local="no">crsf_protocol.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcrsf__channels__s_1a1806779bf4705e97d68844ff1932ee24" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel1</definition>
+        <argsstring></argsstring>
+        <name>channel1</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="103" column="12" bodyfile="src/crsf_protocol.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1a8427dd2f2bc3d75ca8fd1c0b6d20cba1" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel2</definition>
+        <argsstring></argsstring>
+        <name>channel2</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="104" column="12" bodyfile="src/crsf_protocol.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1a7f77b33e4adcaf836503e374f4e1a7b7" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel3</definition>
+        <argsstring></argsstring>
+        <name>channel3</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="105" column="12" bodyfile="src/crsf_protocol.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1a3f1163d06fdff4c0bfcf29c5e73e0aec" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel4</definition>
+        <argsstring></argsstring>
+        <name>channel4</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="106" column="12" bodyfile="src/crsf_protocol.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1aab4a3138e7b842b0af85c21d316bdcdf" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel5</definition>
+        <argsstring></argsstring>
+        <name>channel5</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="107" column="12" bodyfile="src/crsf_protocol.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1a8c32187145f0f86649db81cdceea299f" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel6</definition>
+        <argsstring></argsstring>
+        <name>channel6</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="108" column="12" bodyfile="src/crsf_protocol.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1a4654eaadac7436c75fd493f738a1173c" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel7</definition>
+        <argsstring></argsstring>
+        <name>channel7</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="109" column="12" bodyfile="src/crsf_protocol.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1a7a425817938179cd70397e02e0e58779" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel8</definition>
+        <argsstring></argsstring>
+        <name>channel8</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="110" column="12" bodyfile="src/crsf_protocol.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1a4f79f76c108021b4fcad9bef8d2bcab7" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel9</definition>
+        <argsstring></argsstring>
+        <name>channel9</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="111" column="12" bodyfile="src/crsf_protocol.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1a128d03cea899a74ce7d10835443c7c46" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel10</definition>
+        <argsstring></argsstring>
+        <name>channel10</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="112" column="12" bodyfile="src/crsf_protocol.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1a98a32690d1239571f2c2cce97c009e82" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel11</definition>
+        <argsstring></argsstring>
+        <name>channel11</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="113" column="12" bodyfile="src/crsf_protocol.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1af3b064663e36506744fee236e05ac7de" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel12</definition>
+        <argsstring></argsstring>
+        <name>channel12</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="114" column="12" bodyfile="src/crsf_protocol.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1a052aa79ca866d95ef6f3e0c819b8a474" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel13</definition>
+        <argsstring></argsstring>
+        <name>channel13</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="115" column="12" bodyfile="src/crsf_protocol.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1a9687b7077d532650edcc4f757e7b2d58" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel14</definition>
+        <argsstring></argsstring>
+        <name>channel14</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="116" column="12" bodyfile="src/crsf_protocol.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1a128005ed9c30019f2ee12187e5cfc94f" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel15</definition>
+        <argsstring></argsstring>
+        <name>channel15</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="117" column="12" bodyfile="src/crsf_protocol.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__channels__s_1a2ddf06021b28df330d5ae0f3150f2114" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned crsf_channels_s::channel16</definition>
+        <argsstring></argsstring>
+        <name>channel16</name>
+        <bitfield> 11</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="118" column="12" bodyfile="src/crsf_protocol.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>RC Packet Frame </para>
+    </detaileddescription>
+    <location file="src/crsf_protocol.h" line="102" column="1" bodyfile="src/crsf_protocol.h" bodystart="102" bodyend="119"/>
+    <listofallmembers>
+      <member refid="structcrsf__channels__s_1a1806779bf4705e97d68844ff1932ee24" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel1</name></member>
+      <member refid="structcrsf__channels__s_1a128d03cea899a74ce7d10835443c7c46" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel10</name></member>
+      <member refid="structcrsf__channels__s_1a98a32690d1239571f2c2cce97c009e82" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel11</name></member>
+      <member refid="structcrsf__channels__s_1af3b064663e36506744fee236e05ac7de" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel12</name></member>
+      <member refid="structcrsf__channels__s_1a052aa79ca866d95ef6f3e0c819b8a474" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel13</name></member>
+      <member refid="structcrsf__channels__s_1a9687b7077d532650edcc4f757e7b2d58" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel14</name></member>
+      <member refid="structcrsf__channels__s_1a128005ed9c30019f2ee12187e5cfc94f" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel15</name></member>
+      <member refid="structcrsf__channels__s_1a2ddf06021b28df330d5ae0f3150f2114" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel16</name></member>
+      <member refid="structcrsf__channels__s_1a8427dd2f2bc3d75ca8fd1c0b6d20cba1" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel2</name></member>
+      <member refid="structcrsf__channels__s_1a7f77b33e4adcaf836503e374f4e1a7b7" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel3</name></member>
+      <member refid="structcrsf__channels__s_1a3f1163d06fdff4c0bfcf29c5e73e0aec" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel4</name></member>
+      <member refid="structcrsf__channels__s_1aab4a3138e7b842b0af85c21d316bdcdf" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel5</name></member>
+      <member refid="structcrsf__channels__s_1a8c32187145f0f86649db81cdceea299f" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel6</name></member>
+      <member refid="structcrsf__channels__s_1a4654eaadac7436c75fd493f738a1173c" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel7</name></member>
+      <member refid="structcrsf__channels__s_1a7a425817938179cd70397e02e0e58779" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel8</name></member>
+      <member refid="structcrsf__channels__s_1a4f79f76c108021b4fcad9bef8d2bcab7" prot="public" virt="non-virtual"><scope>crsf_channels_s</scope><name>channel9</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

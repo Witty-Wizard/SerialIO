@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structcrsf__sensor__battery__s" kind="struct" language="C++" prot="public">
+    <compoundname>crsf_sensor_battery_s</compoundname>
+    <includes refid="crsf__protocol_8h" local="no">crsf_protocol.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcrsf__sensor__battery__s_1a5602095139d08f5bfcdf473904229c57" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t crsf_sensor_battery_s::voltage</definition>
+        <argsstring></argsstring>
+        <name>voltage</name>
+        <bitfield> 16</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="137" column="12" bodyfile="src/crsf_protocol.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__sensor__battery__s_1a46ee58d6d1f48c4df5f9e59c740319e3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t crsf_sensor_battery_s::current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <bitfield> 16</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="138" column="12" bodyfile="src/crsf_protocol.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__sensor__battery__s_1a83c5c38a9432d475fecb285d061b5a7f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t crsf_sensor_battery_s::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <bitfield> 24</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="139" column="12" bodyfile="src/crsf_protocol.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcrsf__sensor__battery__s_1a5bf9d00726583816aff09c7b150dc5db" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t crsf_sensor_battery_s::remaining</definition>
+        <argsstring></argsstring>
+        <name>remaining</name>
+        <bitfield> 8</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/crsf_protocol.h" line="140" column="12" bodyfile="src/crsf_protocol.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Battery Voltage parameters </para>
+    </detaileddescription>
+    <location file="src/crsf_protocol.h" line="136" column="1" bodyfile="src/crsf_protocol.h" bodystart="136" bodyend="141"/>
+    <listofallmembers>
+      <member refid="structcrsf__sensor__battery__s_1a83c5c38a9432d475fecb285d061b5a7f" prot="public" virt="non-virtual"><scope>crsf_sensor_battery_s</scope><name>capacity</name></member>
+      <member refid="structcrsf__sensor__battery__s_1a46ee58d6d1f48c4df5f9e59c740319e3" prot="public" virt="non-virtual"><scope>crsf_sensor_battery_s</scope><name>current</name></member>
+      <member refid="structcrsf__sensor__battery__s_1a5bf9d00726583816aff09c7b150dc5db" prot="public" virt="non-virtual"><scope>crsf_sensor_battery_s</scope><name>remaining</name></member>
+      <member refid="structcrsf__sensor__battery__s_1a5602095139d08f5bfcdf473904229c57" prot="public" virt="non-virtual"><scope>crsf_sensor_battery_s</scope><name>voltage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
