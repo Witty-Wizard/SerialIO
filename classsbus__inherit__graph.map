@@ -1,0 +1,5 @@
+<map id="sbus" name="sbus">
+<area shape="rect" id="Node000001" title="A class for handling SBUS protocol communication." alt="" coords="15,79,64,105"/>
+<area shape="rect" id="Node000002" href="$classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol." alt="" coords="5,5,74,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="42,46,42,79,37,79,37,46"/>
+</map>
