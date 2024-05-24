@@ -8,7 +8,7 @@ crsf_channels_t channelData;
 SerialIO *receiver = nullptr;
 
 void setup() { 
-  receiver = new sbus(Serial1, 16)
+  receiver = new sbus(Serial1, 16);
   receiver->begin();
 }
 
