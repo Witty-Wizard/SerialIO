@@ -1,7 +1,10 @@
 #include "crsf.h"
 
 void crsf::begin() {
-  _rxPort->begin(CRSF_BAUDRATE, SERIAL_8N1, _rxPin, _txPin, _inverted);
+  HardwareSerial* serialPort = static_cast<HardwareSerial*>(_rxPort);
+
+  // Initialize the serial port
+  serialPort->begin(CRSF_BAUDRATE, SERIAL_8N1, _rxPin, _txPin, _inverted);
 }
 
 void crsf::processIncoming() {

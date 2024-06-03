@@ -27,7 +27,7 @@ public:
    * @param inverted Whether the serial signal is inverted (true) or not
    * (false).
    */
-  SerialIO(HardwareSerial *rxPort, int rxPin, int txPin, bool inverted)
+  SerialIO(Stream *rxPort, int rxPin, int txPin, bool inverted)
       : _rxPort(rxPort), _rxPin(rxPin), _txPin(txPin), _inverted(inverted){};
 
   virtual ~SerialIO(){};
@@ -56,7 +56,7 @@ public:
   virtual void getChannel(crsf_channels_t *channelData);
 
 protected:
-  HardwareSerial
+  Stream
       *_rxPort; // Pointer to the hardware serial port used for communication.
   bool _headerDetected; // Flag indicating whether a header has been detected
                         // in the incoming data.
