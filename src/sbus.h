@@ -31,9 +31,9 @@ public:
    * @param inverted Whether the serial signal is inverted (true) or not
    * (false).
    */
-  explicit sbus(Stream &rxPort, int rxPin, int txPin = -1,
+  explicit sbus(Stream *rxPort, int rxPin, int txPin = -1,
                 bool inverted = true)
-      : SerialIO(&rxPort, rxPin, txPin, inverted){};
+      : SerialIO(rxPort, rxPin, txPin, inverted){};
 
   virtual ~sbus(){};
 

@@ -28,9 +28,9 @@ public:
    * @param inverted Whether the serial signal is inverted (true) or not
    * (false).
    */
-  explicit crsf(Stream &rxPort, int rxPin, int txPin = -1,
+  explicit crsf(Stream *rxPort, int rxPin, int txPin = -1,
                 bool inverted = false)
-      : SerialIO(&rxPort, rxPin, txPin, inverted){};
+      : SerialIO(rxPort, rxPin, txPin, inverted){};
 
   virtual ~crsf(){};
 
