@@ -1,7 +1,7 @@
 var classSerialIO =
 [
-    [ "SerialIO", "classSerialIO.html#a0781ef98a22989c46bd7f6dbcfcc37d3", null ],
-    [ "begin", "classSerialIO.html#a8d7b00745bb220b8675c15dbc2f5dcdc", null ],
-    [ "getChannel", "classSerialIO.html#a6bae13b73fa25c1d17ad7712a51c2cf5", null ],
-    [ "processIncoming", "classSerialIO.html#abd10b04f6648190c8a5c05757ab029d6", null ]
+    [ "SerialIO", "classSerialIO.html#a51676a51e38a07822efcc9ffc3cd2677", null ],
+    [ "begin", "classSerialIO.html#a30590d6081a2c5a86b06564b4a9f149a", null ],
+    [ "getChannel", "classSerialIO.html#a2f598a00a45c636cdfcb97809ca492ee", null ],
+    [ "processIncoming", "classSerialIO.html#a3bcf156bb4d6f43f9e53b87cdb1d1fd4", null ]
 ];

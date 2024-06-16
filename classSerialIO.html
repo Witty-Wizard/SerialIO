@@ -117,24 +117,24 @@ Inheritance diagram for SerialIO:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0781ef98a22989c46bd7f6dbcfcc37d3" id="r_a0781ef98a22989c46bd7f6dbcfcc37d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0781ef98a22989c46bd7f6dbcfcc37d3">SerialIO</a> (HardwareSerial *rxPort, int rxPin, int txPin, bool inverted)</td></tr>
-<tr class="memdesc:a0781ef98a22989c46bd7f6dbcfcc37d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> class.  <br /></td></tr>
-<tr class="separator:a0781ef98a22989c46bd7f6dbcfcc37d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d7b00745bb220b8675c15dbc2f5dcdc" id="r_a8d7b00745bb220b8675c15dbc2f5dcdc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d7b00745bb220b8675c15dbc2f5dcdc">begin</a> ()</td></tr>
-<tr class="memdesc:a8d7b00745bb220b8675c15dbc2f5dcdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises the pins and setup serial port.  <br /></td></tr>
-<tr class="separator:a8d7b00745bb220b8675c15dbc2f5dcdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd10b04f6648190c8a5c05757ab029d6" id="r_abd10b04f6648190c8a5c05757ab029d6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd10b04f6648190c8a5c05757ab029d6">processIncoming</a> ()</td></tr>
-<tr class="memdesc:abd10b04f6648190c8a5c05757ab029d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">decode the incoming serial data.  <br /></td></tr>
-<tr class="separator:abd10b04f6648190c8a5c05757ab029d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bae13b73fa25c1d17ad7712a51c2cf5" id="r_a6bae13b73fa25c1d17ad7712a51c2cf5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bae13b73fa25c1d17ad7712a51c2cf5">getChannel</a> (<a class="el" href="crsf__protocol_8h.html#acc70938025350136337a247b487027a6">crsf_channels_t</a> *channelData)</td></tr>
-<tr class="memdesc:a6bae13b73fa25c1d17ad7712a51c2cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the decoded rc channels.  <br /></td></tr>
-<tr class="separator:a6bae13b73fa25c1d17ad7712a51c2cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51676a51e38a07822efcc9ffc3cd2677" id="r_a51676a51e38a07822efcc9ffc3cd2677"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51676a51e38a07822efcc9ffc3cd2677">SerialIO</a> (Stream *rxPort, int rxPin, int txPin, bool inverted)</td></tr>
+<tr class="memdesc:a51676a51e38a07822efcc9ffc3cd2677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> class.  <br /></td></tr>
+<tr class="separator:a51676a51e38a07822efcc9ffc3cd2677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30590d6081a2c5a86b06564b4a9f149a" id="r_a30590d6081a2c5a86b06564b4a9f149a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30590d6081a2c5a86b06564b4a9f149a">begin</a> ()</td></tr>
+<tr class="memdesc:a30590d6081a2c5a86b06564b4a9f149a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises the pins and setup serial port.  <br /></td></tr>
+<tr class="separator:a30590d6081a2c5a86b06564b4a9f149a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bcf156bb4d6f43f9e53b87cdb1d1fd4" id="r_a3bcf156bb4d6f43f9e53b87cdb1d1fd4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bcf156bb4d6f43f9e53b87cdb1d1fd4">processIncoming</a> ()</td></tr>
+<tr class="memdesc:a3bcf156bb4d6f43f9e53b87cdb1d1fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">decode the incoming serial data.  <br /></td></tr>
+<tr class="separator:a3bcf156bb4d6f43f9e53b87cdb1d1fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f598a00a45c636cdfcb97809ca492ee" id="r_a2f598a00a45c636cdfcb97809ca492ee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f598a00a45c636cdfcb97809ca492ee">getChannel</a> (<a class="el" href="crsf__protocol_8h.html#acc70938025350136337a247b487027a6">crsf_channels_t</a> *channelData)</td></tr>
+<tr class="memdesc:a2f598a00a45c636cdfcb97809ca492ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the decoded rc channels.  <br /></td></tr>
+<tr class="separator:a2f598a00a45c636cdfcb97809ca492ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ae5af4a41c44fb81263281e64b37f898b" id="r_ae5af4a41c44fb81263281e64b37f898b"><td class="memItemLeft" align="right" valign="top"><a id="ae5af4a41c44fb81263281e64b37f898b" name="ae5af4a41c44fb81263281e64b37f898b"></a>
-HardwareSerial *&#160;</td><td class="memItemRight" valign="bottom"><b>_rxPort</b></td></tr>
-<tr class="separator:ae5af4a41c44fb81263281e64b37f898b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288b0f5fb6a1d566124aa93c035ee451" id="r_a288b0f5fb6a1d566124aa93c035ee451"><td class="memItemLeft" align="right" valign="top"><a id="a288b0f5fb6a1d566124aa93c035ee451" name="a288b0f5fb6a1d566124aa93c035ee451"></a>
+Stream *&#160;</td><td class="memItemRight" valign="bottom"><b>_rxPort</b></td></tr>
+<tr class="separator:a288b0f5fb6a1d566124aa93c035ee451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc076a55e77604224dd861ef8130244f" id="r_adc076a55e77604224dd861ef8130244f"><td class="memItemLeft" align="right" valign="top"><a id="adc076a55e77604224dd861ef8130244f" name="adc076a55e77604224dd861ef8130244f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>_headerDetected</b></td></tr>
 <tr class="separator:adc076a55e77604224dd861ef8130244f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,19 +160,16 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that stores state and functions for initialising and decoding rc protocol. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0781ef98a22989c46bd7f6dbcfcc37d3" name="a0781ef98a22989c46bd7f6dbcfcc37d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0781ef98a22989c46bd7f6dbcfcc37d3">&#9670;&#160;</a></span>SerialIO()</h2>
+<a id="a51676a51e38a07822efcc9ffc3cd2677" name="a51676a51e38a07822efcc9ffc3cd2677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51676a51e38a07822efcc9ffc3cd2677">&#9670;&#160;</a></span>SerialIO()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SerialIO::SerialIO </td>
           <td>(</td>
-          <td class="paramtype">HardwareSerial *</td>          <td class="paramname"><span class="paramname"><em>rxPort</em></span>, </td>
+          <td class="paramtype">Stream *</td>          <td class="paramname"><span class="paramname"><em>rxPort</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -190,11 +187,6 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
           <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>inverted</em></span>&#160;)</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Constructor for the <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> class. </p>
@@ -212,8 +204,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8d7b00745bb220b8675c15dbc2f5dcdc" name="a8d7b00745bb220b8675c15dbc2f5dcdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d7b00745bb220b8675c15dbc2f5dcdc">&#9670;&#160;</a></span>begin()</h2>
+<a id="a30590d6081a2c5a86b06564b4a9f149a" name="a30590d6081a2c5a86b06564b4a9f149a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30590d6081a2c5a86b06564b4a9f149a">&#9670;&#160;</a></span>begin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,7 +214,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void SerialIO::begin </td>
+          <td class="memname">void SerialIO::begin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -241,8 +233,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
 
 </div>
 </div>
-<a id="a6bae13b73fa25c1d17ad7712a51c2cf5" name="a6bae13b73fa25c1d17ad7712a51c2cf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bae13b73fa25c1d17ad7712a51c2cf5">&#9670;&#160;</a></span>getChannel()</h2>
+<a id="a2f598a00a45c636cdfcb97809ca492ee" name="a2f598a00a45c636cdfcb97809ca492ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f598a00a45c636cdfcb97809ca492ee">&#9670;&#160;</a></span>getChannel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,7 +243,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void SerialIO::getChannel </td>
+          <td class="memname">void SerialIO::getChannel </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="crsf__protocol_8h.html#acc70938025350136337a247b487027a6">crsf_channels_t</a> *</td>          <td class="paramname"><span class="paramname"><em>channelData</em></span></td><td>)</td>
           <td></td>
@@ -276,8 +268,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
 
 </div>
 </div>
-<a id="abd10b04f6648190c8a5c05757ab029d6" name="abd10b04f6648190c8a5c05757ab029d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd10b04f6648190c8a5c05757ab029d6">&#9670;&#160;</a></span>processIncoming()</h2>
+<a id="a3bcf156bb4d6f43f9e53b87cdb1d1fd4" name="a3bcf156bb4d6f43f9e53b87cdb1d1fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bcf156bb4d6f43f9e53b87cdb1d1fd4">&#9670;&#160;</a></span>processIncoming()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -286,7 +278,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void SerialIO::processIncoming </td>
+          <td class="memname">void SerialIO::processIncoming </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -305,8 +297,9 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="SerialIO_8h_source.html">SerialIO.h</a></li>
+<li>src/<b>SerialIO.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
