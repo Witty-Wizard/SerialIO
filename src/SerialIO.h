@@ -27,8 +27,7 @@ public:
    * @param inverted Whether the serial signal is inverted (true) or not
    * (false).
    */
-  SerialIO(Stream *rxPort, int rxPin, int txPin, bool inverted)
-      : _rxPort(rxPort), _rxPin(rxPin), _txPin(txPin), _inverted(inverted){};
+  SerialIO(Stream *rxPort, int rxPin, int txPin, bool inverted);
 
   virtual ~SerialIO(){};
 
@@ -68,6 +67,7 @@ protected:
   uint8_t _buffer;
   uint8_t _prevBuffer;
 };
-#include "sbus.h"
 #include "crsf.h"
+#include "sbus.h"
+
 #endif

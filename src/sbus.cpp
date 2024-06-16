@@ -1,5 +1,8 @@
 #include "sbus.h"
 
+sbus::sbus(Stream *rxPort, int rxPin, int txPin, bool inverted)
+    : SerialIO(rxPort, rxPin, txPin, inverted) {}
+
 void sbus::begin() {
 
 // Initialize the serial port
