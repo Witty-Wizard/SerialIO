@@ -72,7 +72,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"SerialIO_8cpp.html"
+"SerialIO_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

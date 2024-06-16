@@ -170,17 +170,17 @@ Tutorial</h2>
 </div><!-- fragment --> To instantiate a <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> object for receiving data only, you can create an instance of the crsf class specifying the serial port, RX pin: <div class="fragment"><div class="line"><a class="code hl_class" href="classSerialIO.html">SerialIO</a> *receiver = <span class="keyword">new</span> <a class="code hl_class" href="classcrsf.html">crsf</a>(Serial1, pinRX);</div>
 </div><!-- fragment --></li>
 <li><b>Initialize Communication</b>: Call the begin() method to initialize communication with the specified serial port: <div class="fragment"><div class="line"><span class="keywordtype">void</span> setup() {</div>
-<div class="line">    receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a8d7b00745bb220b8675c15dbc2f5dcdc">begin</a>();</div>
+<div class="line">    receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a30590d6081a2c5a86b06564b4a9f149a">begin</a>();</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassSerialIO_html_a8d7b00745bb220b8675c15dbc2f5dcdc"><div class="ttname"><a href="classSerialIO.html#a8d7b00745bb220b8675c15dbc2f5dcdc">SerialIO::begin</a></div><div class="ttdeci">virtual void begin()</div><div class="ttdoc">Initialises the pins and setup serial port.</div></div>
+<div class="ttc" id="aclassSerialIO_html_a30590d6081a2c5a86b06564b4a9f149a"><div class="ttname"><a href="classSerialIO.html#a30590d6081a2c5a86b06564b4a9f149a">SerialIO::begin</a></div><div class="ttdeci">virtual void begin()</div><div class="ttdoc">Initialises the pins and setup serial port.</div><div class="ttdef"><b>Definition</b> SerialIO.cpp:8</div></div>
 </div><!-- fragment --></li>
 <li><p class="startli"><b>Process Incoming Data</b>: In the loop() function, call the processIncoming() method to process incoming bytes:</p>
-<div class="fragment"><div class="line">receiver-&gt;<a class="code hl_function" href="classSerialIO.html#abd10b04f6648190c8a5c05757ab029d6">processIncoming</a>();</div>
-<div class="ttc" id="aclassSerialIO_html_abd10b04f6648190c8a5c05757ab029d6"><div class="ttname"><a href="classSerialIO.html#abd10b04f6648190c8a5c05757ab029d6">SerialIO::processIncoming</a></div><div class="ttdeci">virtual void processIncoming()</div><div class="ttdoc">decode the incoming serial data.</div></div>
+<div class="fragment"><div class="line">receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a3bcf156bb4d6f43f9e53b87cdb1d1fd4">processIncoming</a>();</div>
+<div class="ttc" id="aclassSerialIO_html_a3bcf156bb4d6f43f9e53b87cdb1d1fd4"><div class="ttname"><a href="classSerialIO.html#a3bcf156bb4d6f43f9e53b87cdb1d1fd4">SerialIO::processIncoming</a></div><div class="ttdeci">virtual void processIncoming()</div><div class="ttdoc">decode the incoming serial data.</div><div class="ttdef"><b>Definition</b> SerialIO.cpp:12</div></div>
 </div><!-- fragment --></li>
 <li><p class="startli"><b>Retrieve Channel Data</b>: To retrieve the decoded RC channel data, call the getChannel() method, passing a pointer to the channelData structure:</p>
-<div class="fragment"><div class="line">receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a6bae13b73fa25c1d17ad7712a51c2cf5">getChannel</a>(&amp;channelData);</div>
-<div class="ttc" id="aclassSerialIO_html_a6bae13b73fa25c1d17ad7712a51c2cf5"><div class="ttname"><a href="classSerialIO.html#a6bae13b73fa25c1d17ad7712a51c2cf5">SerialIO::getChannel</a></div><div class="ttdeci">virtual void getChannel(crsf_channels_t *channelData)</div><div class="ttdoc">Gives the decoded rc channels.</div></div>
+<div class="fragment"><div class="line">receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a2f598a00a45c636cdfcb97809ca492ee">getChannel</a>(&amp;channelData);</div>
+<div class="ttc" id="aclassSerialIO_html_a2f598a00a45c636cdfcb97809ca492ee"><div class="ttname"><a href="classSerialIO.html#a2f598a00a45c636cdfcb97809ca492ee">SerialIO::getChannel</a></div><div class="ttdeci">virtual void getChannel(crsf_channels_t *channelData)</div><div class="ttdoc">Gives the decoded rc channels.</div><div class="ttdef"><b>Definition</b> SerialIO.cpp:17</div></div>
 </div><!-- fragment --><p> <b>see also</b>:</p><ul>
 <li><a class="el" href="classSerialIO.html">SerialIO</a></li>
 <li><a class="el" href="classsbus.html">sbus</a></li>
@@ -200,13 +200,13 @@ CRSF Basic Example</h3>
 <div class="line"><a class="code hl_class" href="classSerialIO.html">SerialIO</a> *receiver = <span class="keyword">nullptr</span>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> setup() { </div>
-<div class="line">  receiver = <span class="keyword">new</span> <a class="code hl_class" href="classcrsf.html">crsf</a>(Serial1, 16);</div>
-<div class="line">  receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a8d7b00745bb220b8675c15dbc2f5dcdc">begin</a>();</div>
+<div class="line">  receiver = <span class="keyword">new</span> <a class="code hl_class" href="classcrsf.html">crsf</a>(&amp;Serial1, 16);</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a30590d6081a2c5a86b06564b4a9f149a">begin</a>();</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> loop() {</div>
-<div class="line">  receiver-&gt;<a class="code hl_function" href="classSerialIO.html#abd10b04f6648190c8a5c05757ab029d6">processIncoming</a>();</div>
-<div class="line">  receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a6bae13b73fa25c1d17ad7712a51c2cf5">getChannel</a>(&amp;channelData);</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a3bcf156bb4d6f43f9e53b87cdb1d1fd4">processIncoming</a>();</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a2f598a00a45c636cdfcb97809ca492ee">getChannel</a>(&amp;channelData);</div>
 <div class="line">}</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md7"></a>
 SBUS Basic Example</h3>
@@ -218,15 +218,15 @@ SBUS Basic Example</h3>
 <div class="line"><a class="code hl_class" href="classSerialIO.html">SerialIO</a> *receiver = <span class="keyword">nullptr</span>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> setup() { </div>
-<div class="line">  receiver = <span class="keyword">new</span> <a class="code hl_class" href="classsbus.html">sbus</a>(Serial1, 16);</div>
-<div class="line">  receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a8d7b00745bb220b8675c15dbc2f5dcdc">begin</a>();</div>
+<div class="line">  receiver = <span class="keyword">new</span> <a class="code hl_class" href="classsbus.html">sbus</a>(&amp;Serial1, 16);</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a30590d6081a2c5a86b06564b4a9f149a">begin</a>();</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> loop() {</div>
-<div class="line">  receiver-&gt;<a class="code hl_function" href="classSerialIO.html#abd10b04f6648190c8a5c05757ab029d6">processIncoming</a>();</div>
-<div class="line">  receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a6bae13b73fa25c1d17ad7712a51c2cf5">getChannel</a>(&amp;channelData);</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a3bcf156bb4d6f43f9e53b87cdb1d1fd4">processIncoming</a>();</div>
+<div class="line">  receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a2f598a00a45c636cdfcb97809ca492ee">getChannel</a>(&amp;channelData);</div>
 <div class="line">}</div>
-<div class="ttc" id="aclasssbus_html"><div class="ttname"><a href="classsbus.html">sbus</a></div><div class="ttdoc">A class for handling SBUS protocol communication.</div><div class="ttdef"><b>Definition</b> sbus.h:21</div></div>
+<div class="ttc" id="aclasssbus_html"><div class="ttname"><a href="classsbus.html">sbus</a></div><div class="ttdoc">A class for handling SBUS protocol communication.</div><div class="ttdef"><b>Definition</b> sbus.h:22</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
 Guide to Adding More Protocols</h1>
 <h2><a class="anchor" id="autotoc_md9"></a>
@@ -267,9 +267,9 @@ Basic Functions Required</h2>
 <div class="line">  ;</div>
 <div class="line">  ~XYZProtocol();</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">void</span> <a class="code hl_function" href="classSerialIO.html#a8d7b00745bb220b8675c15dbc2f5dcdc">begin</a>();</div>
-<div class="line">  <span class="keywordtype">void</span> <a class="code hl_function" href="classSerialIO.html#abd10b04f6648190c8a5c05757ab029d6">processIncoming</a>();</div>
-<div class="line">  <span class="keywordtype">void</span> <a class="code hl_function" href="classSerialIO.html#a6bae13b73fa25c1d17ad7712a51c2cf5">getChannel</a>(<span class="comment">/* Parameters as needed */</span>);</div>
+<div class="line">  <span class="keywordtype">void</span> <a class="code hl_function" href="classSerialIO.html#a30590d6081a2c5a86b06564b4a9f149a">begin</a>();</div>
+<div class="line">  <span class="keywordtype">void</span> <a class="code hl_function" href="classSerialIO.html#a3bcf156bb4d6f43f9e53b87cdb1d1fd4">processIncoming</a>();</div>
+<div class="line">  <span class="keywordtype">void</span> <a class="code hl_function" href="classSerialIO.html#a2f598a00a45c636cdfcb97809ca492ee">getChannel</a>(<span class="comment">/* Parameters as needed */</span>);</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
 <div class="line">  HardwareSerial *_serialPort;</div>
