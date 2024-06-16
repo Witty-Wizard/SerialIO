@@ -1,10 +1,19 @@
 #include "sbus.h"
 
 void sbus::begin() {
-  HardwareSerial* serialPort = static_cast<HardwareSerial*>(_rxPort);
 
-  // Initialize the serial port
+// Initialize the serial port
+#if defined(ARDUINO_ARCH_ESP32)
+  HardwareSerial *serialPort = (HardwareSerial *)_rxPort;
   serialPort->begin(SBUS_BAUDRATE, SERIAL_8E2, _rxPin, _txPin, _inverted);
+#elif defined(ARDUINO_ARCH_RP2040)
+  SerialUART *serialPort = (SerialUART *)_rxPort;
+  serialPort->setPinout(_txPin, _rxPin);
+  serialPort->begin(SBUS_BAUDRATE, SERIAL_8E2);
+#else
+#error                                                                         \
+    "Unsupported hardware platform. This code supports ESP32 and RP2040 architectures only."
+#endif
 }
 
 void sbus::processIncoming() {
