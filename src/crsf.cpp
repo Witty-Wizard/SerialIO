@@ -1,4 +1,8 @@
 #include "crsf.h"
+
+crsf::crsf(Stream *rxPort, int rxPin, int txPin, bool inverted)
+    : SerialIO(rxPort, rxPin, txPin, inverted){};
+
 void crsf::begin() {
 
 // Initialize the serial port
