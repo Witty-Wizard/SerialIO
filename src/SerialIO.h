@@ -69,5 +69,6 @@ protected:
 };
 #include "crsf.h"
 #include "sbus.h"
+#include "ibus.h"
 
 #endif

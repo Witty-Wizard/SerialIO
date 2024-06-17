@@ -8,7 +8,6 @@
 #define CRSF_H
 
 #include "SerialIO.h"      // Include header file for the serial IO class
-#include "crsf_protocol.h" // Include header file for CRSF protocol
 
 #define CRC8_POLY_D5 0xD5
 
