@@ -5,6 +5,11 @@ SerialIO::SerialIO(Stream *rxPort, int rxPin, int txPin, bool inverted)
     // Constructor implementation
 }
 
+SerialIO::~SerialIO() {
+  // End serial communication
+  _rxPort->end();
+}
+
 void SerialIO::begin() {
     // Initialize pins and setup serial port
 }

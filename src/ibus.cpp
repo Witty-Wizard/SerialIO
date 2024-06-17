@@ -1,6 +1,6 @@
 #include "ibus.h"
 
-ibus : ibus(Stream *rxPort, int rxPin, int txPin = -1, bool inverted = false)
+ibus : ibus(Stream *rxPort, int rxPin, int txPin, bool inverted)
     : SerialIO(rxPort, rxPin, txPin, inverted) {}
 
 void ibus::begin() {

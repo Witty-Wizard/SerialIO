@@ -31,8 +31,6 @@ public:
   explicit ibus(Stream *rxPort, int rxPin, int txPin = -1,
                 bool inverted = false);
 
-  virtual ~ibus(){}; ///< Destructor for the IBUS class
-
   /**
    * @brief Initializes the IBUS communication.
    */

@@ -7,7 +7,7 @@
 #ifndef CRSF_H
 #define CRSF_H
 
-#include "SerialIO.h"      // Include header file for the serial IO class
+#include "SerialIO.h" // Include header file for the serial IO class
 
 #define CRC8_POLY_D5 0xD5
 
@@ -29,8 +29,6 @@ public:
    */
   explicit crsf(Stream *rxPort, int rxPin, int txPin = -1,
                 bool inverted = false);
-
-  virtual ~crsf(){};
 
   /**
    * @brief Initializes the CRSF communication.
