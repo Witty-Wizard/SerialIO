@@ -1,4 +1,4 @@
-name: Arduino_CI
+name: Arduino CI
 
 on: [push, pull_request]
 
