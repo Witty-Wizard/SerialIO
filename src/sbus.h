@@ -7,9 +7,7 @@
 #ifndef SBUS_H
 #define SBUS_H
 
-#include "SerialIO.h"      // Include header file for the serial IO class
-#include "crsf_protocol.h" // Include header file for CRSF protocol
-
+#include "SerialIO.h" // Include header file for the serial IO class
 
 #define HEADER_SBUS 0X0F        ///< SBUS Header Byte
 #define FOOTER_SBUS 0X00        ///< SBUS Footer Byte
@@ -35,8 +33,9 @@ public:
   explicit sbus(Stream *rxPort, int rxPin, int txPin = -1,
                 bool inverted = true);
 
-  virtual ~sbus(){};
-
+  /**
+   * @brief Initializes the SBUS communication.
+   */
   void begin() override;
   void processIncoming() override;
 
