@@ -11,6 +11,8 @@
 
 #define IBUS_MAX_PACKET_SIZE 32 ///< Maximum packet size for the IBUS protocol
 #define IBUS_BAUDRATE 115200    ///< Baud rate for IBUS communication
+#define IBUS_HEADER1 0x20
+#define IBUS_HEADER2 0x40
 
 /**
  * @brief A class for handling IBUS protocol communication.
@@ -18,6 +20,7 @@
 class ibus : public SerialIO {
 private:
   uint8_t _rxData[IBUS_MAX_PACKET_SIZE]; ///< Buffer to store received IBUS data
+  bool checkSum();
 
 public:
   /**
@@ -28,7 +31,7 @@ public:
    * @param inverted Whether the serial signal is inverted (true) or not
    * (false).
    */
-  explicit ibus(Stream *rxPort, int rxPin, int txPin = -1,
+  explicit ibus(Stream *rxPort, int rxPin = -1, int txPin = -1,
                 bool inverted = false);
 
   /**

@@ -14,8 +14,7 @@
    rc protocol
 */
 /**************************************************************************/
-class SerialIO
-{
+class SerialIO {
 public:
   /**
    * @brief Constructor for the SerialIO class.
@@ -53,25 +52,25 @@ public:
 
   */
   /**************************************************************************/
-  virtual void getChannel(crsf_channels_t *channelData);
+  virtual void getChannel(crsf_channels_t *channelData) = 0;
 
   virtual void writeChannel(crsf_channels_t channelData);
 
 protected:
   Stream
-      *_rxPort;         // Pointer to the hardware serial port used for communication.
+      *_rxPort; // Pointer to the hardware serial port used for communication.
   bool _headerDetected; // Flag indicating whether a header has been detected
                         // in the incoming data.
-  bool _inverted;       // Indicates whether the serial signal is inverted (true) or
-                        // not (false).
-  uint8_t _rxIndex;     // Index for the receive_buffer.
-  int _rxPin;           // The RX pin number.
-  int _txPin;           // The TX pin number.
+  bool _inverted;   // Indicates whether the serial signal is inverted (true) or
+                    // not (false).
+  uint8_t _rxIndex; // Index for the receive_buffer.
+  int _rxPin;       // The RX pin number.
+  int _txPin;       // The TX pin number.
   uint8_t _buffer;
   uint8_t _prevBuffer;
 };
 #include "crsf.h"
+#include "ibus.h"
 #include "sbus.h"
-// #include "ibus.h"
 
 #endif
