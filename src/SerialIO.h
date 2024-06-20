@@ -29,7 +29,7 @@ public:
    */
   SerialIO(Stream *rxPort, int rxPin, int txPin, bool inverted);
 
-  virtual ~SerialIO(){};
+  virtual ~SerialIO();
 
   /**************************************************************************/
   /*!
@@ -52,7 +52,9 @@ public:
 
   */
   /**************************************************************************/
-  virtual void getChannel(crsf_channels_t *channelData);
+  virtual void getChannel(crsf_channels_t *channelData) = 0;
+
+  virtual void writeChannel(crsf_channels_t channelData);
 
 protected:
   Stream
@@ -68,6 +70,7 @@ protected:
   uint8_t _prevBuffer;
 };
 #include "crsf.h"
+#include "ibus.h"
 #include "sbus.h"
 
 #endif

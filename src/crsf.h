@@ -7,8 +7,7 @@
 #ifndef CRSF_H
 #define CRSF_H
 
-#include "SerialIO.h"      // Include header file for the serial IO class
-#include "crsf_protocol.h" // Include header file for CRSF protocol
+#include "SerialIO.h" // Include header file for the serial IO class
 
 #define CRC8_POLY_D5 0xD5
 
@@ -28,10 +27,8 @@ public:
    * @param inverted Whether the serial signal is inverted (true) or not
    * (false).
    */
-  explicit crsf(Stream *rxPort, int rxPin, int txPin = -1,
+  explicit crsf(Stream *rxPort, int rxPin = -1, int txPin = -1,
                 bool inverted = false);
-
-  virtual ~crsf(){};
 
   /**
    * @brief Initializes the CRSF communication.

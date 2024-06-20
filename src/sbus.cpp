@@ -14,8 +14,7 @@ void sbus::begin() {
   serialPort->setPinout(_txPin, _rxPin);
   serialPort->begin(SBUS_BAUDRATE, SERIAL_8E2);
 #else
-#error                                                                         \
-    "Unsupported hardware platform. This code supports ESP32 and RP2040 architectures only."
+#warning #warning "Unsupported hardware platform."
 #endif
 }
 

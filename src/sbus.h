@@ -7,12 +7,10 @@
 #ifndef SBUS_H
 #define SBUS_H
 
-#include "SerialIO.h"      // Include header file for the serial IO class
-#include "crsf_protocol.h" // Include header file for CRSF protocol
+#include "SerialIO.h" // Include header file for the serial IO class
 
-
-#define HEADER_SBUS 0X0F        ///< SBUS Header Byte
-#define FOOTER_SBUS 0X00        ///< SBUS Footer Byte
+#define HEADER_SBUS 0x0F        ///< SBUS Header Byte
+#define FOOTER_SBUS 0x00        ///< SBUS Footer Byte
 #define SBUS_BAUDRATE 100000    ///< SBUS baudrate
 #define SBUS_MAX_PACKET_SIZE 25 ///< SBUS packet length
 
@@ -32,10 +30,8 @@ public:
    * @param inverted Whether the serial signal is inverted (true) or not
    * (false).
    */
-  explicit sbus(Stream *rxPort, int rxPin, int txPin = -1,
+  explicit sbus(Stream *rxPort, int rxPin = -1, int txPin = -1,
                 bool inverted = true);
-
-  virtual ~sbus(){};
 
   /**
    * @brief Initializes the SBUS communication.
