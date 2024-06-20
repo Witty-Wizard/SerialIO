@@ -14,8 +14,7 @@ void crsf::begin() {
   serialPort->setPinout(_txPin, _rxPin);
   serialPort->begin(CRSF_BAUDRATE, SERIAL_8N1);
 #else
-#error                                                                         \
-    "Unsupported hardware platform. This code supports ESP32 and RP2040 architectures only."
+#warning #warning "Unsupported hardware platform."
 #endif
 }
 
