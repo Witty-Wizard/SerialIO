@@ -1,17 +1,20 @@
 <map id="src/crsf_protocol.h" name="src/crsf_protocol.h">
-<area shape="rect" id="Node000001" title="Header file for the CRSF protocol implementation." alt="" coords="166,5,294,31"/>
-<area shape="rect" id="Node000002" href="$SerialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="180,79,280,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,46,232,79,227,79,227,46"/>
-<area shape="rect" id="Node000005" href="$crsf_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="5,160,81,186"/>
-<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="205,43,59,162,56,158,202,39"/>
-<area shape="rect" id="Node000006" href="$sbus_8h.html" title="Header file for the SBUS protocol implementation." alt="" coords="440,160,521,186"/>
-<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="264,37,462,157,459,162,261,42"/>
-<area shape="rect" id="Node000003" href="$crsf__basic_8ino.html" title=" " alt="" coords="105,153,245,193"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,119,191,154,186,151,211,116"/>
-<area shape="rect" id="Node000004" href="$sbus__basic_8ino.html" title=" " alt="" coords="270,153,416,193"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="261,111,317,150,314,154,258,116"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="181,113,66,162,64,157,179,108"/>
-<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="279,107,417,150,440,158,438,163,416,155,277,112"/>
-<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="92,152,207,103,209,108,94,156"/>
-<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="445,157,440,155,279,107,281,102,441,150,447,152"/>
+<area shape="rect" id="Node000001" title="Header file for the CRSF protocol implementation." alt="" coords="479,5,608,31"/>
+<area shape="rect" id="Node000002" href="$SerialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="493,79,594,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="546,46,546,79,541,79,541,46"/>
+<area shape="rect" id="Node000003" href="$crsf__basic_8ino.html" title=" " alt="" coords="5,153,146,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="478,104,331,126,159,155,147,158,146,152,158,150,331,121,477,99"/>
+<area shape="rect" id="Node000004" href="$ibus__basic_8ino.html" title=" " alt="" coords="170,153,312,193"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="483,112,313,156,312,151,482,106"/>
+<area shape="rect" id="Node000005" href="$sbus__basic_8ino.html" title=" " alt="" coords="336,153,482,193"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="512,115,443,155,441,150,509,110"/>
+<area shape="rect" id="Node000006" href="$crsf_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="506,160,581,186"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="538,120,539,160,534,160,532,120"/>
+<area shape="rect" id="Node000007" href="$ibus_8h.html" title="Header file for the Ibus protocol implementation." alt="" coords="605,160,682,186"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="565,113,623,158,620,162,562,117"/>
+<area shape="rect" id="Node000008" href="$sbus_8h.html" title="Header file for the SBUS protocol implementation." alt="" coords="707,160,788,186"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="583,109,710,157,708,162,581,114"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="549,145,548,105,553,105,555,145"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="622,152,564,107,567,103,625,147"/>
+<area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="708,156,581,108,583,103,710,151"/>
 </map>

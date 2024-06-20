@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sbus_5fbaudrate_0',['SBUS_BAUDRATE',['../sbus_8h.html#a3845cac6a52b70c707222df645b6c853',1,'sbus.h']]],
-  ['sbus_5fmax_5fpacket_5fsize_1',['SBUS_MAX_PACKET_SIZE',['../sbus_8h.html#a663707452658145decf130f3f1ebd631',1,'sbus.h']]]
+  ['ibus_5fbaudrate_0',['IBUS_BAUDRATE',['../ibus_8h.html#a71178a6bb99ef04e155d33d52f038909',1,'ibus.h']]],
+  ['ibus_5fmax_5fpacket_5fsize_1',['IBUS_MAX_PACKET_SIZE',['../ibus_8h.html#a5173cfd45de6f3f21c78d56474ad7f27',1,'ibus.h']]]
 ];

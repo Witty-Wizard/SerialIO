@@ -121,9 +121,9 @@ Collaboration diagram for sbus:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab706642f959879a92fd3c7e106a3dc55" id="r_ab706642f959879a92fd3c7e106a3dc55"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab706642f959879a92fd3c7e106a3dc55">sbus</a> (Stream *rxPort, int rxPin, int txPin=-1, bool inverted=true)</td></tr>
-<tr class="memdesc:ab706642f959879a92fd3c7e106a3dc55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the SBUS class.  <br /></td></tr>
-<tr class="separator:ab706642f959879a92fd3c7e106a3dc55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39315eef1090ca35a2ec1aed9cbfec05" id="r_a39315eef1090ca35a2ec1aed9cbfec05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39315eef1090ca35a2ec1aed9cbfec05">sbus</a> (Stream *rxPort, int rxPin=-1, int txPin=-1, bool inverted=true)</td></tr>
+<tr class="memdesc:a39315eef1090ca35a2ec1aed9cbfec05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the SBUS class.  <br /></td></tr>
+<tr class="separator:a39315eef1090ca35a2ec1aed9cbfec05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7232d82f864fe8cc32b39c0c1989f418" id="r_a7232d82f864fe8cc32b39c0c1989f418"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7232d82f864fe8cc32b39c0c1989f418">begin</a> () override</td></tr>
 <tr class="memdesc:a7232d82f864fe8cc32b39c0c1989f418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the SBUS communication.  <br /></td></tr>
 <tr class="separator:a7232d82f864fe8cc32b39c0c1989f418"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,6 +137,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a51676a51e38a07822efcc9ffc3cd2677 inherit pub_methods_classSerialIO" id="r_a51676a51e38a07822efcc9ffc3cd2677"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerialIO.html#a51676a51e38a07822efcc9ffc3cd2677">SerialIO</a> (Stream *rxPort, int rxPin, int txPin, bool inverted)</td></tr>
 <tr class="memdesc:a51676a51e38a07822efcc9ffc3cd2677 inherit pub_methods_classSerialIO"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> class.  <br /></td></tr>
 <tr class="separator:a51676a51e38a07822efcc9ffc3cd2677 inherit pub_methods_classSerialIO"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30457d9ccd7fb36afe4214d6640829f2 inherit pub_methods_classSerialIO" id="r_a30457d9ccd7fb36afe4214d6640829f2"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>writeChannel</b> (<a class="el" href="crsf__protocol_8h.html#acc70938025350136337a247b487027a6">crsf_channels_t</a> channelData)</td></tr>
+<tr class="separator:a30457d9ccd7fb36afe4214d6640829f2 inherit pub_methods_classSerialIO"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -169,8 +172,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class for handling SBUS protocol communication. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab706642f959879a92fd3c7e106a3dc55" name="ab706642f959879a92fd3c7e106a3dc55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab706642f959879a92fd3c7e106a3dc55">&#9670;&#160;</a></span>sbus()</h2>
+<a id="a39315eef1090ca35a2ec1aed9cbfec05" name="a39315eef1090ca35a2ec1aed9cbfec05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39315eef1090ca35a2ec1aed9cbfec05">&#9670;&#160;</a></span>sbus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,7 +189,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>rxPin</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>rxPin</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -280,7 +283,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classSerialIO.html#a2f598a00a45c636cdfcb97809ca492ee">SerialIO</a>.</p>
+<p>Implements <a class="el" href="classSerialIO.html#af9ad40f8b521c431a0bf5a3ef91a4dc6">SerialIO</a>.</p>
 
 </div>
 </div>

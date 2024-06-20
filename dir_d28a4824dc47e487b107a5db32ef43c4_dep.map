@@ -1,10 +1,13 @@
 <map id="examples" name="examples">
 <area shape="rect" id="node2" href="dir_e1cdda853dfed1aec62f8d7bad60d1ed.html" title="crsf_basic" alt="" coords="127,27,209,52"/>
-<area shape="rect" id="node4" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html" title="src" alt="" coords="202,100,241,126"/>
-<area shape="poly" id="edge1" href="dir_000000_000004.html" alt="" coords="179,51,205,86,201,89,175,54"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000000_000004.html" title="1" alt="" coords="205,73,212,88"/>
-<area shape="rect" id="node3" href="dir_55843c87c0f105b5d66edf3dd90084e2.html" title="sbus_basic" alt="" coords="232,27,320,52"/>
-<area shape="poly" id="edge2" href="dir_000003_000004.html" alt="" coords="269,54,242,90,238,86,265,51"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000003_000004.html" title="1" alt="" coords="245,83,252,98"/>
-<area shape="rect" id="clust1" href="dir_d28a4824dc47e487b107a5db32ef43c4.html" alt="" coords="16,16,331,63"/>
+<area shape="rect" id="node5" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html" title="src" alt="" coords="255,100,294,126"/>
+<area shape="poly" id="edge1" href="dir_000000_000005.html" alt="" coords="188,51,245,89,242,94,185,55"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000000_000005.html" title="1" alt="" coords="243,75,250,90"/>
+<area shape="rect" id="node3" href="dir_402b80de95337961ccd53f2f7b23a00f.html" title="ibus_basic" alt="" coords="233,27,316,52"/>
+<area shape="poly" id="edge2" href="dir_000003_000005.html" alt="" coords="277,53,277,85,272,85,272,53"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000003_000005.html" title="1" alt="" coords="280,74,287,89"/>
+<area shape="rect" id="node4" href="dir_55843c87c0f105b5d66edf3dd90084e2.html" title="sbus_basic" alt="" coords="340,27,428,52"/>
+<area shape="poly" id="edge3" href="dir_000004_000005.html" alt="" coords="367,55,307,94,304,89,364,51"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000004_000005.html" title="1" alt="" coords="310,89,317,104"/>
+<area shape="rect" id="clust1" href="dir_d28a4824dc47e487b107a5db32ef43c4.html" alt="" coords="16,16,439,63"/>
 </map>
