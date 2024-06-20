@@ -8,7 +8,7 @@ SerialIO::SerialIO(Stream *rxPort, int rxPin, int txPin, bool inverted)
 SerialIO::~SerialIO() {
 // End serial communication
 #if defined(ARDUINO_ARCH_ESP32)
-  HardwareSerial *serialPort = (HarsdwareSerial *)_rxPort;
+  HardwareSerial *serialPort = (HardwareSerial *)_rxPort;
   serialPort->end();
 #elif defined(ARDUINO_ARCH_RP2040)
   SerialUART *serialPort = (SerialUART *)_rxPort;
