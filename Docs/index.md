@@ -5,6 +5,7 @@ SerialIO is a common library designed to simplify the implementation of RC proto
 
 - [Futaba SBUS protocol](#sbusintro)
 - [Crossfire RC protocol](#crsfintro)
+- [Flysky IBUS protocol](#ibusintro)
 
 ## SBUS {#sbusintro}
 
@@ -29,6 +30,16 @@ CRSF (Crossfire Serial Protocol) is a digital communication protocol designed fo
 - Parity: No Parity
 - Stop bits: 1 Stop bits
 - Signal polarity: Uninverted
+
+## IBUS Protocol {#ibusintro}
+The IBUS protocol is a digital communication protocol commonly used in radio-controlled (RC) systems for transmitting control signals between transmitters and receivers.
+
+### Configuration
+- Baud rate: 115200
+- Data bits: 8 Bits
+- Parity: No Parity
+- Stop bits: 1 Stop bits
+- Signal polarity: Non-Inverted
 
 # Getting Started
 - [Installation](#installation)
