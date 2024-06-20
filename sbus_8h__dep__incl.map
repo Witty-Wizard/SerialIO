@@ -1,13 +1,18 @@
 <map id="src/sbus.h" name="src/sbus.h">
-<area shape="rect" id="Node000001" title="Header file for the SBUS protocol implementation." alt="" coords="270,5,351,31"/>
-<area shape="rect" id="Node000002" href="$SerialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="260,79,360,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="304,46,306,78,301,79,299,46"/>
-<area shape="poly" id="edge6_Node000002_Node000001" title=" " alt="" coords="316,64,314,31,320,31,322,63"/>
+<area shape="rect" id="Node000001" title="Header file for the SBUS protocol implementation." alt="" coords="503,5,584,31"/>
+<area shape="rect" id="Node000002" href="$SerialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="493,79,594,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="537,46,539,78,534,79,532,46"/>
+<area shape="poly" id="edge9_Node000002_Node000001" title=" " alt="" coords="550,64,548,31,553,31,555,63"/>
 <area shape="rect" id="Node000003" href="$crsf__basic_8ino.html" title=" " alt="" coords="5,153,146,193"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="260,113,135,155,133,150,259,108"/>
-<area shape="rect" id="Node000004" href="$sbus__basic_8ino.html" title=" " alt="" coords="170,153,317,193"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="292,118,262,154,258,151,288,115"/>
-<area shape="rect" id="Node000005" href="$crsf_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="341,160,416,186"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="325,116,363,158,359,161,321,119"/>
-<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="364,149,325,107,329,103,367,146"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="478,104,331,126,159,155,147,158,146,152,158,150,331,121,477,99"/>
+<area shape="rect" id="Node000004" href="$ibus__basic_8ino.html" title=" " alt="" coords="170,153,312,193"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="483,112,313,156,312,151,482,106"/>
+<area shape="rect" id="Node000005" href="$sbus__basic_8ino.html" title=" " alt="" coords="336,153,482,193"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="512,115,443,155,441,150,509,110"/>
+<area shape="rect" id="Node000006" href="$crsf_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="506,160,581,186"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="538,120,539,160,534,160,532,120"/>
+<area shape="rect" id="Node000007" href="$ibus_8h.html" title="Header file for the Ibus protocol implementation." alt="" coords="605,160,682,186"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="565,113,623,158,620,162,562,117"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="549,145,548,105,553,105,555,145"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="622,152,564,107,567,103,625,147"/>
 </map>

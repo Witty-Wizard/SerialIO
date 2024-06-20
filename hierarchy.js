@@ -7,6 +7,7 @@ var hierarchy =
     [ "crsfPayloadLinkstatistics_s", "structcrsfPayloadLinkstatistics__s.html", null ],
     [ "SerialIO", "classSerialIO.html", [
       [ "crsf", "classcrsf.html", null ],
+      [ "ibus", "classibus.html", null ],
       [ "sbus", "classsbus.html", null ]
     ] ]
 ];

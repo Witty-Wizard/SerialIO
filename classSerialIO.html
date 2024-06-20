@@ -101,7 +101,7 @@ $(function(){initNavTree('classSerialIO.html',''); initResizable(true); });
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classSerialIO-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">SerialIO Class Reference</div></div>
+  <div class="headertitle"><div class="title">SerialIO Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -112,7 +112,7 @@ $(function(){initNavTree('classSerialIO.html',''); initResizable(true); });
 <div class="dynheader">
 Inheritance diagram for SerialIO:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classSerialIO__inherit__graph.svg" width="128" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSerialIO__inherit__graph.svg" width="198" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -126,9 +126,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3bcf156bb4d6f43f9e53b87cdb1d1fd4" id="r_a3bcf156bb4d6f43f9e53b87cdb1d1fd4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bcf156bb4d6f43f9e53b87cdb1d1fd4">processIncoming</a> ()</td></tr>
 <tr class="memdesc:a3bcf156bb4d6f43f9e53b87cdb1d1fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">decode the incoming serial data.  <br /></td></tr>
 <tr class="separator:a3bcf156bb4d6f43f9e53b87cdb1d1fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f598a00a45c636cdfcb97809ca492ee" id="r_a2f598a00a45c636cdfcb97809ca492ee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f598a00a45c636cdfcb97809ca492ee">getChannel</a> (<a class="el" href="crsf__protocol_8h.html#acc70938025350136337a247b487027a6">crsf_channels_t</a> *channelData)</td></tr>
-<tr class="memdesc:a2f598a00a45c636cdfcb97809ca492ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the decoded rc channels.  <br /></td></tr>
-<tr class="separator:a2f598a00a45c636cdfcb97809ca492ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ad40f8b521c431a0bf5a3ef91a4dc6" id="r_af9ad40f8b521c431a0bf5a3ef91a4dc6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9ad40f8b521c431a0bf5a3ef91a4dc6">getChannel</a> (<a class="el" href="crsf__protocol_8h.html#acc70938025350136337a247b487027a6">crsf_channels_t</a> *channelData)=0</td></tr>
+<tr class="memdesc:af9ad40f8b521c431a0bf5a3ef91a4dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the decoded rc channels.  <br /></td></tr>
+<tr class="separator:af9ad40f8b521c431a0bf5a3ef91a4dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30457d9ccd7fb36afe4214d6640829f2" id="r_a30457d9ccd7fb36afe4214d6640829f2"><td class="memItemLeft" align="right" valign="top"><a id="a30457d9ccd7fb36afe4214d6640829f2" name="a30457d9ccd7fb36afe4214d6640829f2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>writeChannel</b> (<a class="el" href="crsf__protocol_8h.html#acc70938025350136337a247b487027a6">crsf_channels_t</a> channelData)</td></tr>
+<tr class="separator:a30457d9ccd7fb36afe4214d6640829f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -229,12 +232,12 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
 
 <p>Initialises the pins and setup serial port. </p>
 
-<p>Reimplemented in <a class="el" href="classcrsf.html#a86bfe46e0bdbf447885dd1614ed939d0">crsf</a>, and <a class="el" href="classsbus.html#a7232d82f864fe8cc32b39c0c1989f418">sbus</a>.</p>
+<p>Reimplemented in <a class="el" href="classcrsf.html#a86bfe46e0bdbf447885dd1614ed939d0">crsf</a>, <a class="el" href="classibus.html#a9edf9871632e0f5b2a7e6e7ee0ff128b">ibus</a>, and <a class="el" href="classsbus.html#a7232d82f864fe8cc32b39c0c1989f418">sbus</a>.</p>
 
 </div>
 </div>
-<a id="a2f598a00a45c636cdfcb97809ca492ee" name="a2f598a00a45c636cdfcb97809ca492ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f598a00a45c636cdfcb97809ca492ee">&#9670;&#160;</a></span>getChannel()</h2>
+<a id="af9ad40f8b521c431a0bf5a3ef91a4dc6" name="af9ad40f8b521c431a0bf5a3ef91a4dc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9ad40f8b521c431a0bf5a3ef91a4dc6">&#9670;&#160;</a></span>getChannel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,7 +246,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SerialIO::getChannel </td>
+          <td class="memname">virtual void SerialIO::getChannel </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="crsf__protocol_8h.html#acc70938025350136337a247b487027a6">crsf_channels_t</a> *</td>          <td class="paramname"><span class="paramname"><em>channelData</em></span></td><td>)</td>
           <td></td>
@@ -251,7 +254,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -264,7 +267,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classcrsf.html#a64c0d7fdcf2da2b7d37e4e373003f24a">crsf</a>, and <a class="el" href="classsbus.html#a9ed525622c08de34cbf9e3f166acd77f">sbus</a>.</p>
+<p>Implemented in <a class="el" href="classcrsf.html#a64c0d7fdcf2da2b7d37e4e373003f24a">crsf</a>, <a class="el" href="classibus.html#a57c1f6c70920a934ec6aae68db0cb2ec">ibus</a>, and <a class="el" href="classsbus.html#a9ed525622c08de34cbf9e3f166acd77f">sbus</a>.</p>
 
 </div>
 </div>
@@ -293,7 +296,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
 
 <p>decode the incoming serial data. </p>
 
-<p>Reimplemented in <a class="el" href="classcrsf.html#aa3ab8580352dff53f78cfec944f05db2">crsf</a>, and <a class="el" href="classsbus.html#a2051c763f60e7d74aae9c247ecd3345a">sbus</a>.</p>
+<p>Reimplemented in <a class="el" href="classcrsf.html#aa3ab8580352dff53f78cfec944f05db2">crsf</a>, <a class="el" href="classibus.html#ac37ccdaf120706f8d773a3fb9aebb4e4">ibus</a>, and <a class="el" href="classsbus.html#a2051c763f60e7d74aae9c247ecd3345a">sbus</a>.</p>
 
 </div>
 </div>

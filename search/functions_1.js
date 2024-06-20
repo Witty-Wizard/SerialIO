@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['crsf_0',['crsf',['../classcrsf.html#a7ad0f6b64383dafda23f8eff33f20fd8',1,'crsf']]]
+  ['crsf_0',['crsf',['../classcrsf.html#a0ca8824ff95924899cf58148db22a3a3',1,'crsf']]]
 ];
