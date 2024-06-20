@@ -54,6 +54,8 @@ public:
   /**************************************************************************/
   virtual void getChannel(crsf_channels_t *channelData);
 
+  virtual void writeChannel(crsf_channels_t channelData);
+
 protected:
   Stream
       *_rxPort; // Pointer to the hardware serial port used for communication.

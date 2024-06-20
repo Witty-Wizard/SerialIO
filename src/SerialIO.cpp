@@ -7,7 +7,13 @@ SerialIO::SerialIO(Stream *rxPort, int rxPin, int txPin, bool inverted)
 
 SerialIO::~SerialIO() {
   // End serial communication
-  _rxPort->end();
+  #if defined(ARDUINO_ARCH_ESP32)
+  HardwareSerial *serialPort = (HardwareSerial *)_rxPort;
+  serialPort->end();
+  #elif defined(ARDUINO_ARCH_RP2040)
+  SerialUART *serialPort = (SerialUART *)_rxPort;
+  serialPort->end();
+  #else
 }
 
 void SerialIO::begin() {
@@ -22,4 +28,15 @@ void SerialIO::processIncoming() {
 void SerialIO::getChannel(crsf_channels_t *channelData) {
     // Get the decoded RC channels
     // This function can be empty if actual decoding is implemented in subclasses
+}
+
+void SerialIO::writeChannel(crsf_channels_t channelData){
+    #if defined(ARDUINO_ARCH_ESP32)
+    HardwareSerial *serialPort = (HardwareSerial *)_rxPort;
+    #elif defined(ARDUINO_ARCH_RP2040)
+    SerialUART *serialPort = (SerialUART *)_rxPort;
+    #else
+    memcpy(buffer, (uint8_t*)&channelData, sizeof(channelData));
+    serialPort->write((uint8_t*)&channelData, sizeof(channelData));
+    free(buffer);
 }
