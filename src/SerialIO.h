@@ -36,13 +36,13 @@ public:
       @brief Initialises the pins and setup serial port.
   */
   /**************************************************************************/
-  virtual void begin();
+  virtual void begin() = 0;
   /**************************************************************************/
   /*!
       @brief decode the incoming serial data.
   */
   /**************************************************************************/
-  virtual void processIncoming();
+  virtual void processIncoming() = 0;
   /**************************************************************************/
   /*!
       @brief Gives the decoded rc channels
@@ -53,8 +53,6 @@ public:
   */
   /**************************************************************************/
   virtual void getChannel(crsf_channels_t *channelData) = 0;
-
-  virtual void writeChannel(crsf_channels_t channelData);
 
 protected:
   Stream

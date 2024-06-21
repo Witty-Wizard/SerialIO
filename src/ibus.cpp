@@ -9,6 +9,9 @@ void ibus::begin() {
 #if defined(ARDUINO_ARCH_ESP32)
   HardwareSerial *serialPort = (HardwareSerial *)_rxPort;
   serialPort->begin(IBUS_BAUDRATE, SERIAL_8N1, _rxPin, _txPin, _inverted);
+#elif defined(ARDUINO_ARCH_AVR)
+  HardwareSerial *serialPort = (HardwareSerial *)_rxPort;
+  serialPort->begin(IBUS_BAUDRATE);
 #elif defined(ARDUINO_ARCH_RP2040)
   SerialUART *serialPort = (SerialUART *)_rxPort;
   serialPort->setPinout(_txPin, _rxPin);
