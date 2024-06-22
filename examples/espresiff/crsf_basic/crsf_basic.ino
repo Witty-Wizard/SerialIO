@@ -10,7 +10,7 @@ crsf receiver(&Serial1,RX_PIN);
 
 void setup() { 
   receiver.begin();
-  Serial.being(9600);
+  Serial.begin(9600);
 }
 
 void loop() {

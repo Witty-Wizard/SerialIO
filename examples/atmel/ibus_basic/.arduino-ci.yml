@@ -1,4 +1,5 @@
 compile:
   platforms:
     - uno
-    - mega
+    - mega2560
+    - leonardo
