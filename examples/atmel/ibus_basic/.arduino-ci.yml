@@ -1,5 +1,5 @@
 compile:
   platforms:
-    - esp32
     - uno
-    - mega
+    - mega2560
+    - leonardo

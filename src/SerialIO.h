@@ -55,6 +55,7 @@ public:
   virtual void getChannel(crsf_channels_t *channelData) = 0;
 
 protected:
+crsf_channels_t channelData;
   Stream
       *_rxPort; // Pointer to the hardware serial port used for communication.
   bool _headerDetected; // Flag indicating whether a header has been detected
