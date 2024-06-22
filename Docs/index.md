@@ -117,10 +117,10 @@ To retrieve the decoded RC channel data, call the getChannel() method, passing a
 ## Examples {#example}
 
 ### CRSF Basic Example
-@include "./examples/crsf_basic/crsf_basic.ino"
+@include "./examples/espresiff/crsf_basic/crsf_basic.ino"
 
 ### SBUS Basic Example
-@include "./examples/sbus_basic/sbus_basic.ino"
+@include "./examples/espresiff/sbus_basic/sbus_basic.ino"
 
 
 
