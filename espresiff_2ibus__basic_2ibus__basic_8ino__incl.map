@@ -1,0 +1,20 @@
+<map id="examples/espresiff/ibus_basic/ibus_basic.ino" name="examples/espresiff/ibus_basic/ibus_basic.ino">
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,5,387,46"/>
+<area shape="rect" id="Node000002" href="$SerialIO_8h.html" title="Header file for serial input/output (IO) functionality." alt="" coords="261,94,339,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="303,46,303,78,297,78,297,46"/>
+<area shape="rect" id="Node000003" href="$crsf__protocol_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="5,168,112,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="261,122,115,165,114,160,260,117"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="136,168,211,193"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="280,123,209,162,207,157,277,118"/>
+<area shape="rect" id="Node000006" href="$crsf_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="235,168,288,193"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="289,121,269,155,264,152,284,119"/>
+<area shape="rect" id="Node000007" href="$ibus_8h.html" title="Header file for the Ibus protocol implementation." alt="" coords="312,168,368,193"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="302,119,320,154,315,156,297,121"/>
+<area shape="rect" id="Node000008" href="$sbus_8h.html" title="Header file for the SBUS protocol implementation." alt="" coords="392,168,451,193"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="315,118,382,158,379,162,312,123"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="27,241,90,267"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="61,194,61,226,56,226,56,194"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="272,166,292,133,297,135,277,169"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="338,168,320,134,324,131,342,166"/>
+<area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="406,169,339,129,342,125,409,165"/>
+</map>
