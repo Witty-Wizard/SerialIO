@@ -44,11 +44,12 @@ void crsf::processIncoming() {
       _headerDetected = false;
     }
   }
+  if (crc8(&_rxData[2], _rxData[1]) == 0)
+    memcpy(&channelData, &_rxData[3], sizeof(channelData));
 }
 
 void crsf::getChannel(crsf_channels_t *channelData) {
-  if (crc8(&_rxData[2], _rxData[1]) == 0)
-    memcpy(channelData, &_rxData[3], sizeof(*channelData));
+  *channelData = this->channelData;
 }
 
 uint8_t crsf::crc8(uint8_t *data, uint8_t len) {

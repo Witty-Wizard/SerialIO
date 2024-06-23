@@ -43,8 +43,9 @@ void sbus::processIncoming() {
       _headerDetected = false;
     }
   }
+  memcpy(&channelData, _rxData + 1, sizeof(channelData));
 }
 
 void sbus::getChannel(crsf_channels_t *channelData) {
-  memcpy(channelData, _rxData + 1, sizeof(*channelData));
+  *channelData = this->channelData;
 }

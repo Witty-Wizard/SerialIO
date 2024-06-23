@@ -42,25 +42,27 @@ void ibus::processIncoming() {
       _headerDetected = false;
     }
   }
+
+  if (ibus::checkSum()) {
+    channelData.channel1 = (_rxData[3] << 8) | _rxData[2];
+    channelData.channel2 = (_rxData[5] << 8) | _rxData[4];
+    channelData.channel3 = (_rxData[7] << 8) | _rxData[6];
+    channelData.channel4 = (_rxData[9] << 8) | _rxData[8];
+    channelData.channel5 = (_rxData[11] << 8) | _rxData[10];
+    channelData.channel6 = (_rxData[13] << 8) | _rxData[12];
+    channelData.channel7 = (_rxData[15] << 8) | _rxData[14];
+    channelData.channel8 = (_rxData[17] << 8) | _rxData[16];
+    channelData.channel9 = (_rxData[19] << 8) | _rxData[18];
+    channelData.channel10 = (_rxData[21] << 8) | _rxData[20];
+    channelData.channel11 = (_rxData[23] << 8) | _rxData[22];
+    channelData.channel12 = (_rxData[25] << 8) | _rxData[24];
+    channelData.channel13 = (_rxData[27] << 8) | _rxData[26];
+    channelData.channel14 = (_rxData[29] << 8) | _rxData[28];
+  }
 }
 
 void ibus::getChannel(crsf_channels_t *channelData) {
-  if (ibus::checkSum()) {
-    channelData->channel1 = (_rxData[3] << 8) | _rxData[2];
-    channelData->channel2 = (_rxData[5] << 8) | _rxData[4];
-    channelData->channel3 = (_rxData[7] << 8) | _rxData[6];
-    channelData->channel4 = (_rxData[9] << 8) | _rxData[8];
-    channelData->channel5 = (_rxData[11] << 8) | _rxData[10];
-    channelData->channel6 = (_rxData[13] << 8) | _rxData[12];
-    channelData->channel7 = (_rxData[15] << 8) | _rxData[14];
-    channelData->channel8 = (_rxData[17] << 8) | _rxData[16];
-    channelData->channel9 = (_rxData[19] << 8) | _rxData[18];
-    channelData->channel10 = (_rxData[21] << 8) | _rxData[20];
-    channelData->channel11 = (_rxData[23] << 8) | _rxData[22];
-    channelData->channel12 = (_rxData[25] << 8) | _rxData[24];
-    channelData->channel13 = (_rxData[27] << 8) | _rxData[26];
-    channelData->channel14 = (_rxData[29] << 8) | _rxData[28];
-  }
+  *channelData = this->channelData;
 }
 
 bool ibus::checkSum() {
