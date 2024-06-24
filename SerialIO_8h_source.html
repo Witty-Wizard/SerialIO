@@ -127,24 +127,25 @@ $(function(){initNavTree('SerialIO_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classSerialIO.html#af9ad40f8b521c431a0bf5a3ef91a4dc6">   55</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSerialIO.html#af9ad40f8b521c431a0bf5a3ef91a4dc6">getChannel</a>(<a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> *channelData) = 0;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  Stream</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      *_rxPort; <span class="comment">// Pointer to the hardware serial port used for communication.</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordtype">bool</span> _headerDetected; <span class="comment">// Flag indicating whether a header has been detected</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                        <span class="comment">// in the incoming data.</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordtype">bool</span> _inverted;   <span class="comment">// Indicates whether the serial signal is inverted (true) or</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    <span class="comment">// not (false).</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  uint8_t _rxIndex; <span class="comment">// Index for the receive_buffer.</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordtype">int</span> _rxPin;       <span class="comment">// The RX pin number.</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordtype">int</span> _txPin;       <span class="comment">// The TX pin number.</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  uint8_t _buffer;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  uint8_t _prevBuffer;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><a class="code hl_struct" href="structcrsf__channels__s.html">crsf_channels_t</a> channelData;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  Stream</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      *_rxPort; <span class="comment">// Pointer to the hardware serial port used for communication.</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordtype">bool</span> _headerDetected; <span class="comment">// Flag indicating whether a header has been detected</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                        <span class="comment">// in the incoming data.</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordtype">bool</span> _inverted;   <span class="comment">// Indicates whether the serial signal is inverted (true) or</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                    <span class="comment">// not (false).</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  uint8_t _rxIndex; <span class="comment">// Index for the receive_buffer.</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordtype">int</span> _rxPin;       <span class="comment">// The RX pin number.</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keywordtype">int</span> _txPin;       <span class="comment">// The TX pin number.</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  uint8_t _buffer;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  uint8_t _prevBuffer;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
 </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#include &quot;<a class="code" href="crsf_8h.html">crsf.h</a>&quot;</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#include &quot;<a class="code" href="ibus_8h.html">ibus.h</a>&quot;</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#include &quot;<a class="code" href="sbus_8h.html">sbus.h</a>&quot;</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#include &quot;<a class="code" href="crsf_8h.html">crsf.h</a>&quot;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#include &quot;<a class="code" href="ibus_8h.html">ibus.h</a>&quot;</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#include &quot;<a class="code" href="sbus_8h.html">sbus.h</a>&quot;</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassSerialIO_html"><div class="ttname"><a href="classSerialIO.html">SerialIO</a></div><div class="ttdoc">Class that stores state and functions for initialising and decoding rc protocol.</div><div class="ttdef"><b>Definition</b> SerialIO.h:17</div></div>
 <div class="ttc" id="aclassSerialIO_html_a1a5b10d8a45d1ef0c1eeb83615c3cb5d"><div class="ttname"><a href="classSerialIO.html#a1a5b10d8a45d1ef0c1eeb83615c3cb5d">SerialIO::begin</a></div><div class="ttdeci">virtual void begin()=0</div><div class="ttdoc">Initialises the pins and setup serial port.</div></div>
 <div class="ttc" id="aclassSerialIO_html_a3ef00c98b6734f69e3245d86c36949ce"><div class="ttname"><a href="classSerialIO.html#a3ef00c98b6734f69e3245d86c36949ce">SerialIO::processIncoming</a></div><div class="ttdeci">virtual void processIncoming()=0</div><div class="ttdoc">decode the incoming serial data.</div></div>
