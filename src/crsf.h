@@ -18,6 +18,7 @@
  */
 class crsf : public SerialIO {
 private:
+  crsf_channels_t channelData;
   uint8_t _rxData[CRSF_MAX_PACKET_SIZE];
 
 public:
@@ -43,7 +44,7 @@ public:
    * @param channelData Pointer to a crsf_channels_t struct where the decoded
    * channel data will be stored.
    */
-  void getChannel(crsf_channels_t *channelData) override;
+  void getChannel(void *channelData) override;
 
   uint8_t crc8(uint8_t *data, uint8_t len);
 };

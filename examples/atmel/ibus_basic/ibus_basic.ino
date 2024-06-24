@@ -3,7 +3,7 @@
  */
 #include <SerialIO.h>
 
-crsf_channels_t channelData;
+ibus_channels_t channelData;
 
 ibus receiver(&Serial);
 

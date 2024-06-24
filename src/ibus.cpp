@@ -43,7 +43,8 @@ void ibus::processIncoming() {
     }
   }
 
-  if (ibus::checkSum()) {
+  if (checkSum()) {
+    channelData.header = (_rxData[2] << 8) | _rxData[0];
     channelData.channel1 = (_rxData[3] << 8) | _rxData[2];
     channelData.channel2 = (_rxData[5] << 8) | _rxData[4];
     channelData.channel3 = (_rxData[7] << 8) | _rxData[6];
@@ -58,11 +59,12 @@ void ibus::processIncoming() {
     channelData.channel12 = (_rxData[25] << 8) | _rxData[24];
     channelData.channel13 = (_rxData[27] << 8) | _rxData[26];
     channelData.channel14 = (_rxData[29] << 8) | _rxData[28];
+    channelData.checksum = (_rxData[31] << 8) | _rxData[30];
   }
 }
 
-void ibus::getChannel(crsf_channels_t *channelData) {
-  *channelData = this->channelData;
+void ibus::getChannel(void *channelData) {
+  *static_cast<decltype(this->channelData) *>(channelData) = this->channelData;
 }
 
 bool ibus::checkSum() {
