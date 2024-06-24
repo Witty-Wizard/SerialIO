@@ -104,47 +104,11 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <h1><a class="anchor" id="autotoc_md0"></a>
 Supported Protocol</h1>
 <ul>
-<li><a class="el" href="#sbusintro">Futaba SBUS protocol</a></li>
-<li><a class="el" href="#crsfintro">Crossfire RC protocol</a></li>
-<li><a class="el" href="#ibusintro">Flysky IBUS protocol</a></li>
+<li><a class="el" href="sbus.html">Futaba SBus protocol</a></li>
+<li><a href="https://github.com/crsf-wg/crsf/wiki">Crossfire RC protocol</a></li>
+<li><a href="https://basejunction.wordpress.com/2015/08/23/en-flysky-i6-14-channels-part1/">Flysky IBus protocol</a></li>
 </ul>
-<h2><a class="anchor" id="sbusintro"></a>
-SBUS</h2>
-<p>The SBUS (Serial Bus) protocol is a digital communication protocol commonly used in radio-controlled (RC) systems for transmitting control signals between transmitters and receivers.</p>
-<h3><a class="anchor" id="autotoc_md1"></a>
-Configuration</h3>
-<ul>
-<li>Baud rate: 100000</li>
-<li>Data bits: 8 Bits</li>
-<li>Parity: Even Parity</li>
-<li>Stop bits: 2 Stop bits</li>
-<li>Signal polarity: Inverted</li>
-</ul>
-<h2><a class="anchor" id="crsfintro"></a>
-CRSF</h2>
-<p>CRSF (Crossfire Serial Protocol) is a digital communication protocol designed for radio-controlled (RC) systems.</p>
-<h3><a class="anchor" id="autotoc_md2"></a>
-Configuration</h3>
-<ul>
-<li>Baud rate: 420000</li>
-<li>Data bits: 8 Bits</li>
-<li>Parity: No Parity</li>
-<li>Stop bits: 1 Stop bits</li>
-<li>Signal polarity: Uninverted</li>
-</ul>
-<h2><a class="anchor" id="ibusintro"></a>
-IBUS Protocol</h2>
-<p>The IBUS protocol is a digital communication protocol commonly used in radio-controlled (RC) systems for transmitting control signals between transmitters and receivers.</p>
-<h3><a class="anchor" id="autotoc_md3"></a>
-Configuration</h3>
-<ul>
-<li>Baud rate: 115200</li>
-<li>Data bits: 8 Bits</li>
-<li>Parity: No Parity</li>
-<li>Stop bits: 1 Stop bits</li>
-<li>Signal polarity: Non-Inverted</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md1"></a>
 Getting Started</h1>
 <ul>
 <li><a class="el" href="#installation">Installation</a></li>
@@ -153,7 +117,7 @@ Getting Started</h1>
 </ul>
 <h2><a class="anchor" id="installation"></a>
 Installation</h2>
-<h3><a class="anchor" id="autotoc_md5"></a>
+<h3><a class="anchor" id="autotoc_md2"></a>
 Arduino Installation</h3>
 <p>To use the <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> library in your Arduino projects, follow these installation steps:</p>
 <ol type="1">
@@ -163,10 +127,10 @@ Arduino Installation</h3>
 <li>Restart the Arduino IDE.</li>
 <li>You should now be able to include the <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> library in your Arduino sketches.</li>
 </ol>
-<h3><a class="anchor" id="autotoc_md6"></a>
+<h3><a class="anchor" id="autotoc_md3"></a>
 PlatformIO Installation</h3>
 <p>If you are using PlatformIO, you can install the <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> library directly from the PlatformIO Library Manager. Add the following line to your <code>platformio.ini</code> file:</p>
-<div class="fragment"><div class="line">lib_deps = Witty-Wizard/SerialIO @ ^0.1.0</div>
+<div class="fragment"><div class="line">lib_deps = Witty-Wizard/SerialIO</div>
 </div><!-- fragment --><h2><a class="anchor" id="tutorial"></a>
 Tutorial</h2>
 <p>To use the library for decoding RC protocols in your Arduino project, follow these steps:</p>
@@ -196,14 +160,15 @@ Tutorial</h2>
 <div class="ttc" id="aclassSerialIO_html_af9ad40f8b521c431a0bf5a3ef91a4dc6"><div class="ttname"><a href="classSerialIO.html#af9ad40f8b521c431a0bf5a3ef91a4dc6">SerialIO::getChannel</a></div><div class="ttdeci">virtual void getChannel(crsf_channels_t *channelData)=0</div><div class="ttdoc">Gives the decoded rc channels.</div></div>
 </div><!-- fragment --><p> <b>see also</b>:</p><ul>
 <li><a class="el" href="classSerialIO.html">SerialIO</a></li>
-<li><a class="el" href="classsbus.html">sbus</a></li>
+<li><a class="el" href="sbus.html">Futaba SBus</a></li>
 <li><a class="el" href="classcrsf.html">crsf</a></li>
+<li><a class="el" href="classibus.html">ibus</a></li>
 </ul>
 </li>
 </ol>
 <h2><a class="anchor" id="example"></a>
 Examples</h2>
-<h3><a class="anchor" id="autotoc_md7"></a>
+<h3><a class="anchor" id="autotoc_md4"></a>
 CRSF Basic Example</h3>
 <div class="fragment"><div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="SerialIO_8h.html">SerialIO.h</a>&gt;</span></div>
@@ -233,7 +198,7 @@ CRSF Basic Example</h3>
 <div class="line"> </div>
 <div class="line">}</div>
 <div class="ttc" id="aclassibus_html_a9edf9871632e0f5b2a7e6e7ee0ff128b"><div class="ttname"><a href="classibus.html#a9edf9871632e0f5b2a7e6e7ee0ff128b">ibus::begin</a></div><div class="ttdeci">void begin() override</div><div class="ttdoc">Initializes the IBUS communication.</div><div class="ttdef"><b>Definition</b> ibus.cpp:6</div></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md5"></a>
 SBUS Basic Example</h3>
 <div class="fragment"><div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="SerialIO_8h.html">SerialIO.h</a>&gt;</span></div>
@@ -263,9 +228,9 @@ SBUS Basic Example</h3>
 <div class="line"> </div>
 <div class="line">}</div>
 <div class="ttc" id="aclasssbus_html"><div class="ttname"><a href="classsbus.html">sbus</a></div><div class="ttdoc">A class for handling SBUS protocol communication.</div><div class="ttdef"><b>Definition</b> sbus.h:20</div></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
 Guide to Adding More Protocols</h1>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 Steps</h2>
 <p>To add more protocols to your project, follow these steps:</p>
 <ol type="1">
@@ -277,7 +242,7 @@ Steps</h2>
 <li><b>Process Incoming Data</b> : Call the function to process incoming data from the protocol whenever data is received.</li>
 <li><b>Extract Channel Information</b> : Use the provided function to extract channel information from the received data, if applicable.</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 Basic Functions Required</h2>
 <p>For initializing the header of a new protocol, you'll typically need the following basic functions:</p>
 <ul>
@@ -313,7 +278,7 @@ Basic Functions Required</h2>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#endif </span><span class="comment">// XYZ_PROTOCOL_H</span></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md12"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
 License</h1>
 <p>This library is distributed under the GNU <a href="https://www.gnu.org/licenses/gpl-3.0.html">General Public License version 3.0</a>. </p>
 </div></div><!-- PageDoc -->

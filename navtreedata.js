@@ -25,33 +25,32 @@
 var NAVTREE =
 [
   [ "SerialIO", "index.html", [
-    [ "Supported Protocol", "index.html#autotoc_md0", [
-      [ "SBUS", "index.html#sbusintro", [
-        [ "Configuration", "index.html#autotoc_md1", null ]
-      ] ],
-      [ "CRSF", "index.html#crsfintro", [
-        [ "Configuration", "index.html#autotoc_md2", null ]
-      ] ],
-      [ "IBUS Protocol", "index.html#ibusintro", [
-        [ "Configuration", "index.html#autotoc_md3", null ]
-      ] ]
-    ] ],
-    [ "Getting Started", "index.html#autotoc_md4", [
+    [ "Supported Protocol", "index.html#autotoc_md0", null ],
+    [ "Getting Started", "index.html#autotoc_md1", [
       [ "Installation", "index.html#installation", [
-        [ "Arduino Installation", "index.html#autotoc_md5", null ],
-        [ "PlatformIO Installation", "index.html#autotoc_md6", null ]
+        [ "Arduino Installation", "index.html#autotoc_md2", null ],
+        [ "PlatformIO Installation", "index.html#autotoc_md3", null ]
       ] ],
       [ "Tutorial", "index.html#tutorial", null ],
       [ "Examples", "index.html#example", [
-        [ "CRSF Basic Example", "index.html#autotoc_md7", null ],
-        [ "SBUS Basic Example", "index.html#autotoc_md8", null ]
+        [ "CRSF Basic Example", "index.html#autotoc_md4", null ],
+        [ "SBUS Basic Example", "index.html#autotoc_md5", null ]
       ] ]
     ] ],
-    [ "Guide to Adding More Protocols", "index.html#autotoc_md9", [
-      [ "Steps", "index.html#autotoc_md10", null ],
-      [ "Basic Functions Required", "index.html#autotoc_md11", null ]
+    [ "Guide to Adding More Protocols", "index.html#autotoc_md6", [
+      [ "Steps", "index.html#autotoc_md7", null ],
+      [ "Basic Functions Required", "index.html#autotoc_md8", null ]
     ] ],
-    [ "License", "index.html#autotoc_md12", null ],
+    [ "License", "index.html#autotoc_md9", null ],
+    [ "Futaba SBus", "sbus.html", [
+      [ "Specifications", "sbus.html#autotoc_md10", [
+        [ "Physical Layer", "sbus.html#physical", [
+          [ "Uart Configuration", "sbus.html#autotoc_md11", null ],
+          [ "Inversion", "sbus.html#autotoc_md12", null ]
+        ] ],
+        [ "Message Format", "sbus.html#format", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

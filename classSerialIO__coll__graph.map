@@ -1,0 +1,5 @@
+<map id="SerialIO" name="SerialIO">
+<area shape="rect" id="Node000001" title="Class that stores state and functions for initialising and decoding rc protocol." alt="" coords="29,94,98,120"/>
+<area shape="rect" id="Node000002" href="$structcrsf__channels__s.html" title=" " alt="" coords="5,5,122,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,47,66,94,61,94,61,47"/>
+</map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['serialio_0',['SerialIO',['../index.html',1,'']]]
+  ['futaba_20sbus_0',['Futaba SBus',['../sbus.html',1,'']]]
 ];
