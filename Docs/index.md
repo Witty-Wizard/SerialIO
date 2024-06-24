@@ -3,43 +3,9 @@ SerialIO is a common library designed to simplify the implementation of RC proto
 
 # Supported Protocol
 
-- [Futaba SBUS protocol](#sbusintro)
-- [Crossfire RC protocol](#crsfintro)
-- [Flysky IBUS protocol](#ibusintro)
-
-## SBUS {#sbusintro}
-
-The SBUS (Serial Bus) protocol is a digital communication protocol commonly used in radio-controlled (RC) systems for transmitting control signals between transmitters and receivers.
-
-### Configuration
-
-- Baud rate: 100000
-- Data bits: 8 Bits
-- Parity: Even Parity
-- Stop bits: 2 Stop bits
-- Signal polarity: Inverted
-
-## CRSF {#crsfintro}
-
-CRSF (Crossfire Serial Protocol) is a digital communication protocol designed for radio-controlled (RC) systems.
-
-### Configuration
-
-- Baud rate: 420000
-- Data bits: 8 Bits
-- Parity: No Parity
-- Stop bits: 1 Stop bits
-- Signal polarity: Uninverted
-
-## IBUS Protocol {#ibusintro}
-The IBUS protocol is a digital communication protocol commonly used in radio-controlled (RC) systems for transmitting control signals between transmitters and receivers.
-
-### Configuration
-- Baud rate: 115200
-- Data bits: 8 Bits
-- Parity: No Parity
-- Stop bits: 1 Stop bits
-- Signal polarity: Non-Inverted
+- [Futaba SBus protocol](#sbus)
+- [Crossfire RC protocol](https://github.com/crsf-wg/crsf/wiki)
+- [Flysky IBus protocol](https://basejunction.wordpress.com/2015/08/23/en-flysky-i6-14-channels-part1/)
 
 # Getting Started
 - [Installation](#installation)
@@ -63,7 +29,7 @@ To use the SerialIO library in your Arduino projects, follow these installation 
 If you are using PlatformIO, you can install the SerialIO library directly from the PlatformIO Library Manager. Add the following line to your `platformio.ini` file:
 
 ```ini
-lib_deps = Witty-Wizard/SerialIO @ ^0.1.0
+lib_deps = Witty-Wizard/SerialIO
 ```
 
 ## Tutorial {#tutorial}
@@ -113,6 +79,7 @@ To retrieve the decoded RC channel data, call the getChannel() method, passing a
     - @ref SerialIO
     - @ref sbus
     - @ref crsf
+    - @ref ibus
 
 ## Examples {#example}
 
