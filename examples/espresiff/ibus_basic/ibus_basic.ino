@@ -4,7 +4,7 @@
 #include <SerialIO.h>
 #define RX_PIN 16
 
-crsf_channels_t channelData;
+ibus_channels_t channelData;
 
 ibus receiver(&Serial1,RX_PIN);
 
