@@ -48,9 +48,7 @@ void crsf::processIncoming() {
     memcpy(&channelData, &_rxData[3], sizeof(channelData));
 }
 
-void crsf::getChannel(crsf_channels_t *channelData) {
-  *channelData = this->channelData;
-}
+void crsf::getChannel(void *channelData) { *channelData = this->channelData; }
 
 uint8_t crsf::crc8(uint8_t *data, uint8_t len) {
   uint8_t crc = 0;

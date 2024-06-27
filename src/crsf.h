@@ -46,7 +46,7 @@ public:
    * @param channelData Pointer to a crsf_channels_t struct where the decoded
    * channel data will be stored.
    */
-  void getChannel(crsf_channels_t *channelData);
+  void getChannel(void *channelData) override;
 
   uint8_t crc8(uint8_t *data, uint8_t len);
 };
