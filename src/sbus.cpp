@@ -46,4 +46,6 @@ void sbus::processIncoming() {
   memcpy(&channelData, _rxData, sizeof(channelData));
 }
 
-void sbus::getChannel(void *channelData) { *channelData = this->channelData; }
+void sbus::getChannel(void *channelData) {
+  *static_cast<decltype(this->channelData) *>(channelData) = this->channelData;
+}

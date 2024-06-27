@@ -63,7 +63,9 @@ void ibus::processIncoming() {
   }
 }
 
-void ibus::getChannel(void *channelData) { *channelData = this->channelData; }
+void ibus::getChannel(void *channelData) {
+  *static_cast<decltype(this->channelData) *>(channelData) = this->channelData;
+}
 
 bool ibus::checkSum() {
   // Sum all the elements of _rxData except the last two bytes
