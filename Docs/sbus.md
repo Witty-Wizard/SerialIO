@@ -1,14 +1,14 @@
-# Futaba SBus {#sbus}
+# Futaba SBus {#futabasbus}
 
 The Futaba S.Bus protocol was introduced around 2009. It was developed by Futaba, a leading manufacturer of RC systems, to address the limitations of traditional PWM (Pulse Width Modulation) systems used for RC control.Unlike PWM, which requires separate wires for each channel, S.Bus uses a single serial connection to transmit data for multiple channels, reducing the complexity of wiring in RC models.
 \image html sbus.png width=700cm
 
 ## Specifications
 
-- [Physical Layer](#physical)
+- [Physical Layer](#physical_sbus)
 - [Message Format](#format)
 
-### Physical Layer {#physical}
+### Physical Layer {#physical_sbus}
 
 The physical layer of the Futaba SBus protocol utilizes UART (Universal Asynchronous Receiver-Transmitter) communication at a baud rate of 100000.
 
@@ -25,7 +25,7 @@ When it comes to the configuration of the UART communication for SBus, it uses t
 For using SBus with a microcontroller, an inverter is typically required for the inverted UART logic level. This inversion is necessary because traditional UART operates with an active high level, while SBus uses inverted UART with an active low level.
 \image html inverter.png width=600cm
 
-### Message Format {#format}
+### Message Format {#format_sbus}
 \image html formatsbus.png 
 
 The SBus protocol uses a specific message format for transmitting control data from the transmitter to the receiver.

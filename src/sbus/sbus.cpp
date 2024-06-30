@@ -1,3 +1,8 @@
+/*!
+ * @file sbus.cpp
+ * @brief Source file for the SBus implementations
+ * @author Witty-Wizard
+ */
 #include "sbus.h"
 
 sbus::sbus(Stream *rxPort, int rxPin, int txPin, bool inverted)
@@ -14,38 +19,27 @@ void sbus::begin() {
   serialPort->setPinout(_txPin, _rxPin);
   serialPort->begin(SBUS_BAUDRATE, SERIAL_8E2);
 #else
-#warning #warning "Unsupported hardware platform."
+#warning "Unsupported hardware platform."
 #endif
 }
 
 void sbus::processIncoming() {
   while (_rxPort->available()) {
-    _prevBuffer = _buffer;
-    _buffer = _rxPort->read();
-
-    if (_headerDetected == true) {
-      _rxData[_rxIndex] = _buffer;
-      _rxIndex++;
-      if (_rxIndex > 23) {
-        _headerDetected = false;
-      }
+    _rxData[SBUS_MAX_PACKET_SIZE - 1] = _rxPort->read();
+    if (_rxData[0] == HEADER_SBUS &&
+        _rxData[SBUS_MAX_PACKET_SIZE - 1] == FOOTER_SBUS) {
+      memcpy(&_channelData, _rxData, sizeof(_channelData));
     } else {
-      if (_prevBuffer == FOOTER_SBUS && _buffer == HEADER_SBUS) {
-        _headerDetected = true;
-        _rxData[0] = 0x0F;
-        _rxData[24] = 0x00;
-        _rxIndex = 1;
-      }
-    }
-
-    if (_rxIndex == sizeof(_rxData) / sizeof(_rxData[0])) {
-      _rxIndex = 0;
-      _headerDetected = false;
+      leftShift(_rxData, sizeof(_rxData));
     }
   }
-  memcpy(&channelData, _rxData, sizeof(channelData));
 }
 
 void sbus::getChannel(void *channelData) {
-  *static_cast<decltype(this->channelData) *>(channelData) = this->channelData;
+  *static_cast<decltype(_channelData) *>(channelData) = _channelData;
+}
+
+void sbus::leftShift(uint8_t arr[], size_t size) {
+  memmove(arr, arr + 1, (size - 1));
+  arr[size - 1] = 0xFF;
 }

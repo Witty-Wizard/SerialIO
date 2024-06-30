@@ -9,10 +9,10 @@
 
 #include "../SerialIO.h" // Include header file for the serial IO class
 
-#define HEADER_SBUS 0x0F        ///< SBUS Header Byte
-#define FOOTER_SBUS 0x00        ///< SBUS Footer Byte
-#define SBUS_BAUDRATE 100000    ///< SBUS baudrate
-#define SBUS_MAX_PACKET_SIZE 25 ///< SBUS packet length
+#define HEADER_SBUS 0x0F        ///< SBus Header Byte
+#define FOOTER_SBUS 0x00        ///< SBus Footer Byte
+#define SBUS_BAUDRATE 100000    ///< SBus baudrate
+#define SBUS_MAX_PACKET_SIZE 25 ///< SBus packet length
 
 typedef struct sbus_channels_s {
   unsigned header : 8;
@@ -45,7 +45,7 @@ typedef struct sbus_channels_s {
  */
 class sbus : public SerialIO {
 private:
-  sbus_channels_t channelData;
+  sbus_channels_t _channelData;
   uint8_t _rxData[SBUS_MAX_PACKET_SIZE];
 
 public:
@@ -76,6 +76,8 @@ public:
    * channel data will be stored.
    */
   void getChannel(void *channelData) override;
+
+  void leftShift(uint8_t arr[], size_t size);
 };
 
 #endif // SBUS_H

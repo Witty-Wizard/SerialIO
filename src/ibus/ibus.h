@@ -38,7 +38,7 @@ typedef struct ibus_channels_s {
  */
 class ibus : public SerialIO {
 private:
-  ibus_channels_t channelData;
+  ibus_channels_t _channelData;
   uint8_t _rxData[IBUS_MAX_PACKET_SIZE]; ///< Buffer to store received IBUS data
   bool checkSum();
 
@@ -70,6 +70,7 @@ public:
    * channel data will be stored.
    */
   void getChannel(void *channelData) override;
+  void leftShift(uint8_t arr[], size_t size);
 };
 
 #endif // IBUS_H
