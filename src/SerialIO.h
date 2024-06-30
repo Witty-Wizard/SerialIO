@@ -58,6 +58,7 @@ protected:
                   // not (false).
   int _rxPin;     // The RX pin number.
   int _txPin;     // The TX pin number.
+  void leftShift(uint8_t arr[], size_t size);
 };
 #include "crsf/crsf.h"
 #include "fport/fport.h"

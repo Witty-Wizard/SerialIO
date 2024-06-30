@@ -17,3 +17,8 @@ SerialIO::~SerialIO() {
 #warning "Unsupported hardware platform."
 #endif
 }
+
+void SerialIO::leftShift(uint8_t arr[], size_t size) {
+  memmove(arr, arr + 1, (size - 1));
+  arr[size - 1] = 0xFF;
+}

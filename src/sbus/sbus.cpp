@@ -38,8 +38,3 @@ void sbus::processIncoming() {
 void sbus::getChannel(void *channelData) {
   *static_cast<decltype(_channelData) *>(channelData) = _channelData;
 }
-
-void sbus::leftShift(uint8_t arr[], size_t size) {
-  memmove(arr, arr + 1, (size - 1));
-  arr[size - 1] = 0xFF;
-}

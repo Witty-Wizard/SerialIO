@@ -20,32 +20,16 @@ void crsf::begin() {
 
 void crsf::processIncoming() {
   while (_rxPort->available()) {
-    _buffer = _rxPort->read();
-    if (_headerDetected) {
-      _rxData[_rxIndex] = _buffer;
-      _rxIndex++;
-      if (_rxIndex > _rxData[1] + 2)
-
-      {
-        _rxIndex = 0;
-        _headerDetected = false;
-      }
-    } else {
-      if (_buffer == CRSF_ADDRESS_FLIGHT_CONTROLLER ||
-          _buffer == CRSF_ADDRESS_CRSF_TRANSMITTER) {
-        _headerDetected = true;
-        _rxData[0] = _buffer;
-        _rxIndex = 1;
-      }
+    _rxData[CRSF_MAX_PACKET_SIZE - 1] = _rxPort->read();
+    if ((_rxData[0] == CRSF_ADDRESS_CRSF_TRANSMITTER ||
+         _rxData[0] == CRSF_ADDRESS_CRSF_TRANSMITTER) &&
+        (crc8(&_rxData[2], _rxData[1]) == 0)) {
+      memcpy(&channelData, &_rxData[3], sizeof(channelData));
     }
-
-    if (_rxIndex == sizeof(_rxData) / sizeof(_rxData[0])) {
-      _rxIndex = 0;
-      _headerDetected = false;
+    else{
+      leftShift(_rxData,sizeof(_rxData));
     }
   }
-  if (crc8(&_rxData[2], _rxData[1]) == 0)
-    memcpy(&channelData, &_rxData[3], sizeof(channelData));
 }
 
 void crsf::getChannel(void *channelData) {

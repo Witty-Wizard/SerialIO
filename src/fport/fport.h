@@ -43,6 +43,5 @@ explicit fport(Stream *rxPort, int rxPin = -1, int txPin = -1,
   void begin() override;
   void processIncoming() override;
   void getChannel(void *channelData) override;
-  void leftShift(uint8_t arr[],size_t size);
 };
 #endif

@@ -70,8 +70,3 @@ bool ibus::checkSum() {
   // Check if the sum matches the expected CRC
   return (sum == 0xFFFF); // Assuming IBUS CRC is 0xFFFF when correct
 }
-
-void ibus::leftShift(uint8_t arr[], size_t size) {
-  memmove(arr, arr + 1, (size - 1));
-  arr[size - 1] = 0xFF;
-}

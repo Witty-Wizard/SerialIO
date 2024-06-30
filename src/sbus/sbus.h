@@ -76,8 +76,6 @@ public:
    * channel data will be stored.
    */
   void getChannel(void *channelData) override;
-
-  void leftShift(uint8_t arr[], size_t size);
 };
 
 #endif // SBUS_H

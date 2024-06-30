@@ -37,8 +37,3 @@ void fport::processIncoming() {
 }
 
 void fport::getChannel(void *channelData) {}
-
-void fport::leftShift(uint8_t arr[], size_t size) {
-  memmove(arr, arr + 1, (size - 1));
-  arr[size - 1] = 0xFF;
-}
