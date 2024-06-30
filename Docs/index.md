@@ -3,11 +3,13 @@ SerialIO is a common library designed to simplify the implementation of RC proto
 
 # Supported Protocol
 
-- [Futaba SBus protocol](#sbus)
+- [Futaba SBus protocol](#futabasbus)
 - [Crossfire RC protocol](https://github.com/crsf-wg/crsf/wiki)
 - [Flysky IBus protocol](https://basejunction.wordpress.com/2015/08/23/en-flysky-i6-14-channels-part1/)
+- [FrSky F.Port](#frskyfport)
 
 # Getting Started
+
 - [Installation](#installation)
 - [Tutorial](#tutorial)
 - [Examples](#example)
@@ -36,64 +38,64 @@ lib_deps = Witty-Wizard/SerialIO
 
 To use the library for decoding RC protocols in your Arduino project, follow these steps:
 
-1. **Include Necessary Libraries**:
-   Include the required libraries at the beginning of your sketch:
-   ```cpp
-   #include <SerialIO.h>
-   ```
-2. **Define Channel Data Structure**:
-   Define a structure to hold the decoded RC channel data.
-   ```cpp
-   crsf_channels_t channelData;
-   ```
-3. **Instantiate SerialIO Object**:
-   Create an instance of the SerialIO class, specifying the serial port, RX pin, and TX pin:
-   ```cpp
-   SerialIO *receiver = new crsf(&Serial1, pinRX, pinTX);
-   ```
-   To instantiate a SerialIO object for receiving data only, you can create an instance of the crsf class specifying the serial port, RX pin:
-   ```cpp
-   SerialIO *receiver = new crsf(&Serial1, pinRX);
-   ```
-4. **Initialize Communication**:
-   Call the begin() method to initialize communication with the specified serial port:
-   ```cpp
-   void setup() {
-       receiver->begin();
-   }
-   ```
-
-5. **Process Incoming Data**:
-In the loop() function, call the processIncoming() method to process incoming bytes:
+1.  **Include Necessary Libraries**:
+    Include the required libraries at the beginning of your sketch:
+    ```cpp
+    #include <SerialIO.h>
+    ```
+2.  **Define Channel Data Structure**:
+    Define a structure to hold the decoded RC channel data.
+    ```cpp
+    crsf_channels_t channelData;
+    ```
+3.  **Instantiate SerialIO Object**:
+    Create an instance of the SerialIO class, specifying the serial port, RX pin, and TX pin:
+    ```cpp
+    SerialIO *receiver = new crsf(&Serial1, pinRX, pinTX);
+    ```
+    To instantiate a SerialIO object for receiving data only, you can create an instance of the crsf class specifying the serial port, RX pin:
+    ```cpp
+    SerialIO *receiver = new crsf(&Serial1, pinRX);
+    ```
+4.  **Initialize Communication**:
+    Call the begin() method to initialize communication with the specified serial port:
 
     ```cpp
-    receiver->processIncoming();
+    void setup() {
+        receiver->begin();
+    }
     ```
-6. **Retrieve Channel Data**:
-To retrieve the decoded RC channel data, call the getChannel() method, passing a pointer to the channelData structure:
 
-    ```cpp
-        receiver->getChannel(&channelData);
-    ```
-**see also**:
-    - @ref SerialIO
-    - @ref sbus
-    - @ref crsf
-    - @ref ibus
+5.  **Process Incoming Data**:
+    In the loop() function, call the processIncoming() method to process incoming bytes:
+
+        ```cpp
+        receiver->processIncoming();
+        ```
+
+6.  **Retrieve Channel Data**:
+    To retrieve the decoded RC channel data, call the getChannel() method, passing a pointer to the channelData structure:
+
+        ```cpp
+            receiver->getChannel(&channelData);
+        ```
+
+    **see also**: - @ref SerialIO - @ref sbus - @ref crsf - @ref ibus
 
 ## Examples {#example}
 
 ### CRSF Basic Example
+
 @include "./examples/espresiff/crsf_basic/crsf_basic.ino"
 
 ### SBUS Basic Example
+
 @include "./examples/espresiff/sbus_basic/sbus_basic.ino"
-
-
 
 # Guide to Adding More Protocols
 
 ## Steps
+
 To add more protocols to your project, follow these steps:
 
 1. **Create a New Protocol File** : Start by creating a new header file for each additional protocol you want to add. For example, if you want to add a protocol named "XYZ", create a file named `xyz_protocol.h`.
@@ -151,4 +153,5 @@ private:
 ```
 
 # License
+
 This library is distributed under the GNU [General Public License version 3.0](https://www.gnu.org/licenses/gpl-3.0.html).
