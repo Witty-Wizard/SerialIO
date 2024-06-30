@@ -4,11 +4,11 @@
 #include <SerialIO.h>
 #define RX_PIN 16
 
-crsf_channels_t channelData;
+rc_channels_t channelData;
 
-crsf receiver(&Serial1,RX_PIN);
+crsf receiver(&Serial1, RX_PIN);
 
-void setup() { 
+void setup() {
   receiver.begin();
   Serial.begin(9600);
 }
@@ -25,5 +25,4 @@ void loop() {
   Serial.print(channelData.channel3);
   Serial.print(" Channel 4: ");
   Serial.println(channelData.channel4);
-
 }

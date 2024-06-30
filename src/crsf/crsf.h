@@ -1,6 +1,7 @@
 /*!
  * @file crsf.h
  * @brief Header file for the CRSF protocol implementation.
+ * @author Witty-Wizard
  */
 
 #pragma once
@@ -9,7 +10,8 @@
 #include "crsf_protocol.h"
 #include <serialIO.h>
 
-#include "SerialIO.h" // Include header file for the serial IO class
+#include "../SerialIO.h" // Include header file for the serial IO class
+#include "crsf_protocol.h"
 
 #define CRC8_POLY_D5 0xD5
 
@@ -18,8 +20,12 @@
  */
 class crsf : public SerialIO {
 private:
-  crsf_channels_t channelData;
-  uint8_t _rxData[CRSF_MAX_PACKET_SIZE];
+  crsf_channels_t _channelData;
+  uint8_t _rxData[CRSF_MAX_PACKET_SIZE]={0};
+  bool _headerDetected; // Flag indicating whether a header has been detected in
+                        // the incoming data.
+  uint8_t _rxIndex;     // Index for the receive_buffer.
+  uint8_t _buffer;
 
 public:
   /**
@@ -44,7 +50,7 @@ public:
    * @param channelData Pointer to a crsf_channels_t struct where the decoded
    * channel data will be stored.
    */
-  void getChannel(void *channelData) override;
+  void getChannel(rc_channels_t *channelData) override;
 
   uint8_t crc8(uint8_t *data, uint8_t len);
 };
