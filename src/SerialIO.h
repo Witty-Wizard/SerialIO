@@ -63,8 +63,8 @@ protected:
   uint8_t _buffer;
   uint8_t _prevBuffer;
 };
-#include "crsf.h"
-#include "ibus.h"
-#include "sbus.h"
+#include "crsf/crsf.h"
+#include "ibus/ibus.h"
+#include "sbus/sbus.h"
 
 #endif
