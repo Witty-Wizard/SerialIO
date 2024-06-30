@@ -5,7 +5,7 @@
 #pragma once
 #ifndef SerialIO_H
 #define SerialIO_H
-#include "crsf_protocol.h"
+#include "crsf/crsf_protocol.h"
 #include <Arduino.h>
 
 /**************************************************************************/

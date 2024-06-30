@@ -7,7 +7,7 @@
 #ifndef SBUS_H
 #define SBUS_H
 
-#include "SerialIO.h" // Include header file for the serial IO class
+#include "../SerialIO.h" // Include header file for the serial IO class
 
 #define HEADER_SBUS 0x0F        ///< SBUS Header Byte
 #define FOOTER_SBUS 0x00        ///< SBUS Footer Byte
