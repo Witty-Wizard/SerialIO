@@ -4,6 +4,13 @@
  */
 #pragma once
 
+#ifndef CRSF_PROTOCOL_H
+#define CRSF_PROTOCOL_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdint.h>
 
 #define PACKED __attribute__((packed))
@@ -183,3 +190,9 @@ static inline uint32_t be32toh(uint32_t val) {
 #endif
 }
 #endif
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // CRSF_PROTOCOL_H

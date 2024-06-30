@@ -7,7 +7,7 @@
 #ifndef IBUS_H
 #define IBUS_H
 
-#include "SerialIO.h" // Include header file for the serial IO class
+#include "../SerialIO.h" // Include header file for the serial IO class
 
 #define IBUS_MAX_PACKET_SIZE 32 ///< Maximum packet size for the IBUS protocol
 #define IBUS_BAUDRATE 115200    ///< Baud rate for IBUS communication
