@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['configuration_0',['Uart Configuration',['../sbus.html#autotoc_md11',1,'']]],
+  ['configuration_0',['Configuration',['../frskyfport.html#autotoc_md1',1,'Uart Configuration'],['../futabasbus.html#autotoc_md13',1,'Uart Configuration']]],
   ['crsf_1',['crsf',['../classcrsf.html',1,'crsf'],['../classcrsf.html#a0ca8824ff95924899cf58148db22a3a3',1,'crsf::crsf()']]],
-  ['crsf_20basic_20example_2',['CRSF Basic Example',['../index.html#autotoc_md4',1,'']]],
+  ['crsf_20basic_20example_2',['CRSF Basic Example',['../index.html#autotoc_md6',1,'']]],
   ['crsf_2eh_3',['crsf.h',['../crsf_8h.html',1,'']]],
   ['crsf_5faddr_5fe_4',['crsf_addr_e',['../crsf__protocol_8h.html#a39bdc922bc88d3bcbbae652a25110a6e',1,'crsf_protocol.h']]],
   ['crsf_5fbasic_2eino_5',['crsf_basic.ino',['../crsf__basic_8ino.html',1,'']]],

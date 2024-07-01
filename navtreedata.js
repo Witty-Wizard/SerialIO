@@ -25,30 +25,38 @@
 var NAVTREE =
 [
   [ "SerialIO", "index.html", [
-    [ "Supported Protocol", "index.html#autotoc_md0", null ],
-    [ "Getting Started", "index.html#autotoc_md1", [
+    [ "Supported Protocol", "index.html#autotoc_md2", null ],
+    [ "Getting Started", "index.html#autotoc_md3", [
       [ "Installation", "index.html#installation", [
-        [ "Arduino Installation", "index.html#autotoc_md2", null ],
-        [ "PlatformIO Installation", "index.html#autotoc_md3", null ]
+        [ "Arduino Installation", "index.html#autotoc_md4", null ],
+        [ "PlatformIO Installation", "index.html#autotoc_md5", null ]
       ] ],
       [ "Tutorial", "index.html#tutorial", null ],
       [ "Examples", "index.html#example", [
-        [ "CRSF Basic Example", "index.html#autotoc_md4", null ],
-        [ "SBUS Basic Example", "index.html#autotoc_md5", null ]
+        [ "CRSF Basic Example", "index.html#autotoc_md6", null ],
+        [ "SBUS Basic Example", "index.html#autotoc_md7", null ]
       ] ]
     ] ],
-    [ "Guide to Adding More Protocols", "index.html#autotoc_md6", [
-      [ "Steps", "index.html#autotoc_md7", null ],
-      [ "Basic Functions Required", "index.html#autotoc_md8", null ]
+    [ "Guide to Adding More Protocols", "index.html#autotoc_md8", [
+      [ "Steps", "index.html#autotoc_md9", null ],
+      [ "Basic Functions Required", "index.html#autotoc_md10", null ]
     ] ],
-    [ "License", "index.html#autotoc_md9", null ],
-    [ "Futaba SBus", "sbus.html", [
-      [ "Specifications", "sbus.html#autotoc_md10", [
-        [ "Physical Layer", "sbus.html#physical", [
-          [ "Uart Configuration", "sbus.html#autotoc_md11", null ],
-          [ "Inversion", "sbus.html#autotoc_md12", null ]
+    [ "License", "index.html#autotoc_md11", null ],
+    [ "FrSky F.Port", "frskyfport.html", [
+      [ "Specifications", "frskyfport.html#autotoc_md0", [
+        [ "Physical Layer", "frskyfport.html#physical_fport", [
+          [ "Uart Configuration", "frskyfport.html#autotoc_md1", null ]
         ] ],
-        [ "Message Format", "sbus.html#format", null ]
+        [ "Message Format", "frskyfport.html#format_fport", null ]
+      ] ]
+    ] ],
+    [ "Futaba SBus", "futabasbus.html", [
+      [ "Specifications", "futabasbus.html#autotoc_md12", [
+        [ "Physical Layer", "futabasbus.html#physical_sbus", [
+          [ "Uart Configuration", "futabasbus.html#autotoc_md13", null ],
+          [ "Inversion", "futabasbus.html#autotoc_md14", null ]
+        ] ],
+        [ "Message Format", "futabasbus.html#format_sbus", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [

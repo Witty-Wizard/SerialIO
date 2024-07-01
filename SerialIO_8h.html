@@ -99,36 +99,54 @@ $(function(){initNavTree('SerialIO_8h.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle"><div class="title">SerialIO.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Header file for serial input/output (IO) functionality.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="crsf__protocol_8h_source.html">crsf_protocol.h</a>&quot;</code><br />
-<code>#include &lt;Arduino.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="crsf_8h_source.html">crsf.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ibus_8h_source.html">ibus.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="sbus_8h_source.html">sbus.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="crsf_8h_source.html">crsf/crsf.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fport_8h_source.html">fport/fport.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ibus_8h_source.html">ibus/ibus.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sbus_8h_source.html">sbus/sbus.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for SerialIO.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="SerialIO_8h__incl.svg" width="456" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="SerialIO_8h__incl.svg" width="570" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="SerialIO_8h__dep__incl.svg" width="1059" height="126"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="SerialIO_8h__dep__incl.svg" width="1286" height="199"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="SerialIO_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrc__channels__s.html">rc_channels_s</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerialIO.html">SerialIO</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that stores state and functions for initialising and decoding rc protocol.  <a href="classSerialIO.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a5bd6e774e3583ec895c19d00e2c43f65" id="r_a5bd6e774e3583ec895c19d00e2c43f65"><td class="memItemLeft" align="right" valign="top"><a id="a5bd6e774e3583ec895c19d00e2c43f65" name="a5bd6e774e3583ec895c19d00e2c43f65"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SerialIO_H</b></td></tr>
+<tr class="separator:a5bd6e774e3583ec895c19d00e2c43f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36d525cf4d116b2fe4ecc00222b256f1" id="r_a36d525cf4d116b2fe4ecc00222b256f1"><td class="memItemLeft" align="right" valign="top"><a id="a36d525cf4d116b2fe4ecc00222b256f1" name="a36d525cf4d116b2fe4ecc00222b256f1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PACKED</b>&#160;&#160;&#160;__attribute__((packed))</td></tr>
+<tr class="separator:a36d525cf4d116b2fe4ecc00222b256f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a4a7401e4645a3d0dda231de0bb0416af" id="r_a4a7401e4645a3d0dda231de0bb0416af"><td class="memItemLeft" align="right" valign="top"><a id="a4a7401e4645a3d0dda231de0bb0416af" name="a4a7401e4645a3d0dda231de0bb0416af"></a>
+typedef struct <a class="el" href="structrc__channels__s.html">rc_channels_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rc_channels_t</b></td></tr>
+<tr class="separator:a4a7401e4645a3d0dda231de0bb0416af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for serial input/output (IO) functionality. </p>
