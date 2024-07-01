@@ -34,7 +34,7 @@ typedef struct fport_channels_s {
 
 class fport : public SerialIO {
 private:
-  uint8_t _rx_buffer[FPORT_MAX_PACKET_SIZE];
+  uint8_t _rxData[FPORT_MAX_PACKET_SIZE];
   fport_channels_t _channelData;
 
 public:
@@ -42,6 +42,6 @@ explicit fport(Stream *rxPort, int rxPin = -1, int txPin = -1,
                 bool inverted = true);
   void begin() override;
   void processIncoming() override;
-  void getChannel(void *channelData) override;
+  void getChannel(rc_channels_t *channelData) override;
 };
 #endif

@@ -18,7 +18,7 @@
  */
 class crsf : public SerialIO {
 private:
-  crsf_channels_t channelData;
+  crsf_channels_t _channelData;
   uint8_t _rxData[CRSF_MAX_PACKET_SIZE];
   bool _headerDetected; // Flag indicating whether a header has been detected in
                         // the incoming data.
@@ -52,7 +52,7 @@ public:
    * @param channelData Pointer to a crsf_channels_t struct where the decoded
    * channel data will be stored.
    */
-  void getChannel(void *channelData) override;
+  void getChannel(rc_channels_t *channelData) override;
 
   uint8_t crc8(uint8_t *data, uint8_t len);
 };

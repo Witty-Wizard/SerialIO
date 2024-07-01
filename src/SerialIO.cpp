@@ -22,3 +22,8 @@ void SerialIO::leftShift(uint8_t arr[], size_t size) {
   memmove(arr, arr + 1, (size - 1));
   arr[size - 1] = 0xFF;
 }
+
+void SerialIO::rightShift(uint8_t arr[], size_t size) {
+  memmove(arr + 1, arr, size - 1);
+  arr[0] = 0xFF;
+}

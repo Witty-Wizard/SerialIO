@@ -24,16 +24,15 @@ void crsf::processIncoming() {
     if ((_rxData[0] == CRSF_ADDRESS_CRSF_TRANSMITTER ||
          _rxData[0] == CRSF_ADDRESS_CRSF_TRANSMITTER) &&
         (crc8(&_rxData[2], _rxData[1]) == 0)) {
-      memcpy(&channelData, &_rxData[3], sizeof(channelData));
-    }
-    else{
-      leftShift(_rxData,sizeof(_rxData));
+      memcpy(&_channelData, &_rxData[3], sizeof(_channelData));
+    } else {
+      leftShift(_rxData, sizeof(_rxData));
     }
   }
 }
 
-void crsf::getChannel(void *channelData) {
-  *static_cast<decltype(this->channelData) *>(channelData) = this->channelData;
+void crsf::getChannel(rc_channels_t *channelData) {
+  memcpy(channelData, &_channelData, sizeof(rc_channels_t));
 }
 
 uint8_t crsf::crc8(uint8_t *data, uint8_t len) {

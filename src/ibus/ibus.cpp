@@ -43,14 +43,26 @@ void ibus::processIncoming() {
         _channelData.channel14 = (_rxData[29] << 8) | _rxData[28];
         _channelData.checksum = (_rxData[31] << 8) | _rxData[30];
       }
-    } else {
-      leftShift(_rxData, sizeof(_rxData));
     }
+    leftShift(_rxData, sizeof(_rxData));
   }
 }
 
-void ibus::getChannel(void *channelData) {
-  *static_cast<decltype(_channelData) *>(channelData) = _channelData;
+void ibus::getChannel(rc_channels_t *channelData) {
+  channelData->channel1=_channelData.channel1;
+  channelData->channel2=_channelData.channel2;
+  channelData->channel3=_channelData.channel3;
+  channelData->channel4=_channelData.channel4;
+  channelData->channel5=_channelData.channel5;
+  channelData->channel6=_channelData.channel6;
+  channelData->channel7=_channelData.channel7;
+  channelData->channel8=_channelData.channel8;
+  channelData->channel9=_channelData.channel9;
+  channelData->channel10=_channelData.channel10;
+  channelData->channel11=_channelData.channel11;
+  channelData->channel12=_channelData.channel12;
+  channelData->channel13=_channelData.channel13;
+  channelData->channel14=_channelData.channel14;
 }
 
 bool ibus::checkSum() {
@@ -61,11 +73,11 @@ bool ibus::checkSum() {
   }
 
   // Transform the last two bytes into a little-endian uint16_t
-  uint16_t crc =
+  uint16_t checkSum =
       (_rxData[sizeof(_rxData) - 1] << 8) | _rxData[sizeof(_rxData) - 2];
 
   // Add the last two bytes to the sum
-  sum += crc;
+  sum += checkSum;
 
   // Check if the sum matches the expected CRC
   return (sum == 0xFFFF); // Assuming IBUS CRC is 0xFFFF when correct

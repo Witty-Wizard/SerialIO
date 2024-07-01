@@ -69,7 +69,7 @@ public:
    * @param channelData Pointer to a crsf_channels_t struct where the decoded
    * channel data will be stored.
    */
-  void getChannel(void *channelData) override;
+  void getChannel(rc_channels_t *channelData) override;
 };
 
 #endif // IBUS_H

@@ -29,12 +29,11 @@ void sbus::processIncoming() {
     if (_rxData[0] == HEADER_SBUS &&
         _rxData[SBUS_MAX_PACKET_SIZE - 1] == FOOTER_SBUS) {
       memcpy(&_channelData, _rxData, sizeof(_channelData));
-    } else {
-      leftShift(_rxData, sizeof(_rxData));
     }
+    leftShift(_rxData, sizeof(_rxData));
   }
 }
 
-void sbus::getChannel(void *channelData) {
-  *static_cast<decltype(_channelData) *>(channelData) = _channelData;
+void sbus::getChannel(rc_channels_t *channelData) {
+  memcpy(channelData, (uint8_t *)&_channelData + 1, sizeof(rc_channels_t));
 }

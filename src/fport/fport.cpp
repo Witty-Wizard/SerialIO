@@ -26,14 +26,13 @@ void fport::begin() {
 
 void fport::processIncoming() {
   while (_rxPort->available()) {
-    _rx_buffer[FPORT_MAX_PACKET_SIZE - 1] = _rxPort->read();
-    if (_rx_buffer[0] == 0x7E &&
-        _rx_buffer[FPORT_MAX_PACKET_SIZE - 1] == 0x7E) {
-      memcpy(&_channelData, &_rx_buffer[4], sizeof(_channelData));
-    } else {
-      leftShift(_rx_buffer, sizeof(_rx_buffer));
-    }
+    _rxData[FPORT_MAX_PACKET_SIZE - 1] = _rxPort->read();
   }
+  while (!(_rxData[0] == 0x7E && _rxData[FPORT_MAX_PACKET_SIZE - 1] == 0x7E)) {
+    leftShift(_rxData, sizeof(_rxData));
+  }
+  memcpy(&_channelData, &_rxData[4], sizeof(_channelData));
+  memset(_rxData, 0, sizeof(_rxData));
 }
 
-void fport::getChannel(void *channelData) {}
+void fport::getChannel(rc_channels_t *channelData) {}
