@@ -5,7 +5,6 @@
  */
 
 #include "fport.h"
-#include <iostream>
 
 fport::fport(Stream *rxPort, int rxPin, int txPin, bool inverted)
     : SerialIO(rxPort, rxPin, txPin, inverted) {}
