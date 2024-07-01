@@ -152,8 +152,12 @@ Tutorial</h2>
 <div class="line">}</div>
 <div class="ttc" id="aclassSerialIO_html_a1a5b10d8a45d1ef0c1eeb83615c3cb5d"><div class="ttname"><a href="classSerialIO.html#a1a5b10d8a45d1ef0c1eeb83615c3cb5d">SerialIO::begin</a></div><div class="ttdeci">virtual void begin()=0</div><div class="ttdoc">Initialises the pins and setup serial port.</div></div>
 </div><!-- fragment --></li>
-<li><b>Process Incoming Data</b>: In the <code>loop()</code> function, call the <code>processIncoming()</code> method to process incoming bytes: <code>cpp receiver-&gt;processIncoming(); </code></li>
-<li><b>Retrieve Channel Data</b>: To retrieve the decoded RC channel data, call the <code>getChannel()</code> method, passing a pointer to the <code>channelData</code> structure: <code>cpp receiver-&gt;getChannel(&amp;channelData); </code></li>
+<li><b>Process Incoming Data</b>: In the <code>loop()</code> function, call the <code>processIncoming()</code> method to process incoming bytes: <div class="fragment"><div class="line">receiver-&gt;<a class="code hl_function" href="classSerialIO.html#a3ef00c98b6734f69e3245d86c36949ce">processIncoming</a>();</div>
+<div class="ttc" id="aclassSerialIO_html_a3ef00c98b6734f69e3245d86c36949ce"><div class="ttname"><a href="classSerialIO.html#a3ef00c98b6734f69e3245d86c36949ce">SerialIO::processIncoming</a></div><div class="ttdeci">virtual void processIncoming()=0</div><div class="ttdoc">decode the incoming serial data.</div></div>
+</div><!-- fragment --></li>
+<li><b>Retrieve Channel Data</b>: To retrieve the decoded RC channel data, call the <code>getChannel()</code> method, passing a pointer to the <code>channelData</code> structure: <div class="fragment"><div class="line">receiver-&gt;<a class="code hl_function" href="classSerialIO.html#ae6269d9231dfa9aceb57a80802d5bfd4">getChannel</a>(&amp;channelData);</div>
+<div class="ttc" id="aclassSerialIO_html_ae6269d9231dfa9aceb57a80802d5bfd4"><div class="ttname"><a href="classSerialIO.html#ae6269d9231dfa9aceb57a80802d5bfd4">SerialIO::getChannel</a></div><div class="ttdeci">virtual void getChannel(rc_channels_t *channelData)=0</div><div class="ttdoc">Get the ChannelData.</div></div>
+</div><!-- fragment --></li>
 </ol>
 <p><b>see also</b>:</p><ul>
 <li><a class="el" href="classSerialIO.html">SerialIO</a></li>
@@ -273,8 +277,6 @@ Basic Functions Required</h2>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#endif </span><span class="comment">// XYZ_PROTOCOL_H</span></div>
-<div class="ttc" id="aclassSerialIO_html_a3ef00c98b6734f69e3245d86c36949ce"><div class="ttname"><a href="classSerialIO.html#a3ef00c98b6734f69e3245d86c36949ce">SerialIO::processIncoming</a></div><div class="ttdeci">virtual void processIncoming()=0</div><div class="ttdoc">decode the incoming serial data.</div></div>
-<div class="ttc" id="aclassSerialIO_html_ae6269d9231dfa9aceb57a80802d5bfd4"><div class="ttname"><a href="classSerialIO.html#ae6269d9231dfa9aceb57a80802d5bfd4">SerialIO::getChannel</a></div><div class="ttdeci">virtual void getChannel(rc_channels_t *channelData)=0</div><div class="ttdoc">Get the ChannelData.</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md11"></a>
 License</h1>
 <p>This library is distributed under the GNU <a href="https://www.gnu.org/licenses/gpl-3.0.html">General Public License version 3.0</a>. </p>
