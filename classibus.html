@@ -116,7 +116,7 @@ Inheritance diagram for ibus:</div>
 <div class="dynheader">
 Collaboration diagram for ibus:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classibus__coll__graph.svg" width="144" height="199"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classibus__coll__graph.svg" width="79" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -130,9 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac37ccdaf120706f8d773a3fb9aebb4e4" id="r_ac37ccdaf120706f8d773a3fb9aebb4e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac37ccdaf120706f8d773a3fb9aebb4e4">processIncoming</a> () override</td></tr>
 <tr class="memdesc:ac37ccdaf120706f8d773a3fb9aebb4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes incoming IBUS data.  <br /></td></tr>
 <tr class="separator:ac37ccdaf120706f8d773a3fb9aebb4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57c1f6c70920a934ec6aae68db0cb2ec" id="r_a57c1f6c70920a934ec6aae68db0cb2ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57c1f6c70920a934ec6aae68db0cb2ec">getChannel</a> (<a class="el" href="crsf__protocol_8h.html#acc70938025350136337a247b487027a6">crsf_channels_t</a> *channelData) override</td></tr>
-<tr class="memdesc:a57c1f6c70920a934ec6aae68db0cb2ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the decoded RC channels from the IBUS data.  <br /></td></tr>
-<tr class="separator:a57c1f6c70920a934ec6aae68db0cb2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d2497d07ecef667e4274049d2c16e0" id="r_a98d2497d07ecef667e4274049d2c16e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98d2497d07ecef667e4274049d2c16e0">getChannel</a> (<a class="el" href="structrc__channels__s.html">rc_channels_t</a> *channelData) override</td></tr>
+<tr class="memdesc:a98d2497d07ecef667e4274049d2c16e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the decoded RC channels from the IBUS data.  <br /></td></tr>
+<tr class="separator:a98d2497d07ecef667e4274049d2c16e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSerialIO"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classSerialIO')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSerialIO.html">SerialIO</a></td></tr>
 <tr class="memitem:a51676a51e38a07822efcc9ffc3cd2677 inherit pub_methods_classSerialIO" id="r_a51676a51e38a07822efcc9ffc3cd2677"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerialIO.html#a51676a51e38a07822efcc9ffc3cd2677">SerialIO</a> (Stream *rxPort, int rxPin, int txPin, bool inverted)</td></tr>
 <tr class="memdesc:a51676a51e38a07822efcc9ffc3cd2677 inherit pub_methods_classSerialIO"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> class.  <br /></td></tr>
@@ -140,34 +140,26 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classSerialIO"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classSerialIO')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classSerialIO.html">SerialIO</a></td></tr>
+<tr class="memitem:aaa0beb7e629887564caf6e4c4c4c98ac inherit pro_methods_classSerialIO" id="r_aaa0beb7e629887564caf6e4c4c4c98ac"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>leftShift</b> (uint8_t arr[], size_t size)</td></tr>
+<tr class="separator:aaa0beb7e629887564caf6e4c4c4c98ac inherit pro_methods_classSerialIO"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c89f0058217f31d041a6af9588f4560 inherit pro_methods_classSerialIO" id="r_a1c89f0058217f31d041a6af9588f4560"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rightShift</b> (uint8_t arr[], size_t size)</td></tr>
+<tr class="separator:a1c89f0058217f31d041a6af9588f4560 inherit pro_methods_classSerialIO"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classSerialIO"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classSerialIO')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classSerialIO.html">SerialIO</a></td></tr>
-<tr class="memitem:a7328638a668ff561619662612b16120d inherit pro_attribs_classSerialIO" id="r_a7328638a668ff561619662612b16120d"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="crsf__protocol_8h.html#acc70938025350136337a247b487027a6">crsf_channels_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>channelData</b></td></tr>
-<tr class="separator:a7328638a668ff561619662612b16120d inherit pro_attribs_classSerialIO"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a288b0f5fb6a1d566124aa93c035ee451 inherit pro_attribs_classSerialIO" id="r_a288b0f5fb6a1d566124aa93c035ee451"><td class="memItemLeft" align="right" valign="top">
 Stream *&#160;</td><td class="memItemRight" valign="bottom"><b>_rxPort</b></td></tr>
 <tr class="separator:a288b0f5fb6a1d566124aa93c035ee451 inherit pro_attribs_classSerialIO"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc076a55e77604224dd861ef8130244f inherit pro_attribs_classSerialIO" id="r_adc076a55e77604224dd861ef8130244f"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>_headerDetected</b></td></tr>
-<tr class="separator:adc076a55e77604224dd861ef8130244f inherit pro_attribs_classSerialIO"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a991be4261eddcd953551d73cf2feeb31 inherit pro_attribs_classSerialIO" id="r_a991be4261eddcd953551d73cf2feeb31"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>_inverted</b></td></tr>
 <tr class="separator:a991be4261eddcd953551d73cf2feeb31 inherit pro_attribs_classSerialIO"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7180c0fc108ed2e41d926dd3ae67b1d6 inherit pro_attribs_classSerialIO" id="r_a7180c0fc108ed2e41d926dd3ae67b1d6"><td class="memItemLeft" align="right" valign="top">
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_rxIndex</b></td></tr>
-<tr class="separator:a7180c0fc108ed2e41d926dd3ae67b1d6 inherit pro_attribs_classSerialIO"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a874e6357c323f6ec3f5a0f180889d05a inherit pro_attribs_classSerialIO" id="r_a874e6357c323f6ec3f5a0f180889d05a"><td class="memItemLeft" align="right" valign="top">
 int&#160;</td><td class="memItemRight" valign="bottom"><b>_rxPin</b></td></tr>
 <tr class="separator:a874e6357c323f6ec3f5a0f180889d05a inherit pro_attribs_classSerialIO"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a8eb08945846fc9962b6a6140436c13 inherit pro_attribs_classSerialIO" id="r_a8a8eb08945846fc9962b6a6140436c13"><td class="memItemLeft" align="right" valign="top">
 int&#160;</td><td class="memItemRight" valign="bottom"><b>_txPin</b></td></tr>
 <tr class="separator:a8a8eb08945846fc9962b6a6140436c13 inherit pro_attribs_classSerialIO"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0bbebbb77c061ec85f1b2d10820ecbe inherit pro_attribs_classSerialIO" id="r_ac0bbebbb77c061ec85f1b2d10820ecbe"><td class="memItemLeft" align="right" valign="top">
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_buffer</b></td></tr>
-<tr class="separator:ac0bbebbb77c061ec85f1b2d10820ecbe inherit pro_attribs_classSerialIO"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c491e997496bf201aa03731f3a548d7 inherit pro_attribs_classSerialIO" id="r_a5c491e997496bf201aa03731f3a548d7"><td class="memItemLeft" align="right" valign="top">
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></td></tr>
-<tr class="separator:a5c491e997496bf201aa03731f3a548d7 inherit pro_attribs_classSerialIO"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class for handling IBUS protocol communication. </p>
@@ -252,8 +244,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
 
 </div>
 </div>
-<a id="a57c1f6c70920a934ec6aae68db0cb2ec" name="a57c1f6c70920a934ec6aae68db0cb2ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57c1f6c70920a934ec6aae68db0cb2ec">&#9670;&#160;</a></span>getChannel()</h2>
+<a id="a98d2497d07ecef667e4274049d2c16e0" name="a98d2497d07ecef667e4274049d2c16e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d2497d07ecef667e4274049d2c16e0">&#9670;&#160;</a></span>getChannel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -264,7 +256,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
         <tr>
           <td class="memname">void ibus::getChannel </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="crsf__protocol_8h.html#acc70938025350136337a247b487027a6">crsf_channels_t</a> *</td>          <td class="paramname"><span class="paramname"><em>channelData</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structrc__channels__s.html">rc_channels_t</a> *</td>          <td class="paramname"><span class="paramname"><em>channelData</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -283,7 +275,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classSerialIO.html#af9ad40f8b521c431a0bf5a3ef91a4dc6">SerialIO</a>.</p>
+<p>Implements <a class="el" href="classSerialIO.html#ae6269d9231dfa9aceb57a80802d5bfd4">SerialIO</a>.</p>
 
 </div>
 </div>
@@ -317,8 +309,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_prevBuffer</b></t
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/<a class="el" href="ibus_8h_source.html">ibus.h</a></li>
-<li>src/<b>ibus.cpp</b></li>
+<li>src/ibus/<a class="el" href="ibus_8h_source.html">ibus.h</a></li>
+<li>src/ibus/<b>ibus.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
