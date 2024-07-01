@@ -67,15 +67,15 @@ To use the library for decoding RC protocols in your Arduino project, follow the
 
 5. **Process Incoming Data**:
     In the `loop()` function, call the `processIncoming()` method to process incoming bytes:
-        ```cpp
-        receiver->processIncoming();
-        ```
+    ```cpp
+    receiver->processIncoming();
+    ```
 
 6. **Retrieve Channel Data**:
     To retrieve the decoded RC channel data, call the `getChannel()` method, passing a pointer to the `channelData` structure:
-        ```cpp
-            receiver->getChannel(&channelData);
-        ```
+    ```cpp
+        receiver->getChannel(&channelData);
+    ```
 
 **see also**:
     - @ref SerialIO
