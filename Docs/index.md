@@ -38,17 +38,17 @@ lib_deps = Witty-Wizard/SerialIO
 
 To use the library for decoding RC protocols in your Arduino project, follow these steps:
 
-1.  **Include Necessary Libraries**:
+1. **Include Necessary Libraries**:
     Include the required libraries at the beginning of your sketch:
     ```cpp
     #include <SerialIO.h>
     ```
-2.  **Define Channel Data Structure**:
+2. **Define Channel Data Structure**:
     Define a structure to hold the decoded RC channel data.
     ```cpp
     crsf_channels_t channelData;
     ```
-3.  **Instantiate SerialIO Object**:
+3. **Instantiate SerialIO Object**:
     Create an instance of the SerialIO class, specifying the serial port, RX pin, and TX pin:
     ```cpp
     SerialIO *receiver = new crsf(&Serial1, pinRX, pinTX);
@@ -57,30 +57,32 @@ To use the library for decoding RC protocols in your Arduino project, follow the
     ```cpp
     SerialIO *receiver = new crsf(&Serial1, pinRX);
     ```
-4.  **Initialize Communication**:
+4. **Initialize Communication**:
     Call the begin() method to initialize communication with the specified serial port:
-
     ```cpp
     void setup() {
         receiver->begin();
     }
     ```
 
-5.  **Process Incoming Data**:
-    In the loop() function, call the processIncoming() method to process incoming bytes:
+5. **Process Incoming Data**:
+    In the `loop()` function, call the `processIncoming()` method to process incoming bytes:
+    ```cpp
+    receiver->processIncoming();
+    ```
 
-        ```cpp
-        receiver->processIncoming();
-        ```
+6. **Retrieve Channel Data**:
+    To retrieve the decoded RC channel data, call the `getChannel()` method, passing a pointer to the `channelData` structure:
+    ```cpp
+        receiver->getChannel(&channelData);
+    ```
 
-6.  **Retrieve Channel Data**:
-    To retrieve the decoded RC channel data, call the getChannel() method, passing a pointer to the channelData structure:
-
-        ```cpp
-            receiver->getChannel(&channelData);
-        ```
-
-    **see also**: - @ref SerialIO - @ref sbus - @ref crsf - @ref ibus
+**see also**:
+    - @ref SerialIO
+    - @ref sbus
+    - @ref crsf
+    - @ref ibus
+    - @ref fport
 
 ## Examples {#example}
 

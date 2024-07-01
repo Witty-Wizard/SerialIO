@@ -36,15 +36,10 @@ void fport::processIncoming() {
                sizeof(_channelData));
       }
     }
-
-    if (_rxData[FPORT_MAX_PACKET_SIZE - 1] == FPORT_END_BYTES) {
-      leftShift(_rxData, sizeof(_rxData));
-    } else if (_rxData[FPORT_MAX_PACKET_SIZE - 2] == 0x7E) {
+    if (_rxData[FPORT_MAX_PACKET_SIZE - 2] == FPORT_END_BYTES) {
       size = _rxData[FPORT_MAX_PACKET_SIZE - 1];
+    } 
       leftShift(_rxData, sizeof(_rxData));
-    } else {
-      leftShift(_rxData, sizeof(_rxData));
-    }
   }
 }
 
