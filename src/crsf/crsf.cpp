@@ -19,37 +19,40 @@ void crsf::begin() {
 }
 
 void crsf::processIncoming() {
+  uint8_t size = CRSF_MAX_PACKET_SIZE;
   while (_rxPort->available()) {
-    _buffer = _rxPort->read();
-    if (_headerDetected) {
-      _rxData[_rxIndex] = _buffer;
-      _rxIndex++;
-      if (_rxIndex > _rxData[1] + 2)
-
-      {
-        _rxIndex = 0;
-        _headerDetected = false;
-      }
-    } else {
-      if (_buffer == CRSF_ADDRESS_FLIGHT_CONTROLLER ||
-          _buffer == CRSF_ADDRESS_CRSF_TRANSMITTER) {
-        _headerDetected = true;
-        _rxData[0] = _buffer;
-        _rxIndex = 1;
+    _rxData[CRSF_MAX_PACKET_SIZE - 1] = _rxPort->read();
+    if (crc8(&_rxData[CRSF_MAX_PACKET_SIZE - size],
+             _rxData[CRSF_MAX_PACKET_SIZE - size - 1]) == 0) {
+      if ((_rxData[CRSF_MAX_PACKET_SIZE - size - 2] ==
+           CRSF_ADDRESS_FLIGHT_CONTROLLER) ||
+          (_rxData[CRSF_MAX_PACKET_SIZE - size - 2] ==
+           CRSF_ADDRESS_CRSF_TRANSMITTER)) {
+        if (_rxData[CRSF_MAX_PACKET_SIZE - size] ==
+            CRSF_FRAMETYPE_RC_CHANNELS_PACKED) {
+          memcpy(&_channelData, &_rxData[CRSF_MAX_PACKET_SIZE - size + 1],
+                 sizeof(_channelData));
+        }
       }
     }
 
-    if (_rxIndex == sizeof(_rxData) / sizeof(_rxData[0])) {
-      _rxIndex = 0;
-      _headerDetected = false;
+    if (_rxData[CRSF_MAX_PACKET_SIZE - 1] == CRSF_ADDRESS_CRSF_TRANSMITTER ||
+        _rxData[CRSF_MAX_PACKET_SIZE - 1] == CRSF_ADDRESS_FLIGHT_CONTROLLER) {
+      leftShift(_rxData, sizeof(_rxData));
+    } else if (_rxData[CRSF_MAX_PACKET_SIZE - 2] ==
+                   CRSF_ADDRESS_CRSF_TRANSMITTER ||
+               _rxData[CRSF_MAX_PACKET_SIZE - 2] ==
+                   CRSF_ADDRESS_FLIGHT_CONTROLLER) {
+      size = _rxData[CRSF_MAX_PACKET_SIZE - 1];
+      leftShift(_rxData, sizeof(_rxData));
+    } else {
+      leftShift(_rxData, sizeof(_rxData));
     }
   }
-  if (crc8(&_rxData[2], _rxData[1]) == 0)
-    memcpy(&channelData, &_rxData[3], sizeof(channelData));
 }
 
-void crsf::getChannel(void *channelData) {
-  *static_cast<decltype(this->channelData) *>(channelData) = this->channelData;
+void crsf::getChannel(rc_channels_t *channelData) {
+  memcpy(channelData, &_channelData, sizeof(rc_channels_t));
 }
 
 uint8_t crsf::crc8(uint8_t *data, uint8_t len) {
