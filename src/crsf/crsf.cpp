@@ -35,19 +35,13 @@ void crsf::processIncoming() {
         }
       }
     }
-
-    if (_rxData[CRSF_MAX_PACKET_SIZE - 1] == CRSF_ADDRESS_CRSF_TRANSMITTER ||
-        _rxData[CRSF_MAX_PACKET_SIZE - 1] == CRSF_ADDRESS_FLIGHT_CONTROLLER) {
-      leftShift(_rxData, sizeof(_rxData));
-    } else if (_rxData[CRSF_MAX_PACKET_SIZE - 2] ==
+     if (_rxData[CRSF_MAX_PACKET_SIZE - 2] ==
                    CRSF_ADDRESS_CRSF_TRANSMITTER ||
                _rxData[CRSF_MAX_PACKET_SIZE - 2] ==
                    CRSF_ADDRESS_FLIGHT_CONTROLLER) {
       size = _rxData[CRSF_MAX_PACKET_SIZE - 1];
-      leftShift(_rxData, sizeof(_rxData));
-    } else {
-      leftShift(_rxData, sizeof(_rxData));
-    }
+    } 
+    leftShift(_rxData, sizeof(_rxData));
   }
 }
 
