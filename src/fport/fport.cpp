@@ -5,6 +5,7 @@
  */
 
 #include "fport.h"
+#include <iostream>
 
 fport::fport(Stream *rxPort, int rxPin, int txPin, bool inverted)
     : SerialIO(rxPort, rxPin, txPin, inverted) {}
@@ -25,14 +26,31 @@ void fport::begin() {
 }
 
 void fport::processIncoming() {
+  uint8_t size = FPORT_MAX_PACKET_SIZE;
   while (_rxPort->available()) {
     _rxData[FPORT_MAX_PACKET_SIZE - 1] = _rxPort->read();
+    if (_rxData[FPORT_MAX_PACKET_SIZE - size - 4] == FPORT_END_BYTES &&
+        _rxData[FPORT_MAX_PACKET_SIZE - 1] == FPORT_END_BYTES) {
+      if (_rxData[FPORT_MAX_PACKET_SIZE - size - 2] ==
+          FPORT_FRAMETYPE_RC_CHANNELS_PACKED) {
+        memcpy(&_channelData, &_rxData[FPORT_MAX_PACKET_SIZE - size - 1],
+               sizeof(_channelData));
+      }
+    }
+
+    if (_rxData[FPORT_MAX_PACKET_SIZE - 1] == FPORT_END_BYTES) {
+      leftShift(_rxData, sizeof(_rxData));
+    } else if (_rxData[FPORT_MAX_PACKET_SIZE - 2] == 0x7E) {
+      size = _rxData[FPORT_MAX_PACKET_SIZE - 1];
+      leftShift(_rxData, sizeof(_rxData));
+    } else {
+      leftShift(_rxData, sizeof(_rxData));
+    }
   }
-  while (!(_rxData[0] == 0x7E && _rxData[FPORT_MAX_PACKET_SIZE - 1] == 0x7E)) {
-    leftShift(_rxData, sizeof(_rxData));
-  }
-  memcpy(&_channelData, &_rxData[4], sizeof(_channelData));
-  memset(_rxData, 0, sizeof(_rxData));
 }
 
-void fport::getChannel(rc_channels_t *channelData) {}
+void fport::getChannel(rc_channels_t *channelData) {
+  memcpy(channelData, &_channelData, sizeof(rc_channels_t));
+}
+
+void fport::crc() {}

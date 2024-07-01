@@ -19,7 +19,7 @@
 class crsf : public SerialIO {
 private:
   crsf_channels_t _channelData;
-  uint8_t _rxData[CRSF_MAX_PACKET_SIZE];
+  uint8_t _rxData[CRSF_MAX_PACKET_SIZE]={0};
   bool _headerDetected; // Flag indicating whether a header has been detected in
                         // the incoming data.
   uint8_t _rxIndex;     // Index for the receive_buffer.

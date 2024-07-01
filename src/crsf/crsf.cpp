@@ -1,4 +1,5 @@
 #include "crsf.h"
+#include <iostream>
 
 crsf::crsf(Stream *rxPort, int rxPin, int txPin, bool inverted)
     : SerialIO(rxPort, rxPin, txPin, inverted){};
@@ -19,12 +20,32 @@ void crsf::begin() {
 }
 
 void crsf::processIncoming() {
+  uint8_t size = CRSF_MAX_PACKET_SIZE;
   while (_rxPort->available()) {
     _rxData[CRSF_MAX_PACKET_SIZE - 1] = _rxPort->read();
-    if ((_rxData[0] == CRSF_ADDRESS_CRSF_TRANSMITTER ||
-         _rxData[0] == CRSF_ADDRESS_CRSF_TRANSMITTER) &&
-        (crc8(&_rxData[2], _rxData[1]) == 0)) {
-      memcpy(&_channelData, &_rxData[3], sizeof(_channelData));
+    if (crc8(&_rxData[CRSF_MAX_PACKET_SIZE - size],
+             _rxData[CRSF_MAX_PACKET_SIZE - size - 1]) == 0) {
+      if ((_rxData[CRSF_MAX_PACKET_SIZE - size - 2] ==
+           CRSF_ADDRESS_FLIGHT_CONTROLLER) ||
+          (_rxData[CRSF_MAX_PACKET_SIZE - size - 2] ==
+           CRSF_ADDRESS_CRSF_TRANSMITTER)) {
+        if (_rxData[CRSF_MAX_PACKET_SIZE - size] ==
+            CRSF_FRAMETYPE_RC_CHANNELS_PACKED) {
+          memcpy(&_channelData, &_rxData[CRSF_MAX_PACKET_SIZE - size + 1],
+                 sizeof(_channelData));
+        }
+      }
+    }
+
+    if (_rxData[CRSF_MAX_PACKET_SIZE - 1] == CRSF_ADDRESS_CRSF_TRANSMITTER ||
+        _rxData[CRSF_MAX_PACKET_SIZE - 1] == CRSF_ADDRESS_FLIGHT_CONTROLLER) {
+      leftShift(_rxData, sizeof(_rxData));
+    } else if (_rxData[CRSF_MAX_PACKET_SIZE - 2] ==
+                   CRSF_ADDRESS_CRSF_TRANSMITTER ||
+               _rxData[CRSF_MAX_PACKET_SIZE - 2] ==
+                   CRSF_ADDRESS_FLIGHT_CONTROLLER) {
+      size = _rxData[CRSF_MAX_PACKET_SIZE - 1];
+      leftShift(_rxData, sizeof(_rxData));
     } else {
       leftShift(_rxData, sizeof(_rxData));
     }

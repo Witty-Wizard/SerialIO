@@ -6,7 +6,6 @@
 #ifndef SerialIO_H
 #define SerialIO_H
 #include <Arduino.h>
-
 #define PACKED __attribute__((packed))
 
 typedef struct rc_channels_s {
