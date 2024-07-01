@@ -135,22 +135,16 @@ PlatformIO Installation</h3>
 </div><!-- fragment --><h2><a class="anchor" id="tutorial"></a>
 Tutorial</h2>
 <p>To use the library for decoding RC protocols in your Arduino project, follow these steps:</p>
-<ol type="1">
-<li><b>Include Necessary Libraries</b>: Include the required libraries at the beginning of your sketch: <code>cpp #include &lt;<a class="el" href="SerialIO_8h.html" title="Header file for serial input/output (IO) functionality.">SerialIO.h</a>&gt; </code></li>
-<li><b>Define Channel Data Structure</b>: Define a structure to hold the decoded RC channel data. <code>cpp crsf_channels_t channelData; </code></li>
-<li><b>Instantiate <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> Object</b>: Create an instance of the <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> class, specifying the serial port, RX pin, and TX pin: <code>cpp <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> *receiver = new crsf(&amp;Serial1, pinRX, pinTX); </code> To instantiate a <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> object for receiving data only, you can create an instance of the crsf class specifying the serial port, RX pin: <code>cpp <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> *receiver = new crsf(&amp;Serial1, pinRX); </code></li>
-<li><p class="startli"><b>Initialize Communication</b>: Call the begin() method to initialize communication with the specified serial port:</p>
-<p class="startli"><code>cpp void setup() { receiver-&gt;begin(); } </code></p>
-</li>
-<li><b>Process Incoming Data</b>: In the loop() function, call the processIncoming() method to process incoming bytes: <pre class="fragment">```cpp
-receiver-&gt;processIncoming();
-```
-</pre></li>
-<li><b>Retrieve Channel Data</b>: To retrieve the decoded RC channel data, call the getChannel() method, passing a pointer to the channelData structure: <pre class="fragment">```cpp
-    receiver-&gt;getChannel(&amp;channelData);
-```
-</pre> <b>see also</b>: - <a class="el" href="classSerialIO.html">SerialIO</a> - <a class="el" href="classsbus.html">sbus</a> - <a class="el" href="classcrsf.html">crsf</a> - <a class="el" href="classibus.html">ibus</a></li>
-</ol>
+<p>1.**Include Necessary Libraries**: Include the required libraries at the beginning of your sketch: <code>cpp #include &lt;<a class="el" href="SerialIO_8h.html" title="Header file for serial input/output (IO) functionality.">SerialIO.h</a>&gt; </code> 2.**Define Channel Data Structure**: Define a structure to hold the decoded RC channel data. <code>cpp crsf_channels_t channelData; </code> 3.**Instantiate <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> Object**: Create an instance of the <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> class, specifying the serial port, RX pin, and TX pin: <code>cpp <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> *receiver = new crsf(&amp;Serial1, pinRX, pinTX); </code> To instantiate a <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> object for receiving data only, you can create an instance of the crsf class specifying the serial port, RX pin: <code>cpp <a class="el" href="classSerialIO.html" title="Class that stores state and functions for initialising and decoding rc protocol.">SerialIO</a> *receiver = new crsf(&amp;Serial1, pinRX); </code> 4.**Initialize Communication**: Call the begin() method to initialize communication with the specified serial port: <code>cpp void setup() { receiver-&gt;begin(); } </code></p>
+<p>5.**Process Incoming Data**: In the loop() function, call the processIncoming() method to process incoming bytes: <code>cpp receiver-&gt;processIncoming(); </code></p>
+<p>6.*Retrieve Channel Data**: To retrieve the decoded RC channel data, call the getChannel() method, passing a pointer to the channelData structure: <code>cpp receiver-&gt;getChannel(&amp;channelData); </code></p>
+<p><b>see also</b>:</p><ul>
+<li><a class="el" href="classSerialIO.html">SerialIO</a></li>
+<li><a class="el" href="classsbus.html">sbus</a></li>
+<li><a class="el" href="classcrsf.html">crsf</a></li>
+<li><a class="el" href="classibus.html">ibus</a></li>
+<li><a class="el" href="classfport.html">fport</a></li>
+</ul>
 <h2><a class="anchor" id="example"></a>
 Examples</h2>
 <h3><a class="anchor" id="autotoc_md6"></a>
