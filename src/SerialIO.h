@@ -6,6 +6,7 @@
 #ifndef SerialIO_H
 #define SerialIO_H
 #include <Arduino.h>
+#include <ibus/ibus_protocol.h>
 #define PACKED __attribute__((packed))
 
 typedef struct rc_channels_s {
@@ -68,6 +69,12 @@ public:
   */
   /**************************************************************************/
   virtual void getChannel(rc_channels_t *channelData) = 0;
+
+  /*!
+      @brief Get the ChannelData.
+  */
+  /**************************************************************************/
+  virtual void getChannel(ibus_channels_t *channelData);
 
 protected:
   Stream
