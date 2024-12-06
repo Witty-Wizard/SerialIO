@@ -27,3 +27,5 @@ void SerialIO::rightShift(uint8_t arr[], size_t size) {
   memmove(arr + 1, arr, size - 1);
   arr[0] = 0xFF;
 }
+
+void SerialIO::getChannel(ibus_channels_t *channelData) {}
