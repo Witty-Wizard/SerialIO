@@ -43,10 +43,17 @@ public:
 
   /**
    * @brief Gets the decoded RC channels from the IBUS data.
-   * @param channelData Pointer to a crsf_channels_t struct where the decoded
+   * @param channelData Pointer to a rc_channels_t struct where the decoded
    * channel data will be stored.
    */
   void getChannel(rc_channels_t *channelData) override;
+
+  /**
+   * @brief Gets the decoded RC channels from the IBUS data.
+   * @param channelData Pointer to a ibus_channels_t struct where the decoded
+   * channel data will be stored.
+   */
+  void getChannel(ibus_channels_t *channelData) override;
 };
 
 #endif // IBUS_H

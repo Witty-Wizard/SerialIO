@@ -51,20 +51,24 @@ void ibus::processIncoming() {
 }
 
 void ibus::getChannel(rc_channels_t *channelData) {
-  channelData->channel1=_channelData.channel1;
-  channelData->channel2=_channelData.channel2;
-  channelData->channel3=_channelData.channel3;
-  channelData->channel4=_channelData.channel4;
-  channelData->channel5=_channelData.channel5;
-  channelData->channel6=_channelData.channel6;
-  channelData->channel7=_channelData.channel7;
-  channelData->channel8=_channelData.channel8;
-  channelData->channel9=_channelData.channel9;
-  channelData->channel10=_channelData.channel10;
-  channelData->channel11=_channelData.channel11;
-  channelData->channel12=_channelData.channel12;
-  channelData->channel13=_channelData.channel13;
-  channelData->channel14=_channelData.channel14;
+  channelData->channel1 = _channelData.channel1;
+  channelData->channel2 = _channelData.channel2;
+  channelData->channel3 = _channelData.channel3;
+  channelData->channel4 = _channelData.channel4;
+  channelData->channel5 = _channelData.channel5;
+  channelData->channel6 = _channelData.channel6;
+  channelData->channel7 = _channelData.channel7;
+  channelData->channel8 = _channelData.channel8;
+  channelData->channel9 = _channelData.channel9;
+  channelData->channel10 = _channelData.channel10;
+  channelData->channel11 = _channelData.channel11;
+  channelData->channel12 = _channelData.channel12;
+  channelData->channel13 = _channelData.channel13;
+  channelData->channel14 = _channelData.channel14;
+}
+
+void ibus::getChannel(ibus_channels_t *channelData) {
+  *channelData = _channelData;
 }
 
 bool ibus::checkSum() {
