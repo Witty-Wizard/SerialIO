@@ -16,7 +16,7 @@ void crsf::begin() {
   serialPort->setInvertTX(_inverted);
   serialPort->begin(CRSF_BAUDRATE, SERIAL_8N1);
 #else
-#warning #warning "Unsupported hardware platform."
+#warning "Unsupported hardware platform."
 #endif
 }
 
