@@ -1,8 +1,8 @@
 ---
-name: 🪲 Bug Report
+name: 🐞 Bug Report
 about: Create a bug report to help us resolving the bug
-title: '🪲[Bug]: '
-labels: '🪲bug'
+title: '🐞 Bug: '
+labels: 'bugfixes 🐞'
 assignees: ''
 
 ---
