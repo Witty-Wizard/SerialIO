@@ -1,8 +1,8 @@
 ---
-name: ✨ Feature Request
-about: ✨Suggest an interesting feature idea for this project
-title: '✨[FEATURE]: '
-labels: '✨enhancement'
+name: 🪄 Feature Request
+about: 🪄 Suggest an interesting feature idea for this project
+title: 'FEATURE: '
+labels: 'enhancement 🪄'
 assignees: ''
 
 ---

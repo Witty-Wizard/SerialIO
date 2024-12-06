@@ -1,8 +1,8 @@
 ---
-name: 📝 Documentation
+name: 📖 Documentation
 about: Propose changes and improvements to Cansat-Ground-Station Docs.
-title: '📝[Docs]: '
-labels: '📝docs'
+title: '📖 Docs: '
+labels: 'documentation 📖'
 assignees: ''
 ---
 
