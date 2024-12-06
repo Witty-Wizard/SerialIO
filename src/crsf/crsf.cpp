@@ -12,6 +12,8 @@ void crsf::begin() {
 #elif defined(ARDUINO_ARCH_RP2040)
   SerialUART *serialPort = (SerialUART *)_rxPort;
   serialPort->setPinout(_txPin, _rxPin);
+  serialPort->setInvertRX(_inverted);
+  serialPort->setInvertTX(_inverted);
   serialPort->begin(CRSF_BAUDRATE, SERIAL_8N1);
 #else
 #warning #warning "Unsupported hardware platform."
