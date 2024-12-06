@@ -28,7 +28,7 @@ void ibus::processIncoming() {
     _rxData[IBUS_MAX_PACKET_SIZE - 1] = _rxPort->read();
     if (_rxData[0] == IBUS_HEADER1 && _rxData[1] == IBUS_HEADER2) {
       if (checkSum()) {
-        _channelData.header = (_rxData[2] << 8) | _rxData[0];
+        _channelData.header = (_rxData[1] << 8) | _rxData[0];
         _channelData.channel1 = (_rxData[3] << 8) | _rxData[2];
         _channelData.channel2 = (_rxData[5] << 8) | _rxData[4];
         _channelData.channel3 = (_rxData[7] << 8) | _rxData[6];
