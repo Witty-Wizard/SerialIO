@@ -19,7 +19,7 @@ void ibus::begin() {
   serialPort->setInvertTX(_inverted);
   serialPort->begin(IBUS_BAUDRATE, SERIAL_8N1);
 #else
-#warning #warning "Unsupported hardware platform."
+#warning "Unsupported hardware platform."
 #endif
 }
 
