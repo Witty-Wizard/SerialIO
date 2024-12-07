@@ -30,8 +30,6 @@ ibus receiver(&Serial1, SBUS_RX_PIN, SBUS_TX_PIN,
 
 void setup() {
   // setup sbus receiver
-  Serial1.setInvertRX(true); // will only work with the earlephilhower core
-  Serial1.setInvertTX(true);
   receiver.begin();
 
   Serial.begin(115200);
