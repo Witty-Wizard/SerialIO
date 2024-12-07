@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['example_0',['Example',['../index.html#autotoc_md6',1,'CRSF Basic Example'],['../index.html#autotoc_md7',1,'SBUS Basic Example']]],
-  ['examples_1',['Examples',['../index.html#example',1,'']]]
+  ['4_20permanent_20ban_0',['4. Permanent Ban',['../md_CODE__OF__CONDUCT.html#autotoc_md10',1,'']]]
 ];

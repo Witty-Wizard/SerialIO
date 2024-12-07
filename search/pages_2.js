@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sbus_0',['Futaba SBus',['../futabasbus.html',1,'']]],
-  ['serialio_1',['SerialIO',['../index.html',1,'']]]
+  ['of_20conduct_0',['Contributor Covenant Code of Conduct',['../md_CODE__OF__CONDUCT.html',1,'']]]
 ];
