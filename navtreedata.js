@@ -25,36 +25,50 @@
 var NAVTREE =
 [
   [ "SerialIO", "index.html", [
-    [ "Supported Protocol", "index.html#autotoc_md2", null ],
-    [ "Getting Started", "index.html#autotoc_md3", [
+    [ "Supported Protocol", "index.html#autotoc_md14", null ],
+    [ "Getting Started", "index.html#autotoc_md15", [
       [ "Installation", "index.html#installation", [
-        [ "Arduino Installation", "index.html#autotoc_md4", null ],
-        [ "PlatformIO Installation", "index.html#autotoc_md5", null ]
+        [ "Arduino Installation", "index.html#autotoc_md16", null ],
+        [ "PlatformIO Installation", "index.html#autotoc_md17", null ]
       ] ],
       [ "Tutorial", "index.html#tutorial", null ],
       [ "Examples", "index.html#example", [
-        [ "CRSF Basic Example", "index.html#autotoc_md6", null ],
-        [ "SBUS Basic Example", "index.html#autotoc_md7", null ]
+        [ "CRSF Basic Example", "index.html#autotoc_md18", null ],
+        [ "SBUS Basic Example", "index.html#autotoc_md19", null ]
       ] ]
     ] ],
-    [ "Guide to Adding More Protocols", "index.html#autotoc_md8", [
-      [ "Steps", "index.html#autotoc_md9", null ],
-      [ "Basic Functions Required", "index.html#autotoc_md10", null ]
+    [ "Guide to Adding More Protocols", "index.html#autotoc_md20", [
+      [ "Steps", "index.html#autotoc_md21", null ],
+      [ "Basic Functions Required", "index.html#autotoc_md22", null ]
     ] ],
-    [ "License", "index.html#autotoc_md11", null ],
+    [ "License", "index.html#autotoc_md23", null ],
+    [ "Contributor Covenant Code of Conduct", "md_CODE__OF__CONDUCT.html", [
+      [ "Our Pledge", "md_CODE__OF__CONDUCT.html#autotoc_md1", null ],
+      [ "Our Standards", "md_CODE__OF__CONDUCT.html#autotoc_md2", null ],
+      [ "Enforcement Responsibilities", "md_CODE__OF__CONDUCT.html#autotoc_md3", null ],
+      [ "Scope", "md_CODE__OF__CONDUCT.html#autotoc_md4", null ],
+      [ "Enforcement", "md_CODE__OF__CONDUCT.html#autotoc_md5", null ],
+      [ "Enforcement Guidelines", "md_CODE__OF__CONDUCT.html#autotoc_md6", [
+        [ "Correction", "md_CODE__OF__CONDUCT.html#autotoc_md7", null ],
+        [ "Warning", "md_CODE__OF__CONDUCT.html#autotoc_md8", null ],
+        [ "Temporary Ban", "md_CODE__OF__CONDUCT.html#autotoc_md9", null ],
+        [ "Permanent Ban", "md_CODE__OF__CONDUCT.html#autotoc_md10", null ]
+      ] ],
+      [ "Attribution", "md_CODE__OF__CONDUCT.html#autotoc_md11", null ]
+    ] ],
     [ "FrSky F.Port", "frskyfport.html", [
-      [ "Specifications", "frskyfport.html#autotoc_md0", [
+      [ "Specifications", "frskyfport.html#autotoc_md12", [
         [ "Physical Layer", "frskyfport.html#physical_fport", [
-          [ "Uart Configuration", "frskyfport.html#autotoc_md1", null ]
+          [ "Uart Configuration", "frskyfport.html#autotoc_md13", null ]
         ] ],
         [ "Message Format", "frskyfport.html#format_fport", null ]
       ] ]
     ] ],
     [ "Futaba SBus", "futabasbus.html", [
-      [ "Specifications", "futabasbus.html#autotoc_md12", [
+      [ "Specifications", "futabasbus.html#autotoc_md24", [
         [ "Physical Layer", "futabasbus.html#physical_sbus", [
-          [ "Uart Configuration", "futabasbus.html#autotoc_md13", null ],
-          [ "Inversion", "futabasbus.html#autotoc_md14", null ]
+          [ "Uart Configuration", "futabasbus.html#autotoc_md25", null ],
+          [ "Inversion", "futabasbus.html#autotoc_md26", null ]
         ] ],
         [ "Message Format", "futabasbus.html#format_sbus", null ]
       ] ]
