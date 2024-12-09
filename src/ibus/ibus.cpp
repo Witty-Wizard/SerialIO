@@ -33,6 +33,7 @@ void ibus::processIncoming() {
         for(int i = 0; i < len; i++){
           arr[i] = (_rxData[i*sizeof(uint16_t)+1] << 8) | _rxData[i*sizeof(uint16_t)];
         }
+        free(arr)
       }
     }
     leftShift(_rxData, sizeof(_rxData));
