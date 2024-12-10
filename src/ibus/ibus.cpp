@@ -29,11 +29,11 @@ void ibus::processIncoming() {
     if (_rxData[0] == IBUS_HEADER1 && _rxData[1] == IBUS_HEADER2) {
       if (checkSum()) {
         size_t len = sizeof(ibus_channels_s) / sizeof(uint16_t);
-        uint16_t *arr = (uint16_t *)malloc(len * sizeof(uint16_t));
-        for(int i = 0; i < len; i++){
-          arr[i] = (_rxData[i*sizeof(uint16_t)+1] << 8) | _rxData[i*sizeof(uint16_t)];
+        uint16_t *arr = (uint16_t *)&_channelData;
+        for (int i = 0; i < len; i++) {
+          arr[i] = (_rxData[i * sizeof(uint16_t) + 1] << 8) |
+                   _rxData[i * sizeof(uint16_t)];
         }
-        free(arr);
       }
     }
     leftShift(_rxData, sizeof(_rxData));
