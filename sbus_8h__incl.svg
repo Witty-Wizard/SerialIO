@@ -171,9 +171,9 @@
 </g>
 </g>
 <!-- Node6&#45;&gt;Node2 -->
-<g id="edge6_Node000006_Node000002" class="edge">
+<g id="edge8_Node000006_Node000002" class="edge">
 <title>Node6&#45;&gt;Node2</title>
-<g id="a_edge6_Node000006_Node000002"><a xlink:title=" ">
+<g id="a_edge8_Node000006_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M227.46,-130.11C228.85,-136.75 229.3,-146.05 228.81,-154.42"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="225.37,-153.72 227.6,-164.08 232.31,-154.59 225.37,-153.72"/>
 </a>
@@ -182,25 +182,25 @@
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="crsf__protocol_8h.html" target="_top" xlink:title="Header file for the CRSF protocol implementation.">
+<g id="a_Node000007"><a xlink:href="crsf__protocol_8h_source.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="244.12,-74.5 164.38,-74.5 164.38,-55.25 244.12,-55.25 244.12,-74.5"/>
 <text text-anchor="middle" x="204.25" y="-61" font-family="Helvetica,sans-Serif" font-size="10.00">crsf_protocol.h</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
-<g id="edge7_Node000006_Node000007" class="edge">
+<g id="edge6_Node000006_Node000007" class="edge">
 <title>Node6&#45;&gt;Node7</title>
-<g id="a_edge7_Node000006_Node000007"><a xlink:title=" ">
+<g id="a_edge6_Node000006_Node000007"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M219.28,-110.33C217,-103.59 213.76,-94.02 210.88,-85.49"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="214.29,-84.65 207.77,-76.29 207.66,-86.89 214.29,-84.65"/>
 </a>
 </g>
 </g>
 <!-- Node7&#45;&gt;Node5 -->
-<g id="edge8_Node000007_Node000005" class="edge">
+<g id="edge7_Node000007_Node000005" class="edge">
 <title>Node7&#45;&gt;Node5</title>
-<g id="a_edge8_Node000007_Node000005"><a xlink:title=" ">
+<g id="a_edge7_Node000007_Node000005"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M212.34,-55.08C219.11,-47.73 228.97,-37.01 237.31,-27.94"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="239.76,-30.45 243.96,-20.72 234.61,-25.71 239.76,-30.45"/>
 </a>

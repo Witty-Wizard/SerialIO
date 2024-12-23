@@ -19,10 +19,10 @@
 <area shape="poly" id="edge14_Node000003_Node000010" title=" " alt="" coords="315,177,374,216,371,220,312,181"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="313,374,376,399"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="169,324,299,367,297,372,167,329"/>
-<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="306,226,308,193,313,194,311,226"/>
-<area shape="rect" id="Node000008" href="$crsf__protocol_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="224,300,331,326"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="300,253,289,286,284,284,295,251"/>
-<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="291,324,325,360,321,364,287,328"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="306,226,308,193,313,194,311,226"/>
+<area shape="rect" id="Node000008" href="$crsf__protocol_8h_source.html" title=" " alt="" coords="224,300,331,326"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="300,253,289,286,284,284,295,251"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="291,324,325,360,321,364,287,328"/>
 <area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="220,224,277,186,280,190,223,228"/>
 <area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="188,254,155,290,151,287,184,250"/>
 <area shape="poly" id="edge15_Node000010_Node000003" title=" " alt="" coords="398,228,339,189,342,184,401,224"/>

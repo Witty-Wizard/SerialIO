@@ -16,10 +16,10 @@
 <area shape="poly" id="edge16_Node000002_Node000011" title=" " alt="" coords="333,118,465,160,463,165,331,123"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="311,315,375,341"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="169,265,297,308,296,313,167,270"/>
-<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="306,167,308,135,313,135,311,167"/>
-<area shape="rect" id="Node000007" href="$crsf__protocol_8h.html" title="Header file for the CRSF protocol implementation." alt="" coords="224,241,331,267"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="300,194,289,228,284,226,295,193"/>
-<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="290,265,324,302,320,305,286,269"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="306,167,308,135,313,135,311,167"/>
+<area shape="rect" id="Node000007" href="$crsf__protocol_8h_source.html" title=" " alt="" coords="224,241,331,267"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="300,194,289,228,284,226,295,193"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="290,265,324,302,320,305,286,269"/>
 <area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="397,170,338,130,341,126,400,165"/>
 <area shape="rect" id="Node000009" href="$fport__protocol_8h.html" title="Header file for the F.Port protocol implementation." alt="" coords="354,241,465,267"/>
 <area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="412,194,412,226,407,226,407,194"/>

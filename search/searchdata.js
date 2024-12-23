@@ -4,10 +4,8 @@ var indexSectionsWithContent =
   1: "cfirs",
   2: "cfis",
   3: "bcgips",
-  4: "c",
-  5: "c",
-  6: "cfhis",
-  7: "cfops"
+  4: "fhis",
+  5: "cfops"
 };
 
 var indexSectionNames =
@@ -16,10 +14,8 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "typedefs",
-  5: "enums",
-  6: "defines",
-  7: "pages"
+  4: "defines",
+  5: "pages"
 };
 
 var indexSectionLabels =
@@ -28,9 +24,7 @@ var indexSectionLabels =
   1: "Classes",
   2: "Files",
   3: "Functions",
-  4: "Typedefs",
-  5: "Enumerations",
-  6: "Macros",
-  7: "Pages"
+  4: "Macros",
+  5: "Pages"
 };
 
