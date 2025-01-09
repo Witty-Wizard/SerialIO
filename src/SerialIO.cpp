@@ -1,7 +1,9 @@
 #include "SerialIO.h"
 
-SerialIO::SerialIO(Stream *rxPort, int rxPin, int txPin, bool inverted)
-    : _rxPort(rxPort), _rxPin(rxPin), _txPin(txPin), _inverted(inverted) {
+SerialIO::SerialIO(Stream *rxPort, int rxPin, int txPin, bool inverted,
+                   bool softSerial)
+    : _rxPort(rxPort), _rxPin(rxPin), _txPin(txPin), _inverted(inverted),
+      _softSerial(softSerial) {
   // Constructor implementation
 }
 

@@ -27,8 +27,20 @@ public:
    * @param inverted Whether the serial signal is inverted (true) or not
    * (false).
    */
-  explicit sbus(Stream *rxPort, int rxPin = -1, int txPin = -1,
-                bool inverted = true);
+  explicit sbus(
+      Stream *rxPort,
+      int rxPin = -1, // default value -1 means to use the default
+                      // pins associated with serial port
+      int txPin = -1,
+      bool inverted = true // Set default inverted value as true because sbus
+                           // logic is inverted by convention
+  );
+
+  /**
+   * @brief Constructor for the SBUS class.
+   * @param rxPort Reference to the Software serial port for RX communication.
+   */
+  explicit sbus(SoftwareSerial *rxPort);
 
   /**
    * @brief Initializes the SBUS communication.

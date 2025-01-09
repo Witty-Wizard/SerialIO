@@ -46,8 +46,11 @@ public:
    * @param txPin The TX pin number.
    * @param inverted Whether the serial signal is inverted (true) or not
    * (false).
+   * @param softSerial Whether to use software serial or hardware serial (don't
+   * input this parameter)
    */
-  SerialIO(Stream *rxPort, int rxPin, int txPin, bool inverted);
+  SerialIO::SerialIO(Stream *rxPort, int rxPin, int txPin, bool inverted,
+                     bool softSerial);
 
   virtual ~SerialIO();
 
