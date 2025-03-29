@@ -1,7 +1,7 @@
 name: 📖 Documentation
-about: Propose changes and improvements to Docs.
-title: '📖 Docs: '
-labels: ['documentation 📖']
+description: Propose changes and improvements to Docs.
+title: "📖 Docs: "
+labels: ["documentation 📖"]
 assignees:
   - Witty-Wizard
 
@@ -9,35 +9,35 @@ body:
   - type: textarea
     id: issue-description
     attributes:
-      label: 'Describe the issue or improvement you want to propose'
+      label: "Describe the issue or improvement you want to propose"
       description: "Provide a clear description of the changes you're proposing for the documentation. Are you suggesting corrections, clarifications, additions, or updates?"
-      placeholder: 'Describe the improvement...'
+      placeholder: "Describe the improvement..."
     validations:
       required: true
 
   - type: textarea
     id: issue-why
     attributes:
-      label: 'Why do the Docs need this improvement?'
+      label: "Why do the Docs need this improvement?"
       description: "Explain the motivation behind the proposed changes and how they will benefit the community or users of the documentation."
-      placeholder: 'Explain why this change is needed...'
+      placeholder: "Explain why this change is needed..."
     validations:
       required: true
 
   - type: textarea
     id: issue-solution
     attributes:
-      label: 'What is the proposed solution?'
+      label: "What is the proposed solution?"
       description: "Outline the specific changes or additions you would like to see in the documentation. Be as detailed as possible."
-      placeholder: 'Describe the solution...'
+      placeholder: "Describe the solution..."
     validations:
       required: true
 
   - type: textarea
-    id:additional-context
+    id: additional-context
     attributes:
-      label: 'Additional context'
+      label: "Additional context"
       description: "If applicable, provide any additional context, examples, or screenshots related to the proposed documentation changes."
-      placeholder: 'Add any additional context...'
+      placeholder: "Add any additional context..."
     validations:
       required: false
