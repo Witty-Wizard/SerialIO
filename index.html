@@ -19,7 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="SerialIO" href="main.html" /> 
+    <link rel="next" title="Futaba SBus" href="sbus.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,9 +41,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="main.html">SerialIO</a></li>
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="sbus.html">Futaba SBus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fport.html">FrSky F.Port</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apidocumentation.html">API Documentation</a></li>
@@ -73,128 +71,234 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="serialio">
-<h1>SerialIO<a class="headerlink" href="#serialio" title="Link to this heading"></a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="main.html">SerialIO</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="main.html#supported-protocols">Supported Protocols</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html#getting-started">Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html#tutorial">Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html#see-also">See Also</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html#examples">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html#guide-to-adding-more-protocols">Guide to Adding More Protocols</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main.html#license">License</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="sbus.html">Futaba SBus</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sbus.html#specifications">Specifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sbus.html#physical-layer">Physical Layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sbus.html#message-format">Message Format</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fport.html">FrSky F.Port</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fport.html#specifications">Specifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fport.html#physical-layer">Physical Layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fport.html#message-format">Message Format</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="apidocumentation.html">API Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv44crsf"><code class="docutils literal notranslate"><span class="pre">crsf</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv415crsf_channels_s"><code class="docutils literal notranslate"><span class="pre">crsf_channels_s</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv413crsf_header_s"><code class="docutils literal notranslate"><span class="pre">crsf_header_s</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv421crsf_sensor_battery_s"><code class="docutils literal notranslate"><span class="pre">crsf_sensor_battery_s</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv417crsf_sensor_gps_s"><code class="docutils literal notranslate"><span class="pre">crsf_sensor_gps_s</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv427crsfPayloadLinkstatistics_s"><code class="docutils literal notranslate"><span class="pre">crsfPayloadLinkstatistics_s</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv45fport"><code class="docutils literal notranslate"><span class="pre">fport</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv416fport_channels_s"><code class="docutils literal notranslate"><span class="pre">fport_channels_s</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv44ibus"><code class="docutils literal notranslate"><span class="pre">ibus</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv415ibus_channels_s"><code class="docutils literal notranslate"><span class="pre">ibus_channels_s</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv413rc_channels_s"><code class="docutils literal notranslate"><span class="pre">rc_channels_s</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv44sbus"><code class="docutils literal notranslate"><span class="pre">sbus</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv415sbus_channels_s"><code class="docutils literal notranslate"><span class="pre">sbus_channels_s</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv48SerialIO"><code class="docutils literal notranslate"><span class="pre">SerialIO</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#conf"><code class="docutils literal notranslate"><span class="pre">conf</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.RX_PIN"><code class="docutils literal notranslate"><span class="pre">RX_PIN</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv45setupv"><code class="docutils literal notranslate"><span class="pre">setup()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv44loopv"><code class="docutils literal notranslate"><span class="pre">loop()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv411channelData"><code class="docutils literal notranslate"><span class="pre">channelData</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.SBUS_TX_PIN"><code class="docutils literal notranslate"><span class="pre">SBUS_TX_PIN</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.SBUS_RX_PIN"><code class="docutils literal notranslate"><span class="pre">SBUS_RX_PIN</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv46rcdata"><code class="docutils literal notranslate"><span class="pre">rcdata</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.CRSF_H"><code class="docutils literal notranslate"><span class="pre">CRSF_H</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.CRC8_POLY_D5"><code class="docutils literal notranslate"><span class="pre">CRC8_POLY_D5</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.CRSF_PROTOCOL_H"><code class="docutils literal notranslate"><span class="pre">CRSF_PROTOCOL_H</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.PACKED"><code class="docutils literal notranslate"><span class="pre">PACKED</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.CRSF_BAUDRATE"><code class="docutils literal notranslate"><span class="pre">CRSF_BAUDRATE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.CRSF_NUM_CHANNELS"><code class="docutils literal notranslate"><span class="pre">CRSF_NUM_CHANNELS</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.CRSF_CHANNEL_VALUE_MIN"><code class="docutils literal notranslate"><span class="pre">CRSF_CHANNEL_VALUE_MIN</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.CRSF_CHANNEL_VALUE_1000"><code class="docutils literal notranslate"><span class="pre">CRSF_CHANNEL_VALUE_1000</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.CRSF_CHANNEL_VALUE_MID"><code class="docutils literal notranslate"><span class="pre">CRSF_CHANNEL_VALUE_MID</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.CRSF_CHANNEL_VALUE_2000"><code class="docutils literal notranslate"><span class="pre">CRSF_CHANNEL_VALUE_2000</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.CRSF_CHANNEL_VALUE_MAX"><code class="docutils literal notranslate"><span class="pre">CRSF_CHANNEL_VALUE_MAX</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.CRSF_CHANNEL_VALUE_SPAN"><code class="docutils literal notranslate"><span class="pre">CRSF_CHANNEL_VALUE_SPAN</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.CRSF_MAX_PACKET_SIZE"><code class="docutils literal notranslate"><span class="pre">CRSF_MAX_PACKET_SIZE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.CRSF_MAX_PAYLOAD_LEN"><code class="docutils literal notranslate"><span class="pre">CRSF_MAX_PAYLOAD_LEN</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv413crsf_header_t"><code class="docutils literal notranslate"><span class="pre">crsf_header_t</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv415crsf_channels_t"><code class="docutils literal notranslate"><span class="pre">crsf_channels_t</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv420crsfLinkStatistics_t"><code class="docutils literal notranslate"><span class="pre">crsfLinkStatistics_t</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv421crsf_sensor_battery_t"><code class="docutils literal notranslate"><span class="pre">crsf_sensor_battery_t</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv417crsf_sensor_gps_t"><code class="docutils literal notranslate"><span class="pre">crsf_sensor_gps_t</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv4N19PhonyNameDueToError25CRSF_FRAME_LENGTH_ADDRESSE"><code class="docutils literal notranslate"><span class="pre">CRSF_FRAME_LENGTH_ADDRESS</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv4N19PhonyNameDueToError29CRSF_FRAME_LENGTH_FRAMELENGTHE"><code class="docutils literal notranslate"><span class="pre">CRSF_FRAME_LENGTH_FRAMELENGTH</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv4N19PhonyNameDueToError22CRSF_FRAME_LENGTH_TYPEE"><code class="docutils literal notranslate"><span class="pre">CRSF_FRAME_LENGTH_TYPE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv4N19PhonyNameDueToError21CRSF_FRAME_LENGTH_CRCE"><code class="docutils literal notranslate"><span class="pre">CRSF_FRAME_LENGTH_CRC</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv4N19PhonyNameDueToError26CRSF_FRAME_LENGTH_TYPE_CRCE"><code class="docutils literal notranslate"><span class="pre">CRSF_FRAME_LENGTH_TYPE_CRC</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv4N19PhonyNameDueToError30CRSF_FRAME_LENGTH_EXT_TYPE_CRCE"><code class="docutils literal notranslate"><span class="pre">CRSF_FRAME_LENGTH_EXT_TYPE_CRC</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv4N19PhonyNameDueToError29CRSF_FRAME_LENGTH_NON_PAYLOADE"><code class="docutils literal notranslate"><span class="pre">CRSF_FRAME_LENGTH_NON_PAYLOAD</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv4N19PhonyNameDueToError27CRSF_FRAME_GPS_PAYLOAD_SIZEE"><code class="docutils literal notranslate"><span class="pre">CRSF_FRAME_GPS_PAYLOAD_SIZE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv4N19PhonyNameDueToError38CRSF_FRAME_BATTERY_SENSOR_PAYLOAD_SIZEE"><code class="docutils literal notranslate"><span class="pre">CRSF_FRAME_BATTERY_SENSOR_PAYLOAD_SIZE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv4N19PhonyNameDueToError39CRSF_FRAME_LINK_STATISTICS_PAYLOAD_SIZEE"><code class="docutils literal notranslate"><span class="pre">CRSF_FRAME_LINK_STATISTICS_PAYLOAD_SIZE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv4N19PhonyNameDueToError35CRSF_FRAME_RC_CHANNELS_PAYLOAD_SIZEE"><code class="docutils literal notranslate"><span class="pre">CRSF_FRAME_RC_CHANNELS_PAYLOAD_SIZE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv4N19PhonyNameDueToError32CRSF_FRAME_ATTITUDE_PAYLOAD_SIZEE"><code class="docutils literal notranslate"><span class="pre">CRSF_FRAME_ATTITUDE_PAYLOAD_SIZE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv417crsf_frame_type_e"><code class="docutils literal notranslate"><span class="pre">crsf_frame_type_e</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv411crsf_addr_e"><code class="docutils literal notranslate"><span class="pre">crsf_addr_e</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv47htobe168uint16_t"><code class="docutils literal notranslate"><span class="pre">htobe16()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv47be16toh8uint16_t"><code class="docutils literal notranslate"><span class="pre">be16toh()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv47htobe328uint32_t"><code class="docutils literal notranslate"><span class="pre">htobe32()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv47be32toh8uint32_t"><code class="docutils literal notranslate"><span class="pre">be32toh()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.FPORT_H"><code class="docutils literal notranslate"><span class="pre">FPORT_H</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.FPORT_PROTOCOL_H"><code class="docutils literal notranslate"><span class="pre">FPORT_PROTOCOL_H</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.FPORT_BAUDRATE"><code class="docutils literal notranslate"><span class="pre">FPORT_BAUDRATE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.FPORT_MAX_PACKET_SIZE"><code class="docutils literal notranslate"><span class="pre">FPORT_MAX_PACKET_SIZE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.FPORT_END_BYTES"><code class="docutils literal notranslate"><span class="pre">FPORT_END_BYTES</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv416fport_channels_t"><code class="docutils literal notranslate"><span class="pre">fport_channels_t</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv418fport_frame_type_e"><code class="docutils literal notranslate"><span class="pre">fport_frame_type_e</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.IBUS_H"><code class="docutils literal notranslate"><span class="pre">IBUS_H</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.IBUS_PROTOCOL_H"><code class="docutils literal notranslate"><span class="pre">IBUS_PROTOCOL_H</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.IBUS_MAX_PACKET_SIZE"><code class="docutils literal notranslate"><span class="pre">IBUS_MAX_PACKET_SIZE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.IBUS_BAUDRATE"><code class="docutils literal notranslate"><span class="pre">IBUS_BAUDRATE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.IBUS_HEADER1"><code class="docutils literal notranslate"><span class="pre">IBUS_HEADER1</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.IBUS_HEADER2"><code class="docutils literal notranslate"><span class="pre">IBUS_HEADER2</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv415ibus_channels_t"><code class="docutils literal notranslate"><span class="pre">ibus_channels_t</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.SBUS_H"><code class="docutils literal notranslate"><span class="pre">SBUS_H</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.SBUS_PROTOCOL_H"><code class="docutils literal notranslate"><span class="pre">SBUS_PROTOCOL_H</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.HEADER_SBUS"><code class="docutils literal notranslate"><span class="pre">HEADER_SBUS</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.FOOTER_SBUS"><code class="docutils literal notranslate"><span class="pre">FOOTER_SBUS</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.SBUS_BAUDRATE"><code class="docutils literal notranslate"><span class="pre">SBUS_BAUDRATE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.SBUS_MAX_PACKET_SIZE"><code class="docutils literal notranslate"><span class="pre">SBUS_MAX_PACKET_SIZE</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv415sbus_channels_t"><code class="docutils literal notranslate"><span class="pre">sbus_channels_t</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#c.SerialIO_H"><code class="docutils literal notranslate"><span class="pre">SerialIO_H</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="apidocumentation.html#_CPPv413rc_channels_t"><code class="docutils literal notranslate"><span class="pre">rc_channels_t</span></code></a></li>
-</ul>
-</li>
-</ul>
+  <div class="toctree-wrapper compound">
 </div>
+<section id="serialio">
+<h1>SerialIO<a class="headerlink" href="#serialio" title="Link to this heading"></a></h1>
+<p id="mainpage">SerialIO is a common library designed to simplify the implementation of RC protocol decoding in Arduino projects. It provides a modular and extensible architecture that allows for easy integration of various RC protocols.</p>
+<section id="supported-protocols">
+<h2>Supported Protocols<a class="headerlink" href="#supported-protocols" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="sbus.html">Futaba SBus protocol</a></p></li>
+<li><p><a class="reference external" href="https://github.com/crsf-wg/crsf/wiki">Crossfire RC protocol</a></p></li>
+<li><p><a class="reference external" href="https://basejunction.wordpress.com/2015/08/23/en-flysky-i6-14-channels-part1/">Flysky IBus protocol</a></p></li>
+<li><p><a class="reference external" href="fport.html">FrSky F.Port</a></p></li>
+</ul>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#installation">Installation</a></p></li>
+<li><p><a class="reference internal" href="#tutorial">Tutorial</a></p></li>
+<li><p><a class="reference internal" href="#examples">Examples</a></p></li>
+</ul>
+</section>
+<section id="installation">
+<span id="id1"></span><h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<section id="arduino-installation">
+<h3>Arduino Installation<a class="headerlink" href="#arduino-installation" title="Link to this heading"></a></h3>
+<p>To use the SerialIO library in your Arduino projects, follow these installation steps:</p>
+<ol class="arabic simple">
+<li><p>Download the SerialIO library from the <a class="reference external" href="https://github.com/Witty-Wizard/SerialIO">GitHub repository</a>.</p></li>
+<li><p>Extract the downloaded ZIP file.</p></li>
+<li><p>Copy the extracted folder to the <cite>libraries</cite> directory in your Arduino sketchbook.</p></li>
+<li><p>Restart the Arduino IDE.</p></li>
+<li><p>You should now be able to include the SerialIO library in your Arduino sketches.</p></li>
+</ol>
+</section>
+<section id="platformio-installation">
+<h3>PlatformIO Installation<a class="headerlink" href="#platformio-installation" title="Link to this heading"></a></h3>
+<p>If you are using PlatformIO, you can install the SerialIO library directly from the PlatformIO Library Manager. Add the following line to your <cite>platformio.ini</cite> file:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">lib_deps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Witty-Wizard/SerialIO</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="tutorial">
+<span id="id2"></span><h2>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading"></a></h2>
+<p>To use the library for decoding RC protocols in your Arduino project, follow these steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Include Necessary Libraries</strong>:</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SerialIO.h&gt;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Define Channel Data Structure</strong>:</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">crsf_channels_t</span><span class="w"> </span><span class="n">channelData</span><span class="p">;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>Instantiate SerialIO Object</strong>:</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SerialIO</span><span class="w"> </span><span class="o">*</span><span class="n">receiver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">crsf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Serial1</span><span class="p">,</span><span class="w"> </span><span class="n">pinRX</span><span class="p">,</span><span class="w"> </span><span class="n">pinTX</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To instantiate a SerialIO object for receiving data only:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SerialIO</span><span class="w"> </span><span class="o">*</span><span class="n">receiver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">crsf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Serial1</span><span class="p">,</span><span class="w"> </span><span class="n">pinRX</span><span class="p">);</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>Initialize Communication</strong>:</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">receiver</span><span class="o">-&gt;</span><span class="n">begin</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p><strong>Process Incoming Data</strong>:</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">receiver</span><span class="o">-&gt;</span><span class="n">processIncoming</span><span class="p">();</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p><strong>Retrieve Channel Data</strong>:</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">receiver</span><span class="o">-&gt;</span><span class="n">getChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">channelData</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a href="#id3"><span class="problematic" id="id4">:doxygenclass:`SerialIO`</span></a></p></li>
+<li><p><a href="#id5"><span class="problematic" id="id6">:doxygenclass:`sbus`</span></a></p></li>
+<li><p><a href="#id7"><span class="problematic" id="id8">:doxygenclass:`crsf`</span></a></p></li>
+<li><p><a href="#id9"><span class="problematic" id="id10">:doxygenclass:`ibus`</span></a></p></li>
+<li><p><a href="#id11"><span class="problematic" id="id12">:doxygenclass:`fport`</span></a></p></li>
+</ul>
+</section>
+<section id="examples">
+<span id="example"></span><h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<section id="crsf-basic-example">
+<h3>CRSF Basic Example<a class="headerlink" href="#crsf-basic-example" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*!</span>
+<span class="cm"> * @file crsf_basic.ino</span>
+<span class="cm"> */</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SerialIO.h&gt;</span>
+<span class="cp">#define RX_PIN 16</span>
+
+<span class="n">rc_channels_t</span><span class="w"> </span><span class="n">channelData</span><span class="p">;</span>
+
+<span class="n">crsf</span><span class="w"> </span><span class="nf">receiver</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Serial1</span><span class="p">,</span><span class="w"> </span><span class="n">RX_PIN</span><span class="p">);</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">receiver</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">receiver</span><span class="p">.</span><span class="n">processIncoming</span><span class="p">();</span>
+<span class="w">  </span><span class="n">receiver</span><span class="p">.</span><span class="n">getChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">channelData</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Channel 1: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">channelData</span><span class="p">.</span><span class="n">channel1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; Channel 2: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">channelData</span><span class="p">.</span><span class="n">channel2</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; Channel 3: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">channelData</span><span class="p">.</span><span class="n">channel3</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; Channel 4: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">channelData</span><span class="p">.</span><span class="n">channel4</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="sbus-basic-example">
+<h3>SBUS Basic Example<a class="headerlink" href="#sbus-basic-example" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*!</span>
+<span class="cm"> * @file sbus_basic.ino</span>
+<span class="cm"> */</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SerialIO.h&gt;</span>
+<span class="cp">#define RX_PIN 16</span>
+
+<span class="n">rc_channels_t</span><span class="w"> </span><span class="n">channelData</span><span class="p">;</span>
+
+<span class="n">sbus</span><span class="w"> </span><span class="nf">receiver</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Serial1</span><span class="p">,</span><span class="w"> </span><span class="n">RX_PIN</span><span class="p">);</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">receiver</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">receiver</span><span class="p">.</span><span class="n">processIncoming</span><span class="p">();</span>
+<span class="w">  </span><span class="n">receiver</span><span class="p">.</span><span class="n">getChannel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">channelData</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Channel 1: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">channelData</span><span class="p">.</span><span class="n">channel1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; Channel 2: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">channelData</span><span class="p">.</span><span class="n">channel2</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; Channel 3: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">channelData</span><span class="p">.</span><span class="n">channel3</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot; Channel 4: &quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">channelData</span><span class="p">.</span><span class="n">channel4</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="guide-to-adding-more-protocols">
+<h2>Guide to Adding More Protocols<a class="headerlink" href="#guide-to-adding-more-protocols" title="Link to this heading"></a></h2>
+<section id="steps">
+<h3>Steps<a class="headerlink" href="#steps" title="Link to this heading"></a></h3>
+<p>To add more protocols to your project, follow these steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Create a New Protocol File</strong> : Create a header file for the new protocol, e.g., <cite>xyz_protocol.h</cite>.</p></li>
+<li><p><strong>Define Protocol Structure</strong> : Define constants, data structures, and functions.</p></li>
+<li><p><strong>Implement Protocol Functions</strong> : Implement functions in a corresponding source file (<cite>xyz_protocol.cpp</cite>).</p></li>
+<li><p><strong>Include Protocol Header</strong> : Include the header file using <cite>#include “xyz_protocol.h”</cite>.</p></li>
+<li><p><strong>Initialize Protocol</strong> : Initialize the protocol in your code.</p></li>
+<li><p><strong>Process Incoming Data</strong> : Call the function to process data.</p></li>
+<li><p><strong>Extract Channel Information</strong> : Extract channel data using the provided function.</p></li>
+</ol>
+</section>
+<section id="basic-functions-required">
+<h3>Basic Functions Required<a class="headerlink" href="#basic-functions-required" title="Link to this heading"></a></h3>
+<p>For a new protocol, implement these basic functions:</p>
+<ul class="simple">
+<li><p><cite>void begin()</cite> : Initialize the protocol.</p></li>
+<li><p><cite>void processIncoming()</cite> : Process incoming data.</p></li>
+<li><p><cite>void getChannels()</cite> : Extract channel information.</p></li>
+</ul>
+<p>Here is a template for a new protocol header:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
+<span class="cp">#ifndef XYZ_PROTOCOL_H</span>
+<span class="cp">#define XYZ_PROTOCOL_H</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">XYZProtocol</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">SerialIO</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">XYZProtocol</span><span class="p">(</span><span class="n">HardwareSerial</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rxPort</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">rxPin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">txPin</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">inverted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">SerialIO</span><span class="p">(</span><span class="o">&amp;</span><span class="n">rxPort</span><span class="p">,</span><span class="w"> </span><span class="n">rxPin</span><span class="p">,</span><span class="w"> </span><span class="n">txPin</span><span class="p">,</span><span class="w"> </span><span class="n">inverted</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">    </span><span class="o">~</span><span class="n">XYZProtocol</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">begin</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">processIncoming</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">getChannel</span><span class="p">();</span>
+
+<span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="n">HardwareSerial</span><span class="w"> </span><span class="o">*</span><span class="n">_serialPort</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="cp">#endif </span><span class="c1">// XYZ_PROTOCOL_H</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Link to this heading"></a></h2>
+<p>This library is distributed under the GNU <a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.html">General Public License version 3.0</a>.</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="main.html" class="btn btn-neutral float-right" title="SerialIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sbus.html" class="btn btn-neutral float-right" title="Futaba SBus" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
