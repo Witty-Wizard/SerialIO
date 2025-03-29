@@ -1,0 +1,43 @@
+name: 🐛 Bug Report
+description: Create a bug report to help us resolving the bug
+title: "🐛 Bug: "
+labels: ["bug 🐛"]
+assignees:
+  - Witty-Wizard
+
+body:
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: |
+        Please provide a clear and concise description of the bug. Include any relevant details, such as error messages, unexpected behavior, or steps to reproduce the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        Please provide a list of steps to reproduce the bug. This will help us understand how to replicate the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: |
+        Please describe what you expected to happen. This will help us understand the intended functionality.
+    validations:
+      required: true
+
+  - type: textarea
+    id: Additional-context
+    attributes:
+      label: Additional Context
+      description: |
+        Please provide any additional context or information that may be relevant to the bug report. This could include screenshots, logs, or any other details that may help us understand the issue better.
+    validations:
+      required: false
