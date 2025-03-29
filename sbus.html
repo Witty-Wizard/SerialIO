@@ -1,0 +1,169 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Futaba SBus &mdash; SerialIO 0.2.4 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=6ffd866b"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="FrSky F.Port" href="fport.html" />
+    <link rel="prev" title="SerialIO" href="main.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SerialIO
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="main.html">SerialIO</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Futaba SBus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#specifications">Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#physical-layer">Physical Layer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#uart-configuration">UART Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inversion">Inversion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#message-format">Message Format</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fport.html">FrSky F.Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apidocumentation.html">API Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SerialIO</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Futaba SBus</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/sbus.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="futaba-sbus">
+<span id="futabasbus"></span><h1>Futaba SBus<a class="headerlink" href="#futaba-sbus" title="Link to this heading"></a></h1>
+<p>The Futaba S.Bus protocol was introduced around 2009. It was developed by Futaba, a leading manufacturer of RC systems, to address the limitations of traditional PWM (Pulse Width Modulation) systems used for RC control. Unlike PWM, which requires separate wires for each channel, S.Bus uses a single serial connection to transmit data for multiple channels, reducing the complexity of wiring in RC models.</p>
+<a class="reference internal image-reference" href="_images/sbus.png"><img alt="_images/sbus.png" src="_images/sbus.png" style="width: 700cm;" />
+</a>
+<section id="specifications">
+<h2>Specifications<a class="headerlink" href="#specifications" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#physical-layer">Physical Layer</a></p></li>
+<li><p><a class="reference internal" href="#message-format">Message Format</a></p></li>
+</ul>
+</section>
+<section id="physical-layer">
+<span id="physical-sbus"></span><h2>Physical Layer<a class="headerlink" href="#physical-layer" title="Link to this heading"></a></h2>
+<p>The physical layer of the Futaba SBus protocol utilizes UART (Universal Asynchronous Receiver-Transmitter) communication at a baud rate of 100000.</p>
+<section id="uart-configuration">
+<h3>UART Configuration<a class="headerlink" href="#uart-configuration" title="Link to this heading"></a></h3>
+<p>The configuration of the UART communication for SBus uses the following format:</p>
+<ul class="simple">
+<li><p><strong>8 bits of data</strong>: Each data frame consists of 8 bits, representing the information being transmitted.</p></li>
+<li><p><strong>Even parity</strong>: With even parity, the number of bits set to 1 in each 8-bit data frame, including the parity bit, must be an even number.</p></li>
+<li><p><strong>2 stop bits</strong>: Following the data bits and the parity bit, there are 2 stop bits. Stop bits indicate the end of a data frame and provide timing for the receiving device to process the data.</p></li>
+</ul>
+</section>
+<section id="inversion">
+<h3>Inversion<a class="headerlink" href="#inversion" title="Link to this heading"></a></h3>
+<p>For using SBus with a microcontroller, an inverter is typically required for the inverted UART logic level. This inversion is necessary because traditional UART operates with an active high level, while SBus uses inverted UART with an active low level.</p>
+<a class="reference internal image-reference" href="_images/inverter.png"><img alt="_images/inverter.png" src="_images/inverter.png" style="width: 600cm;" />
+</a>
+</section>
+</section>
+<section id="message-format">
+<span id="format-sbus"></span><h2>Message Format<a class="headerlink" href="#message-format" title="Link to this heading"></a></h2>
+<img alt="_images/formatsbus.png" src="_images/formatsbus.png" />
+<p>The SBus protocol uses a specific message format for transmitting control data from the transmitter to the receiver.</p>
+<ul>
+<li><p><strong>Byte[0]</strong>: SBUS header (0x0F): The message begins with a header byte, which serves as the start indicator for the S.Bus message. This byte is fixed at <cite>0x0F</cite>, indicating the beginning of a new S.Bus frame.</p></li>
+<li><p><strong>Byte[1 - 22]</strong>: 16 servo channels, 11 bits each: The next 22 bytes are allocated for servo channel data. Each servo channel occupies 11 bits, allowing for precise control over servo positions. This section contains information about the positions of up to 16 servo channels.</p></li>
+<li><p><strong>Byte[23]</strong>: Additional status indicators:</p>
+<ul class="simple">
+<li><p><strong>Bit 0</strong>: Channel 17</p></li>
+<li><p><strong>Bit 1</strong>: Channel 18</p></li>
+<li><p><strong>Bit 2</strong>: Frame lost</p></li>
+<li><p><strong>Bit 3</strong>: Failsafe activated</p></li>
+</ul>
+<p>These bits provide information about the status of channels 17 and 18, as well as indications of frame loss and failsafe activation.</p>
+</li>
+<li><p><strong>Byte[24]</strong>: SBUS footer (0x00): The message concludes with a footer byte, marking the end of the S.Bus frame.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="main.html" class="btn btn-neutral float-left" title="SerialIO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fport.html" class="btn btn-neutral float-right" title="FrSky F.Port" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Witty-Wizard.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
