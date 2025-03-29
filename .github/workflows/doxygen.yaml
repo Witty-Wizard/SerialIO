@@ -12,25 +12,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
-    - name: Download Custom CSS File
-      run: curl -o doxygen-awesome.css https://raw.githubusercontent.com/jothepro/doxygen-awesome-css/main/doxygen-awesome.css
-        
-    - name: Download Dark Mode Toggle JavaScript
-      run: curl -o doxygen-awesome-darkmode-toggle.js https://raw.githubusercontent.com/jothepro/doxygen-awesome-css/main/doxygen-awesome-darkmode-toggle.js
-        
-    - name: Doxygen Action
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r Docs/requirements.txt
+
+    - name: Generate Doxygen Documentation
       uses: mattnotmitt/doxygen-action@v1.1.0
       with:
         doxyfile-path: "./Doxyfile"
         working-directory: "."
 
+    - name: Build Sphinx Documentation
+      run: |
+        sphinx-build ./Docs/source ./Docs/build
+
     - name: Upload Documentation as Artifact
       uses: actions/upload-artifact@v4
       with:
         name: documentation
-        path: ./Docs/html
+        path: ./Docs/build
 
   deploy:
     runs-on: ubuntu-latest
@@ -38,16 +47,17 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/v')
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
     - name: Download Documentation Artifact
       uses: actions/download-artifact@v4
       with:
         name: documentation
-        path: ./Docs/html
+        path: ./Docs/build
 
-    - name: Deploy
+    - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./Docs/html
+        publish_dir: ./Docs/build
