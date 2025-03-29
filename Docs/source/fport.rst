@@ -1,7 +1,7 @@
 .. _frskyfport:
 
 FrSky F.Port
-=============
+============
 
 FrSky F.Port is a protocol developed by FrSky Electronic Co., Ltd., designed for communication between receivers and connected devices like servos or sensors. It is a one-line bus system that supports both control and data transmission, operating at a higher speed (115200 baud per second) compared to its predecessor, S.Port.
 
