@@ -9,6 +9,7 @@
   <title>API Documentation &mdash; SerialIO 0.2.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
@@ -16,6 +17,8 @@
       <script src="_static/documentation_options.js?v=6ffd866b"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -41,7 +44,12 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sbus.html">Futaba SBus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fport.html">FrSky F.Port</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a><ul>
@@ -245,20 +253,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N8SerialIO6_txPinE"><code class="docutils literal notranslate"><span class="pre">_txPin</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#conf"><code class="docutils literal notranslate"><span class="pre">conf</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#conf.project"><code class="docutils literal notranslate"><span class="pre">project</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#conf.copyright"><code class="docutils literal notranslate"><span class="pre">copyright</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#conf.author"><code class="docutils literal notranslate"><span class="pre">author</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#conf.release"><code class="docutils literal notranslate"><span class="pre">release</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#conf.extensions"><code class="docutils literal notranslate"><span class="pre">extensions</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#conf.templates_path"><code class="docutils literal notranslate"><span class="pre">templates_path</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#conf.exclude_patterns"><code class="docutils literal notranslate"><span class="pre">exclude_patterns</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#conf.html_theme"><code class="docutils literal notranslate"><span class="pre">html_theme</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#conf.html_static_path"><code class="docutils literal notranslate"><span class="pre">html_static_path</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#conf.breathe_projects"><code class="docutils literal notranslate"><span class="pre">breathe_projects</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#conf.breathe_default_project"><code class="docutils literal notranslate"><span class="pre">breathe_default_project</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="#c.RX_PIN"><code class="docutils literal notranslate"><span class="pre">RX_PIN</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#_CPPv45setupv"><code class="docutils literal notranslate"><span class="pre">setup()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#_CPPv44loopv"><code class="docutils literal notranslate"><span class="pre">loop()</span></code></a></li>
@@ -428,7 +422,7 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N4crsf15processIncomingEv">
 <span id="_CPPv3N4crsf15processIncomingEv"></span><span id="_CPPv2N4crsf15processIncomingEv"></span><span id="crsf::processIncoming"></span><span class="target" id="classcrsf_1aa3ab8580352dff53f78cfec944f05db2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">processIncoming</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4crsf15processIncomingEv" title="Link to this definition"></a><br /></dt>
-<dd><p>decode the incoming serial data. </p>
+<dd><p>Process incoming serial data and decode it. </p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -741,19 +735,28 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5fport5beginEv">
 <span id="_CPPv3N5fport5beginEv"></span><span id="_CPPv2N5fport5beginEv"></span><span id="fport::begin"></span><span class="target" id="classfport_1a7f298f4011a14a42182a474060e81d7a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5fport5beginEv" title="Link to this definition"></a><br /></dt>
-<dd><p>Initialises the pins and setup serial port. </p>
+<dd><p>Initialize pins and set up the serial port. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5fport15processIncomingEv">
 <span id="_CPPv3N5fport15processIncomingEv"></span><span id="_CPPv2N5fport15processIncomingEv"></span><span id="fport::processIncoming"></span><span class="target" id="classfport_1aed17f1aea2f0d5dea859901f4d7e6c6b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">processIncoming</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5fport15processIncomingEv" title="Link to this definition"></a><br /></dt>
-<dd><p>decode the incoming serial data. </p>
+<dd><p>Process incoming serial data and decode it. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5fport10getChannelEP13rc_channels_t">
 <span id="_CPPv3N5fport10getChannelEP13rc_channels_t"></span><span id="_CPPv2N5fport10getChannelEP13rc_channels_t"></span><span id="fport::getChannel__rc_channels_tP"></span><span class="target" id="classfport_1aca28e1d8a521dc608561bc0867b60a25"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getChannel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413rc_channels_t" title="rc_channels_t"><span class="n"><span class="pre">rc_channels_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">channelData</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5fport10getChannelEP13rc_channels_t" title="Link to this definition"></a><br /></dt>
-<dd><p>Get the ChannelData. </p>
+<dd><p>Retrieve the current channel data. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The structure contains 16 channels, each represented as an 11-bit unsigned integer with a maximum value of 2047. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>channelData</strong> – <strong>[out]</strong> Pointer to an <a class="reference internal" href="#SerialIO_8h_1a4a7401e4645a3d0dda231de0bb0416af"><span class="std std-ref">rc_channels_t</span></a> structure to store the retrieved channel data.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
@@ -932,7 +935,7 @@
 <dd><p>Gets the decoded RC channels from the IBUS data. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>channelData</strong> – Pointer to a rc_channels_t struct where the decoded channel data will be stored. </p>
+<dd class="field-odd"><p><strong>channelData</strong> – Pointer to a <a class="reference internal" href="#SerialIO_8h_1a4a7401e4645a3d0dda231de0bb0416af"><span class="std std-ref">rc_channels_t</span></a> struct where the decoded channel data will be stored. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1064,7 +1067,10 @@
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv413rc_channels_s">
 <span id="_CPPv313rc_channels_s"></span><span id="_CPPv213rc_channels_s"></span><span id="rc_channels_s"></span><span class="target" id="structrc__channels__s"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rc_channels_s</span></span></span><a class="headerlink" href="#_CPPv413rc_channels_s" title="Link to this definition"></a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#SerialIO_8h"><span class="std std-ref">SerialIO.h</span></a>&gt;</em></div>
+<p>Structure representing 16 RC channels using 11-bit values. </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N13rc_channels_s8channel1E">
@@ -1182,7 +1188,7 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N4sbus15processIncomingEv">
 <span id="_CPPv3N4sbus15processIncomingEv"></span><span id="_CPPv2N4sbus15processIncomingEv"></span><span id="sbus::processIncoming"></span><span class="target" id="classsbus_1a2051c763f60e7d74aae9c247ecd3345a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">processIncoming</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4sbus15processIncomingEv" title="Link to this definition"></a><br /></dt>
-<dd><p>decode the incoming serial data. </p>
+<dd><p>Process incoming serial data and decode it. </p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -1340,22 +1346,21 @@
 <span id="_CPPv38SerialIO"></span><span id="_CPPv28SerialIO"></span><span id="SerialIO"></span><span class="target" id="classSerialIO"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SerialIO</span></span></span><a class="headerlink" href="#_CPPv48SerialIO" title="Link to this definition"></a><br /></dt>
 <dd><div class="docutils container">
 <em>#include &lt;<a class="reference internal" href="#SerialIO_8h"><span class="std std-ref">SerialIO.h</span></a>&gt;</em></div>
-<p>Class that stores state and functions for initialising and decoding rc protocol. </p>
+<p>Class providing methods for initializing and decoding RC protocols. </p>
 <p>Subclassed by <a class="reference internal" href="#classcrsf"><span class="std std-ref">crsf</span></a>, <a class="reference internal" href="#classfport"><span class="std std-ref">fport</span></a>, <a class="reference internal" href="#classibus"><span class="std std-ref">ibus</span></a>, <a class="reference internal" href="#classsbus"><span class="std std-ref">sbus</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SerialIO8SerialIOEP6Streamiib">
 <span id="_CPPv3N8SerialIO8SerialIOEP6Streamiib"></span><span id="_CPPv2N8SerialIO8SerialIOEP6Streamiib"></span><span id="SerialIO::SerialIO__StreamP.i.i.b"></span><span class="target" id="classSerialIO_1a51676a51e38a07822efcc9ffc3cd2677"></span><span class="sig-name descname"><span class="n"><span class="pre">SerialIO</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Stream</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">rxPort</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rxPin</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">txPin</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">inverted</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SerialIO8SerialIOEP6Streamiib" title="Link to this definition"></a><br /></dt>
-<dd><p>Constructor for the <a class="reference internal" href="#classSerialIO"><span class="std std-ref">SerialIO</span></a> class. </p>
-<p>Initializes the pins and sets up the serial port.</p>
+<dd><p>Constructor to initialize the <a class="reference internal" href="#classSerialIO"><span class="std std-ref">SerialIO</span></a> class. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>rxPort</strong> – Pointer to the hardware serial port to use. </p></li>
-<li><p><strong>rxPin</strong> – The RX pin number. </p></li>
-<li><p><strong>txPin</strong> – The TX pin number. </p></li>
-<li><p><strong>inverted</strong> – Whether the serial signal is inverted (true) or not (false). </p></li>
+<li><p><strong>rxPin</strong> – RX pin number. </p></li>
+<li><p><strong>txPin</strong> – TX pin number. </p></li>
+<li><p><strong>inverted</strong> – Set to true if the serial signal is inverted. </p></li>
 </ul>
 </dd>
 </dl>
@@ -1364,30 +1369,45 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SerialIOD0Ev">
 <span id="_CPPv3N8SerialIOD0Ev"></span><span id="_CPPv2N8SerialIOD0Ev"></span><span id="SerialIO::~SerialIO"></span><span class="target" id="classSerialIO_1a6e93a0a8bc22f276d792009520acee7c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~SerialIO</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SerialIOD0Ev" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Virtual destructor. </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SerialIO5beginEv">
 <span id="_CPPv3N8SerialIO5beginEv"></span><span id="_CPPv2N8SerialIO5beginEv"></span><span id="SerialIO::begin"></span><span class="target" id="classSerialIO_1a1a5b10d8a45d1ef0c1eeb83615c3cb5d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8SerialIO5beginEv" title="Link to this definition"></a><br /></dt>
-<dd><p>Initialises the pins and setup serial port. </p>
+<dd><p>Initialize pins and set up the serial port. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SerialIO15processIncomingEv">
 <span id="_CPPv3N8SerialIO15processIncomingEv"></span><span id="_CPPv2N8SerialIO15processIncomingEv"></span><span id="SerialIO::processIncoming"></span><span class="target" id="classSerialIO_1a3ef00c98b6734f69e3245d86c36949ce"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">processIncoming</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8SerialIO15processIncomingEv" title="Link to this definition"></a><br /></dt>
-<dd><p>decode the incoming serial data. </p>
+<dd><p>Process incoming serial data and decode it. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SerialIO10getChannelEP13rc_channels_t">
 <span id="_CPPv3N8SerialIO10getChannelEP13rc_channels_t"></span><span id="_CPPv2N8SerialIO10getChannelEP13rc_channels_t"></span><span id="SerialIO::getChannel__rc_channels_tP"></span><span class="target" id="classSerialIO_1ae6269d9231dfa9aceb57a80802d5bfd4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getChannel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413rc_channels_t" title="rc_channels_t"><span class="n"><span class="pre">rc_channels_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">channelData</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8SerialIO10getChannelEP13rc_channels_t" title="Link to this definition"></a><br /></dt>
-<dd><p>Get the ChannelData. </p>
+<dd><p>Retrieve the current channel data. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The structure contains 16 channels, each represented as an 11-bit unsigned integer with a maximum value of 2047. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>channelData</strong> – <strong>[out]</strong> Pointer to an <a class="reference internal" href="#SerialIO_8h_1a4a7401e4645a3d0dda231de0bb0416af"><span class="std std-ref">rc_channels_t</span></a> structure to store the retrieved channel data.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SerialIO10getChannelEP15ibus_channels_t">
 <span id="_CPPv3N8SerialIO10getChannelEP15ibus_channels_t"></span><span id="_CPPv2N8SerialIO10getChannelEP15ibus_channels_t"></span><span id="SerialIO::getChannel__ibus_channels_tP"></span><span class="target" id="classSerialIO_1aefd15bb636bb01552a05dcf3344acd6c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getChannel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv415ibus_channels_t" title="ibus_channels_t"><span class="n"><span class="pre">ibus_channels_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">channelData</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SerialIO10getChannelEP15ibus_channels_t" title="Link to this definition"></a><br /></dt>
-<dd><p>Get the ChannelData. </p>
+<dd><p>Retrieve the current channel data using ibus_channels_t. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>channelData</strong> – <strong>[out]</strong> Pointer to an ibus_channels_t structure to store the channel data. </p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -1396,12 +1416,30 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SerialIO9leftShiftEA_7uint8_t6size_t">
 <span id="_CPPv3N8SerialIO9leftShiftEA_7uint8_t6size_t"></span><span id="_CPPv2N8SerialIO9leftShiftEA_7uint8_t6size_t"></span><span id="SerialIO::leftShift__uint8_tA.s"></span><span class="target" id="classSerialIO_1aaa0beb7e629887564caf6e4c4c4c98ac"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">leftShift</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arr</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SerialIO9leftShiftEA_7uint8_t6size_t" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Perform a left shift operation on the given byte array. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> – Pointer to the byte array. </p></li>
+<li><p><strong>size</strong> – Size of the array. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8SerialIO10rightShiftEA_7uint8_t6size_t">
 <span id="_CPPv3N8SerialIO10rightShiftEA_7uint8_t6size_t"></span><span id="_CPPv2N8SerialIO10rightShiftEA_7uint8_t6size_t"></span><span id="SerialIO::rightShift__uint8_tA.s"></span><span class="target" id="classSerialIO_1a1c89f0058217f31d041a6af9588f4560"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rightShift</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arr</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8SerialIO10rightShiftEA_7uint8_t6size_t" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Perform a right shift operation on the given byte array. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> – Pointer to the byte array. </p></li>
+<li><p><strong>size</strong> – Size of the array. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
@@ -1409,98 +1447,29 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8SerialIO7_rxPortE">
 <span id="_CPPv3N8SerialIO7_rxPortE"></span><span id="_CPPv2N8SerialIO7_rxPortE"></span><span id="SerialIO::_rxPort__StreamP"></span><span class="target" id="classSerialIO_1a288b0f5fb6a1d566124aa93c035ee451"></span><span class="n"><span class="pre">Stream</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_rxPort</span></span></span><a class="headerlink" href="#_CPPv4N8SerialIO7_rxPortE" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Pointer to the hardware serial port used for communication. </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8SerialIO9_invertedE">
 <span id="_CPPv3N8SerialIO9_invertedE"></span><span id="_CPPv2N8SerialIO9_invertedE"></span><span id="SerialIO::_inverted__b"></span><span class="target" id="classSerialIO_1a991be4261eddcd953551d73cf2feeb31"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_inverted</span></span></span><a class="headerlink" href="#_CPPv4N8SerialIO9_invertedE" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Indicates whether the serial signal is inverted. </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8SerialIO6_rxPinE">
 <span id="_CPPv3N8SerialIO6_rxPinE"></span><span id="_CPPv2N8SerialIO6_rxPinE"></span><span id="SerialIO::_rxPin__i"></span><span class="target" id="classSerialIO_1a874e6357c323f6ec3f5a0f180889d05a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_rxPin</span></span></span><a class="headerlink" href="#_CPPv4N8SerialIO6_rxPinE" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>RX pin number. </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8SerialIO6_txPinE">
 <span id="_CPPv3N8SerialIO6_txPinE"></span><span id="_CPPv2N8SerialIO6_txPinE"></span><span id="SerialIO::_txPin__i"></span><span class="target" id="classSerialIO_1a8a8eb08945846fc9962b6a6140436c13"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_txPin</span></span></span><a class="headerlink" href="#_CPPv4N8SerialIO6_txPinE" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>TX pin number. </p>
+</dd></dl>
 
 </div>
 </dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="conf">
-<span class="target" id="namespaceconf"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">conf</span></span><a class="headerlink" href="#conf" title="Link to this definition"></a></dt>
-<dd><div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="conf.project">
-<span class="target" id="conf_8py_1a2803387c30920e3e74f46eb541db430d"></span><span class="sig-name descname"><span class="pre">project</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;SerialIO&quot;</span></em><a class="headerlink" href="#conf.project" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="conf.copyright">
-<span class="target" id="conf_8py_1aa11e0a8e9c47ccc775796bd64c295d2c"></span><span class="sig-name descname"><span class="pre">copyright</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;2025,</span> <span class="pre">Witty-Wizard&quot;</span></em><a class="headerlink" href="#conf.copyright" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="conf.author">
-<span class="target" id="conf_8py_1a0b68e66074bc74dbb7460951f810b4c8"></span><span class="sig-name descname"><span class="pre">author</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;Witty-Wizard&quot;</span></em><a class="headerlink" href="#conf.author" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="conf.release">
-<span class="target" id="conf_8py_1aca7e23e5f354ec5d8e18d6b5769908c9"></span><span class="sig-name descname"><span class="pre">release</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;0.2.4&quot;</span></em><a class="headerlink" href="#conf.release" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="conf.extensions">
-<span class="target" id="conf_8py_1ae475e080536acb271a0a0efe56c3ba42"></span><span class="sig-name descname"><span class="pre">extensions</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&quot;sphinx.ext.autodoc&quot;,</span> <span class="pre">&quot;sphinx.ext.viewcode&quot;,</span> <span class="pre">&quot;breathe&quot;]</span></em><a class="headerlink" href="#conf.extensions" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="conf.templates_path">
-<span class="target" id="conf_8py_1ae850ae634911b713e036b43894fdd525"></span><span class="sig-name descname"><span class="pre">templates_path</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&quot;_templates&quot;]</span></em><a class="headerlink" href="#conf.templates_path" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="conf.exclude_patterns">
-<span class="target" id="conf_8py_1a7ad48fb6f3e9b129c02346ea0d3527c1"></span><span class="sig-name descname"><span class="pre">exclude_patterns</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#conf.exclude_patterns" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="conf.html_theme">
-<span class="target" id="conf_8py_1a012ba9863b958ed7baa933116f2a05b6"></span><span class="sig-name descname"><span class="pre">html_theme</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;sphinx_rtd_theme&quot;</span></em><a class="headerlink" href="#conf.html_theme" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="conf.html_static_path">
-<span class="target" id="conf_8py_1af4fb5d8851ccaade135c2668dd3ced41"></span><span class="sig-name descname"><span class="pre">html_static_path</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&quot;_static&quot;]</span></em><a class="headerlink" href="#conf.html_static_path" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="conf.breathe_projects">
-<span class="target" id="conf_8py_1ad7fcd78de73b7505cc99717d4abf2ac1"></span><span class="sig-name descname"><span class="pre">breathe_projects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{&quot;SerialIO&quot;:</span> <span class="pre">&quot;../xml&quot;}</span></em><a class="headerlink" href="#conf.breathe_projects" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="conf.breathe_default_project">
-<span class="target" id="conf_8py_1a15ff89fd36856d4530d4ed2083e6dfc7"></span><span class="sig-name descname"><span class="pre">breathe_default_project</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;SerialIO&quot;</span></em><a class="headerlink" href="#conf.breathe_default_project" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</div>
-</dd></dl>
-
-<dl>
-<dt class="sig sig-object cpp">
-<span class="target" id="CODE__OF__CONDUCT_8md"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">CODE_OF_CONDUCT.md</span></span></dt>
-<dd></dd></dl>
-
-<dl>
-<dt class="sig sig-object py">
-<span class="target" id="conf_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">conf.py</span></span></dt>
-<dd></dd></dl>
 
 <dl>
 <dt class="sig sig-object cpp">
@@ -2400,7 +2369,12 @@
 <em>#include “<a class="reference internal" href="#ibus_8h"><span class="std std-ref">ibus/ibus.h</span></a>”</em></div>
 <div class="docutils container">
 <em>#include “<a class="reference internal" href="#sbus_8h"><span class="std std-ref">sbus/sbus.h</span></a>”</em></div>
-<p>Header file for serial input/output (IO) functionality. </p>
+<p>Header file for <a class="reference internal" href="#classSerialIO"><span class="std std-ref">SerialIO</span></a> class, providing serial input/output (IO) functionality. </p>
+<p><dl class="simple">
+<dt><strong>Author</strong></dt><dd><p>WittyWizard </p>
+</dd>
+</dl>
+</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
 <dl class="cpp macro">
@@ -2419,85 +2393,10 @@
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv413rc_channels_t">
 <span id="_CPPv313rc_channels_t"></span><span id="_CPPv213rc_channels_t"></span><span id="rc_channels_t"></span><span class="target" id="SerialIO_8h_1a4a7401e4645a3d0dda231de0bb0416af"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv413rc_channels_s" title="rc_channels_s"><span class="n"><span class="pre">rc_channels_s</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rc_channels_t</span></span></span><a class="headerlink" href="#_CPPv413rc_channels_t" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-</div>
+<dd><p>Structure representing 16 RC channels using 11-bit values. </p>
 </dd></dl>
 
-<dl>
-<dt class="sig sig-object cpp">
-<span class="target" id="md_CODE__OF__CONDUCT"></span><em><span class="pre">page</span></em> <span class="sig-name descname"><span class="pre">Contributor</span> <span class="pre">Covenant</span> <span class="pre">Code</span> <span class="pre">of</span> <span class="pre">Conduct</span></span></dt>
-<dd><p><span class="target" id="md_CODE__OF__CONDUCT_1autotoc_md0"></span></p>
-<section id="md_CODE__OF__CONDUCT_1autotoc_md1">
-<h2>Our Pledge<a class="headerlink" href="#md_CODE__OF__CONDUCT_1autotoc_md1" title="Link to this heading"></a></h2>
-<p id="md_CODE__OF__CONDUCT_1autotoc_md1">We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.</p>
-<p>We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.</p>
-</section>
-<section id="md_CODE__OF__CONDUCT_1autotoc_md2">
-<h2>Our Standards<a class="headerlink" href="#md_CODE__OF__CONDUCT_1autotoc_md2" title="Link to this heading"></a></h2>
-<p id="md_CODE__OF__CONDUCT_1autotoc_md2">Examples of behavior that contributes to a positive environment for our community include:</p>
-<p><ul class="simple">
-<li><p>Demonstrating empathy and kindness toward other people</p></li>
-<li><p>Being respectful of differing opinions, viewpoints, and experiences</p></li>
-<li><p>Giving and gracefully accepting constructive feedback</p></li>
-<li><p>Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience</p></li>
-<li><p>Focusing on what is best not just for us as individuals, but for the overall community</p></li>
-</ul>
-</p>
-<p>Examples of unacceptable behavior include:</p>
-<p><ul class="simple">
-<li><p>The use of sexualized language or imagery, and sexual attention or advances of any kind</p></li>
-<li><p>Trolling, insulting or derogatory comments, and personal or political attacks</p></li>
-<li><p>Public or private harassment</p></li>
-<li><p>Publishing others’ private information, such as a physical or email address, without their explicit permission</p></li>
-<li><p>Other conduct which could reasonably be considered inappropriate in a professional setting</p></li>
-</ul>
-</p>
-</section>
-<section id="md_CODE__OF__CONDUCT_1autotoc_md3">
-<h2>Enforcement Responsibilities<a class="headerlink" href="#md_CODE__OF__CONDUCT_1autotoc_md3" title="Link to this heading"></a></h2>
-<p id="md_CODE__OF__CONDUCT_1autotoc_md3">Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.</p>
-<p>Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.</p>
-</section>
-<section id="md_CODE__OF__CONDUCT_1autotoc_md4">
-<h2>Scope<a class="headerlink" href="#md_CODE__OF__CONDUCT_1autotoc_md4" title="Link to this heading"></a></h2>
-<p id="md_CODE__OF__CONDUCT_1autotoc_md4">This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.</p>
-</section>
-<section id="md_CODE__OF__CONDUCT_1autotoc_md5">
-<h2>Enforcement<a class="headerlink" href="#md_CODE__OF__CONDUCT_1autotoc_md5" title="Link to this heading"></a></h2>
-<p id="md_CODE__OF__CONDUCT_1autotoc_md5">Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement atAll complaints will be reviewed and investigated promptly and fairly.</p>
-<p>All community leaders are obligated to respect the privacy and security of the reporter of any incident.</p>
-</section>
-<section id="md_CODE__OF__CONDUCT_1autotoc_md6">
-<h2>Enforcement Guidelines<a class="headerlink" href="#md_CODE__OF__CONDUCT_1autotoc_md6" title="Link to this heading"></a></h2>
-<p id="md_CODE__OF__CONDUCT_1autotoc_md6">Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:</p>
-<section id="md_CODE__OF__CONDUCT_1autotoc_md7">
-<h3>1. Correction<a class="headerlink" href="#md_CODE__OF__CONDUCT_1autotoc_md7" title="Link to this heading"></a></h3>
-<p id="md_CODE__OF__CONDUCT_1autotoc_md7"><strong>Community Impact</strong>: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.</p>
-<p><strong>Consequence</strong>: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.</p>
-</section>
-<section id="md_CODE__OF__CONDUCT_1autotoc_md8">
-<h3>2. Warning<a class="headerlink" href="#md_CODE__OF__CONDUCT_1autotoc_md8" title="Link to this heading"></a></h3>
-<p id="md_CODE__OF__CONDUCT_1autotoc_md8"><strong>Community Impact</strong>: A violation through a single incident or series of actions.</p>
-<p><strong>Consequence</strong>: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.</p>
-</section>
-<section id="md_CODE__OF__CONDUCT_1autotoc_md9">
-<h3>3. Temporary Ban<a class="headerlink" href="#md_CODE__OF__CONDUCT_1autotoc_md9" title="Link to this heading"></a></h3>
-<p id="md_CODE__OF__CONDUCT_1autotoc_md9"><strong>Community Impact</strong>: A serious violation of community standards, including sustained inappropriate behavior.</p>
-<p><strong>Consequence</strong>: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.</p>
-</section>
-<section id="md_CODE__OF__CONDUCT_1autotoc_md10">
-<h3>4. Permanent Ban<a class="headerlink" href="#md_CODE__OF__CONDUCT_1autotoc_md10" title="Link to this heading"></a></h3>
-<p id="md_CODE__OF__CONDUCT_1autotoc_md10"><strong>Community Impact</strong>: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.</p>
-<p><strong>Consequence</strong>: A permanent ban from any sort of public interaction within the community.</p>
-</section>
-</section>
-<section id="md_CODE__OF__CONDUCT_1autotoc_md11">
-<h2>Attribution<a class="headerlink" href="#md_CODE__OF__CONDUCT_1autotoc_md11" title="Link to this heading"></a></h2>
-<p id="md_CODE__OF__CONDUCT_1autotoc_md11">This Code of Conduct is adapted from the <a class="reference external" href="https://www.contributor-covenant.org">Contributor Covenant</a>, version 2.0, available at <a class="reference external" href="https://www.contributor-covenant.org/version/2/0/code_of_conduct.html">https://www.contributor-covenant.org/version/2/0/code_of_conduct.html</a>.</p>
-<p>Community Impact Guidelines were inspired by <a class="reference external" href="https://github.com/mozilla/diversity">Mozilla’s code of conduct enforcement ladder</a>.</p>
-<p>For answers to common questions about this code of conduct, see the FAQ at <a class="reference external" href="https://www.contributor-covenant.org/faq">https://www.contributor-covenant.org/faq</a>. Translations are available at <a class="reference external" href="https://www.contributor-covenant.org/translations">https://www.contributor-covenant.org/translations</a>. </p>
-</section>
+</div>
 </dd></dl>
 
 <dl>
@@ -2513,11 +2412,6 @@
 <dl>
 <dt class="sig sig-object cpp">
 <span class="target" id="dir_3aff92986739d7986d53894338238de5"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">examples/espresiff/crsf_basic</span></span></dt>
-<dd></dd></dl>
-
-<dl>
-<dt class="sig sig-object cpp">
-<span class="target" id="dir_5baf679cf4943df8904dce5d41d4d3dc"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">Docs</span></span></dt>
 <dd></dd></dl>
 
 <dl>
@@ -2568,11 +2462,6 @@
 <dl>
 <dt class="sig sig-object cpp">
 <span class="target" id="dir_a4df4d8936a58abd930affd03de7cd69"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">examples/espresiff/sbus_basic</span></span></dt>
-<dd></dd></dl>
-
-<dl>
-<dt class="sig sig-object cpp">
-<span class="target" id="dir_ad6f24764c0b19c50834c5ab8d174026"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">Docs/source</span></span></dt>
 <dd></dd></dl>
 
 <dl>

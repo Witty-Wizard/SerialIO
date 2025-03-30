@@ -8,6 +8,7 @@
   <title>Index &mdash; SerialIO 0.2.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
@@ -15,6 +16,8 @@
       <script src="_static/documentation_options.js?v=6ffd866b"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -39,7 +42,12 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sbus.html">Futaba SBus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fport.html">FrSky F.Port</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apidocumentation.html">API Documentation</a></li>
@@ -72,10 +80,8 @@
 <h1 id="index">Index</h1>
 
 <div class="genindex-jumpbox">
- <a href="#A"><strong>A</strong></a>
- | <a href="#B"><strong>B</strong></a>
+ <a href="#B"><strong>B</strong></a>
  | <a href="#C"><strong>C</strong></a>
- | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
  | <a href="#H"><strong>H</strong></a>
  | <a href="#I"><strong>I</strong></a>
@@ -83,29 +89,16 @@
  | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
- | <a href="#T"><strong>T</strong></a>
  
 </div>
-<h2 id="A">A</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="apidocumentation.html#conf.author">author (conf attribute)</a>
-</li>
-  </ul></td>
-</tr></table>
-
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="apidocumentation.html#_CPPv47be16toh8uint16_t">be16toh (C++ function)</a>
 </li>
-      <li><a href="apidocumentation.html#_CPPv47be32toh8uint32_t">be32toh (C++ function)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="apidocumentation.html#conf.breathe_default_project">breathe_default_project (conf attribute)</a>
-</li>
-      <li><a href="apidocumentation.html#conf.breathe_projects">breathe_projects (conf attribute)</a>
+      <li><a href="apidocumentation.html#_CPPv47be32toh8uint32_t">be32toh (C++ function)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -114,10 +107,6 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="apidocumentation.html#_CPPv411channelData">channelData (C++ member)</a>, <a href="apidocumentation.html#_CPPv411channelData">[1]</a>, <a href="apidocumentation.html#_CPPv411channelData">[2]</a>, <a href="apidocumentation.html#_CPPv411channelData">[3]</a>
-</li>
-      <li><a href="apidocumentation.html#conf">conf (built-in class)</a>
-</li>
-      <li><a href="apidocumentation.html#conf.copyright">copyright (conf attribute)</a>
 </li>
       <li><a href="apidocumentation.html#c.CRC8_POLY_D5">CRC8_POLY_D5 (C macro)</a>
 </li>
@@ -221,10 +210,10 @@
 </li>
       <li><a href="apidocumentation.html#_CPPv415crsf_channels_t">crsf_channels_t (C++ type)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="apidocumentation.html#_CPPv417crsf_frame_type_e">crsf_frame_type_e (C++ enum)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="apidocumentation.html#_CPPv4N17crsf_frame_type_e23CRSF_FRAMETYPE_ATTITUDEE">crsf_frame_type_e::CRSF_FRAMETYPE_ATTITUDE (C++ enumerator)</a>
 </li>
       <li><a href="apidocumentation.html#_CPPv4N17crsf_frame_type_e29CRSF_FRAMETYPE_BATTERY_SENSORE">crsf_frame_type_e::CRSF_FRAMETYPE_BATTERY_SENSOR (C++ enumerator)</a>
@@ -334,18 +323,6 @@
   </ul></td>
 </tr></table>
 
-<h2 id="E">E</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="apidocumentation.html#conf.exclude_patterns">exclude_patterns (conf attribute)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="apidocumentation.html#conf.extensions">extensions (conf attribute)</a>
-</li>
-  </ul></td>
-</tr></table>
-
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -441,12 +418,8 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="apidocumentation.html#c.HEADER_SBUS">HEADER_SBUS (C macro)</a>
 </li>
-      <li><a href="apidocumentation.html#conf.html_static_path">html_static_path (conf attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="apidocumentation.html#conf.html_theme">html_theme (conf attribute)</a>
-</li>
       <li><a href="apidocumentation.html#_CPPv47htobe168uint16_t">htobe16 (C++ function)</a>
 </li>
       <li><a href="apidocumentation.html#_CPPv47htobe328uint32_t">htobe32 (C++ function)</a>
@@ -549,10 +522,10 @@
 </li>
       <li><a href="apidocumentation.html#_CPPv4N19PhonyNameDueToError21CRSF_FRAME_LENGTH_CRCE">PhonyNameDueToError::CRSF_FRAME_LENGTH_CRC (C++ enumerator)</a>
 </li>
-      <li><a href="apidocumentation.html#_CPPv4N19PhonyNameDueToError30CRSF_FRAME_LENGTH_EXT_TYPE_CRCE">PhonyNameDueToError::CRSF_FRAME_LENGTH_EXT_TYPE_CRC (C++ enumerator)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#_CPPv4N19PhonyNameDueToError30CRSF_FRAME_LENGTH_EXT_TYPE_CRCE">PhonyNameDueToError::CRSF_FRAME_LENGTH_EXT_TYPE_CRC (C++ enumerator)</a>
+</li>
       <li><a href="apidocumentation.html#_CPPv4N19PhonyNameDueToError29CRSF_FRAME_LENGTH_FRAMELENGTHE">PhonyNameDueToError::CRSF_FRAME_LENGTH_FRAMELENGTH (C++ enumerator)</a>
 </li>
       <li><a href="apidocumentation.html#_CPPv4N19PhonyNameDueToError29CRSF_FRAME_LENGTH_NON_PAYLOADE">PhonyNameDueToError::CRSF_FRAME_LENGTH_NON_PAYLOAD (C++ enumerator)</a>
@@ -564,8 +537,6 @@
       <li><a href="apidocumentation.html#_CPPv4N19PhonyNameDueToError39CRSF_FRAME_LINK_STATISTICS_PAYLOAD_SIZEE">PhonyNameDueToError::CRSF_FRAME_LINK_STATISTICS_PAYLOAD_SIZE (C++ enumerator)</a>
 </li>
       <li><a href="apidocumentation.html#_CPPv4N19PhonyNameDueToError35CRSF_FRAME_RC_CHANNELS_PAYLOAD_SIZEE">PhonyNameDueToError::CRSF_FRAME_RC_CHANNELS_PAYLOAD_SIZE (C++ enumerator)</a>
-</li>
-      <li><a href="apidocumentation.html#conf.project">project (conf attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -612,8 +583,6 @@
       <li><a href="apidocumentation.html#_CPPv413rc_channels_t">rc_channels_t (C++ type)</a>
 </li>
       <li><a href="apidocumentation.html#_CPPv46rcdata">rcdata (C++ member)</a>
-</li>
-      <li><a href="apidocumentation.html#conf.release">release (conf attribute)</a>
 </li>
       <li><a href="apidocumentation.html#c.RX_PIN">RX_PIN (C macro)</a>, <a href="apidocumentation.html#c.RX_PIN">[1]</a>, <a href="apidocumentation.html#c.RX_PIN">[2]</a>
 </li>
@@ -728,14 +697,6 @@
       <li><a href="apidocumentation.html#c.SerialIO_H">SerialIO_H (C macro)</a>
 </li>
       <li><a href="apidocumentation.html#_CPPv45setupv">setup (C++ function)</a>, <a href="apidocumentation.html#_CPPv45setupv">[1]</a>, <a href="apidocumentation.html#_CPPv45setupv">[2]</a>, <a href="apidocumentation.html#_CPPv45setupv">[3]</a>, <a href="apidocumentation.html#_CPPv45setupv">[4]</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="T">T</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="apidocumentation.html#conf.templates_path">templates_path (conf attribute)</a>
 </li>
   </ul></td>
 </tr></table>
