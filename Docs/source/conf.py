@@ -16,7 +16,6 @@ release = "0.2.4"
 
 extensions = ["sphinx.ext.autodoc", "sphinx.ext.viewcode", "breathe", "sphinx_copybutton"]
 
-
 templates_path = ["_templates"]
 exclude_patterns = []
 
@@ -26,6 +25,20 @@ exclude_patterns = []
 
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
+
+# Add GitHub repository button
+html_theme_options = {
+    "repository_url": "https://github.com/Witty-Wizard/SerialIO",
+    "use_repository_button": True,
+}
+
+# -- SEO Configurations ------------------------------------------------------
+# Add meta tags and improve search engine visibility
+html_meta = {
+    "description": "SerialIO | A serial communication library.",
+    "author": "Witty-Wizard",
+    "keywords": "SerialIO, serial communication, embedded systems, STM32, ESP32",
+}
 
 # -- Breathe configurations --------------------------------------------------
 # Path to the generated Doxygen XML files
