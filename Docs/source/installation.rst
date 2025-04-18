@@ -5,8 +5,9 @@ Installation
 
 Arduino Installation
 --------------------
+SerialIO is available on the Arduino library manager or,
 
-To use the SerialIO library in your Arduino projects, follow these installation steps:
+you can install it manually by downloading the library from the GitHub repository:
 
 1. Download the SerialIO library from the `GitHub repository <https://github.com/Witty-Wizard/SerialIO>`_.
 2. Extract the downloaded ZIP file.
@@ -17,7 +18,7 @@ To use the SerialIO library in your Arduino projects, follow these installation 
 PlatformIO Installation
 -----------------------
 
-If you are using PlatformIO, you can install the SerialIO library directly from the PlatformIO Library Manager. Add the following line to your `platformio.ini` file:
+If you are using PlatformIO, you can install the SerialIO library directly from the PlatformIO Library Manager. Add the following line to your ``platformio.ini`` file:
 
 .. code-block:: ini
 

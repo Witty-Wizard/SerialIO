@@ -1,3 +1,11 @@
+Supported Protocols
+####################
+
+- `Futaba SBus protocol <#futabasbus>`_
+- `Crossfire RC protocol <https://github.com/crsf-wg/crsf/wiki>`_
+- `Flysky IBus protocol <https://basejunction.wordpress.com/2015/08/23/en-flysky-i6-14-channels-part1/>`_
+- `FrSky F.Port <#frskyfport>`_
+
 .. _futabasbus:
 
 Futaba SBus
@@ -7,12 +15,6 @@ The Futaba S.Bus protocol was introduced around 2009. It was developed by Futaba
 
 .. image:: _static/sbus.png
    :width: 700cm
-
-Specifications
---------------
-
-- `Physical Layer`_
-- `Message Format`_
 
 .. _physical_sbus:
 
@@ -31,7 +33,7 @@ The configuration of the UART communication for SBus uses the following format:
 - **2 stop bits**: Following the data bits and the parity bit, there are 2 stop bits. Stop bits indicate the end of a data frame and provide timing for the receiving device to process the data.
 
 Inversion
-^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 For using SBus with a microcontroller, an inverter is typically required for the inverted UART logic level. This inversion is necessary because traditional UART operates with an active high level, while SBus uses inverted UART with an active low level.
 
@@ -61,3 +63,36 @@ The SBus protocol uses a specific message format for transmitting control data f
   These bits provide information about the status of channels 17 and 18, as well as indications of frame loss and failsafe activation.
 
 - **Byte[24]**: SBUS footer (0x00): The message concludes with a footer byte, marking the end of the S.Bus frame.
+
+.. _frskyfport:
+
+FrSky F.Port
+============
+
+FrSky F.Port is a protocol developed by FrSky Electronic Co., Ltd., designed for communication between receivers and connected devices like servos or sensors. It is a one-line bus system that supports both control and data transmission, operating at a higher speed (115200 baud per second) compared to its predecessor, S.Port.
+
+.. _physical_fport:
+
+Physical Layer
+--------------
+
+The physical layer of the FrSky F.Port protocol utilizes UART (Universal Asynchronous Receiver-Transmitter) communication at a baud rate of 115200.
+
+UART Configuration
+^^^^^^^^^^^^^^^^^^
+
+The configuration of the UART communication for F.Port uses the following format:
+
+- **8 bits of data**: Each data frame consists of 8 bits, representing the information being transmitted.
+- **No parity**: It does not use a parity bit. Instead, it uses a checksum at the end of the whole packet for error detection.
+- **1 stop bit**: Following the data bits, there is 1 stop bit. Stop bits indicate the end of a data frame and provide timing for the receiving device to process the data.
+
+.. _format_fport:
+
+Message Format
+--------------
+
+For the data format and more details, refer to the official documentation at the following link:
+
+- `F.Port Protocol Specification (BetaFlight V2.1, 2017.11.21) <https://github.com/betaflight/betaflight/files/1491056/F.Port.protocol.betaFlight.V2.1.2017.11.21.pdf>`_
+
