@@ -30,10 +30,22 @@ exclude_patterns = []
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 
-# Add GitHub repository button
+# -- Github button -----------------------------------------------------------
+
 html_theme_options = {
-    "repository_url": "https://github.com/Witty-Wizard/SerialIO",
-    "use_repository_button": True,
+    "style_external_links": True,  # Adds an external link icon
+    "navigation_depth": 4,
+    "prev_next_buttons_location": "bottom",
+    "collapse_navigation": False,
+    "sticky_navigation": True,
+}
+
+html_context = {
+    "display_github": True,
+    "github_user": "Robotics-PEC",
+    "github_repo": "Getting-Started-with-ROS",
+    "github_version": "main",
+    "conf_py_path": "/docs/",  # Adjust based on repo structure
 }
 
 # -- SEO Configurations ------------------------------------------------------
