@@ -5,10 +5,18 @@
     <a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img src="https://img.shields.io/github/license/Witty-Wizard/SerialIO" alt="GitHub License"></a>
 </p>
 
-# SerialIO Library
+# SerialIO
 
-A versatile Arduino library that provides support for decoding multiple RC protocols such as SBUS and CRSF.
+An arduino library for parsing almost any RC protocol.
 
-# Overview
+## Overview
 
 SerialIO is a common library designed to simplify the implementation of RC protocol decoding in Arduino projects. It provides a modular and extensible architecture that allows for easy integration of various RC protocols.
+
+## How to use?
+
+The examples and the tutorial are available on [this link](https://serialio.wittywizard.in)
+
+## Contributing to the library
+
+You see a bug or any feature that you require, please feel free to open an issue or if you have fixed the issue then please create a PR on github.
