@@ -12,14 +12,30 @@ SerialIO is a common library designed to simplify the implementation of RC proto
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
+   :caption: Getting Started:
 
-   supportedprotocols
    installation
    tutorial
    example
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: Supported Protocols:
+
+   sbus
+   fport
+
+.. toctree::
+   :maxdepth: 1
+   :caption: API Documentation:
+
+   apidocumentation
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Development:
+   
    contributing
-   apidocumentation 
 
 License
 -------
