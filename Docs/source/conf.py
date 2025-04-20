@@ -42,8 +42,8 @@ html_theme_options = {
 
 html_context = {
     "display_github": True,
-    "github_user": "Robotics-PEC",
-    "github_repo": "Getting-Started-with-ROS",
+    "github_user": "Witty-Wizard",
+    "github_repo": "SerialIO,
     "github_version": "main",
     "conf_py_path": "/docs/",  # Adjust based on repo structure
 }
