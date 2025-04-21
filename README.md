@@ -1,7 +1,7 @@
 <p align="center">
     <img src="https://img.shields.io/github/v/release/Witty-Wizard/SerialIO" alt="GitHub Release">
+    <img src="https://img.shields.io/github/issues/Witty-Wizard/SerialIO" alt="Github Issues">
     <a href="https://github.com/Witty-Wizard/SerialIO/actions/workflows/arduino_ci.yaml"><img src="https://github.com/Witty-Wizard/SerialIO/actions/workflows/arduino_ci.yaml/badge.svg" alt="Arduino_CI"></a>
-    <a href="https://serialio.wittywizard.in/"><img src="https://img.shields.io/badge/-Doxygen-2C4AA8?style=flat&logo=doxygen&logoColor=white" alt="Doxygen"></a>
     <a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img src="https://img.shields.io/github/license/Witty-Wizard/SerialIO" alt="GitHub License"></a>
 </p>
 
@@ -15,7 +15,7 @@ SerialIO is a common library designed to simplify the implementation of RC proto
 
 ## How to use?
 
-The examples and the tutorial are available on [this link](https://serialio.wittywizard.in)
+The examples and the tutorial are available on [this link](https://docs.wittywizard.in/projects/serialio)
 
 ## Contributing to the library
 
