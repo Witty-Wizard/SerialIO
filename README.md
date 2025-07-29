@@ -20,3 +20,11 @@ The examples and the tutorial are available on [this link](https://docs.wittywiz
 ## Contributing to the library
 
 You see a bug or any feature that you require, please feel free to open an issue or if you have fixed the issue then please create a PR on github.
+
+## License
+
+  <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+    <img src="https://www.gnu.org/graphics/gplv3-or-later.svg" alt="GPL‑3.0‑or‑later" width="160">
+  </a>
+
+This library is licensed under the [GNU General Public License v3.0 or later](https://www.gnu.org/licenses/gpl-3.0.en.html).
