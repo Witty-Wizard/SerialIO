@@ -40,4 +40,9 @@ SerialIO is a common library designed to simplify the implementation of RC proto
 License
 -------
 
-This library is distributed under the GNU `General Public License version 3.0 <https://www.gnu.org/licenses/gpl-3.0.html>`_.
+.. image:: https://www.gnu.org/graphics/gplv3-or-later.svg
+   :target: https://www.gnu.org/licenses/gpl-3.0.en.html
+   :alt: GPL‑3.0‑or‑later
+   :width: 160
+
+This library is distributed under the `GNU General Public License v3.0 or later <https://www.gnu.org/licenses/gpl-3.0.en.html>`_.
