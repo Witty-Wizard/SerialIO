@@ -43,7 +43,7 @@ html_theme_options = {
 html_context = {
     "display_github": True,
     "github_user": "Witty-Wizard",
-    "github_repo": "SerialIO,
+    "github_repo": "SerialIO",
     "github_version": "main",
     "conf_py_path": "/docs/",  # Adjust based on repo structure
 }
