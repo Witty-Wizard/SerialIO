@@ -21,10 +21,20 @@ The examples and the tutorial are available on [this link](https://docs.wittywiz
 
 You see a bug or any feature that you require, please feel free to open an issue or if you have fixed the issue then please create a PR on github.
 
+## Support This Project
+
+If you find this project helpful or want to support its development, consider buying me a beer:
+
+<a href="https://buymeacoffee.com/wittywizard">
+    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Beer-%23FFDD00?style=for-the-badge&logo=buy-me-a-beer&logoColor=black" alt="Buy Me a Beer">
+</a>
+
+Your support helps keep this project maintained and evolving!
+
 ## License
 
   <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
-    <img src="https://www.gnu.org/graphics/gplv3-or-later.svg" alt="GPL‑3.0‑or‑later" width="160">
+    <img src="https://www.gnu.org/graphics/gplv3-or-later.svg" alt="GPL​-3.0​-or​later" width="160">
   </a>
 
 This library is licensed under the [GNU General Public License v3.0 or later](https://www.gnu.org/licenses/gpl-3.0.en.html).
