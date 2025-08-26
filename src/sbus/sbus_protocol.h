@@ -18,6 +18,7 @@ extern "C" {
 #define FOOTER_SBUS 0x00 ///< SBus Footer Byte
 #define SBUS_BAUDRATE 100000 ///< SBus baudrate
 #define SBUS_MAX_PACKET_SIZE 25 ///< SBus packet length
+#define SBUS_TIMEOUT 200 ///< SBus timeout in milliseconds
 
 typedef struct sbus_channels_s {
   unsigned header : 8;
