@@ -17,8 +17,6 @@ class sbus : public SerialIO {
 private:
   sbus_channels_t _channelData;
   uint8_t _rxData[SBUS_MAX_PACKET_SIZE];
-  uint32_t _lastPacketTime = 0;
-  bool _connectionTimeout = false;
 
 public:
   /**
@@ -44,13 +42,6 @@ public:
    * channel data will be stored.
    */
   void getChannel(rc_channels_t *channelData) override;
-
-  /**
-   * @brief Gets the failsafe status from the SBUS data.
-   * @param failsafeData Pointer to a failsafe_t struct where the failsafe
-   * status will be stored.
-   */
-  void getFailsafe(failsafe_t *failsafeData);
 
     /**
    * @brief Gets the failsafe status from the SBUS data.
