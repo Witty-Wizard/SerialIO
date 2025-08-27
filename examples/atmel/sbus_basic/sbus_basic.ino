@@ -1,17 +1,18 @@
 /*!
- * @file ibus_basic.ino
+ * @file sbus_basic.ino
  */
 #include <SerialIO.h>
 
 rc_channels_t channelData;
 
-ibus receiver(&Serial);
+sbus receiver(&Serial);
 
 void setup() { 
   receiver.begin();
 }
 
 void loop() {
+  // setup sbus receiver
   receiver.processIncoming();
   receiver.getChannel(&channelData);
 
