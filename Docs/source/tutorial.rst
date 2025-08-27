@@ -107,8 +107,81 @@ Crossfire
     mySerial.begin(CRSF_BAUDRATE);
     SerialIO *receiver = new crsf(mySerial); 
 
+Monitoring Communication
+========================
+You can monitor the communication status on certain protocols, to ensure reliability of the received channel data.
+
+SBus
+----
+
+Serial Communication
+^^^^^^^^^^^^^^^^^^^^
+You can monitor the serial communication using the `getSerialConnectionStatus()` method on the `receiver` instance.
+This method returns `true` if the serial communication is running without errors, otherwise it returns `false`.
+
+.. code-block:: cpp
+
+    #include <SerialIO.h>
+
+    rc_channels_t channelData;
+    sbus receiver(&Serial);
+
+    // within your setup routine
+    receiver.begin();
+    
+    // within your program loop
+    receiver.processIncoming();
+    receiver.getChannel(&channelData);
+
+    bool serialConnectionStatus = receiver.getSerialConnectionStatus();
+
+    if(!serialConnectionStatus) {
+        // handle failsafe of channelData
+    }
+    
+
+Radio connection
+^^^^^^^^^^^^^^^^
+You can monitor the radio connection of the receiver using the `getFailsafe()` method on the `receiver` instance.
+The failsafe indicates when the receiver has lost connection to the transmitter.  
+When the failsafe is activated, the channel data might be set to predefined values or hold the last known values.
+
+You can also monitor the quality of the connection with `getFramelost()` method on the `receiver` instance.
+Usually lost frame indicates when a frame is lost between the transmitter an receiver.
+Failsafe activation requires that many frames ahs been lost in a row.
+
+.. note::
+    Some receivers might not provide any failsafe or frame loss information via SBus protocol.
+    In that case, the methods will always return `false`.
+
+.. code-block:: cpp
+ 
+    #include <SerialIO.h>
+    
+    rc_channels_t channelData;
+    sbus receiver(&Serial);
+
+    // within your setup routine
+    receiver.begin();
+    
+    // within your program loop
+    receiver.processIncoming();
+    receiver.getChannel(&channelData);
+
+    bool failsafe = receiver.getFailsafe();
+    bool frameLost = receiver.getFramelost();
+
+    if(failsafe) {
+        // handle failsafe of channelData
+    }
+
+    if(frameLost) {
+        // handle frame lost event
+    }
+
+
 See Also
-^^^^^^^^
+========
 - :cpp:class:`SerialIO`
 - :cpp:class:`sbus`
 - :cpp:class:`crsf`
