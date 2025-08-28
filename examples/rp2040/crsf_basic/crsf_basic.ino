@@ -1,5 +1,5 @@
 /*!
- * @file ibus_basic.ino
+ * @file crsf_basic.ino
  */
 /*
 
@@ -21,16 +21,16 @@ lib_deps =
 
 #include <SerialIO.h>
 
-#define IBUS_TX_PIN 0
-#define IBUS_RX_PIN 1
+#define CRSF_TX_PIN 0
+#define CRSF_RX_PIN 1
 
 rc_channels_t rcdata;
 // On RP2040 or Arduino ESP32 you need to specify the TX and RX pins
-ibus receiver(&Serial1, IBUS_RX_PIN, IBUS_TX_PIN,
+crsf receiver(&Serial1, CRSF_RX_PIN, CRSF_TX_PIN,
               true); // RP2040 requires the TX_PIN so to not hang up the mcu
 
 void setup() {
-  // setup ibus receiver
+  // setup crsf receiver
   receiver.begin();
 
   Serial.begin(115200);

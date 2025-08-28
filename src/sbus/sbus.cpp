@@ -33,9 +33,36 @@ void sbus::processIncoming() {
       memcpy(&_channelData, _rxData, sizeof(_channelData));
     }
     leftShift(_rxData, sizeof(_rxData));
+
+    _lastPacketTime = millis();
+    _connectionTimeout = false;
+  }
+
+  if (millis() - _lastPacketTime > SBUS_TIMEOUT) {
+    _connectionTimeout = true;
   }
 }
 
 void sbus::getChannel(rc_channels_t *channelData) {
   memcpy(channelData, (uint8_t *)&_channelData + 1, sizeof(rc_channels_t));
+}
+
+bool sbus::getFailsafe() {
+  return _channelData.failsafe;
+}
+
+bool sbus::getFramelost() {
+  return _channelData.framelost;
+}
+
+bool sbus::getChannel17() {
+  return _channelData.channel17;
+}
+
+bool sbus::getChannel18() {
+  return _channelData.channel18;
+}
+
+bool sbus::getSerialConnectionStatus() {
+  return !_connectionTimeout;
 }

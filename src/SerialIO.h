@@ -89,6 +89,8 @@ protected:
   bool _inverted;  ///< Indicates whether the serial signal is inverted.
   int _rxPin;      ///< RX pin number.
   int _txPin;      ///< TX pin number.
+  uint32_t _lastPacketTime = 0; ///< Timestamp of the last received packet.
+  bool _connectionTimeout = false; ///< Indicates whether the connection has timed out.
 
   /**
    * @brief Perform a left shift operation on the given byte array.

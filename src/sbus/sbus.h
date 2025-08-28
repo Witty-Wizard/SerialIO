@@ -42,6 +42,36 @@ public:
    * channel data will be stored.
    */
   void getChannel(rc_channels_t *channelData) override;
+
+    /**
+   * @brief Gets the failsafe status from the SBUS data.
+   * @return True if failsafe is active, false otherwise.
+   */
+  bool getFailsafe();
+
+  /**
+   * @brief Gets the frame lost status from the SBUS data.
+   * @return True if frame lost is active, false otherwise.
+   */
+  bool getFramelost();
+
+  /**
+   * @brief Gets the channel 17 status from the SBUS data.
+   * @return True if channel 17 is active, false otherwise.
+   */
+  bool getChannel17();
+
+  /**
+   * @brief Gets the channel 18 status from the SBUS data.
+   * @return True if channel 18 is active, false otherwise.
+   */
+  bool getChannel18();
+
+  /**
+   * @brief Gets the serial connection status.
+   * @return True if the connection is active, false if it has timed out.
+   */
+  bool getSerialConnectionStatus();
 };
 
 #endif
