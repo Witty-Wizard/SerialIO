@@ -13,7 +13,7 @@ subprocess.call('cd ../.. ; doxygen', shell=True)
 project = "SerialIO"
 copyright = "2025, Witty-Wizard"
 author = "Witty-Wizard"
-release = "0.2.4"
+release = "0.3.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
