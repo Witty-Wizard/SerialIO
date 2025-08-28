@@ -2,6 +2,7 @@
     <img src="https://img.shields.io/github/v/release/Witty-Wizard/SerialIO" alt="GitHub Release">
     <img src="https://img.shields.io/github/issues/Witty-Wizard/SerialIO" alt="Github Issues">
     <a href="https://github.com/Witty-Wizard/SerialIO/actions/workflows/arduino_ci.yaml"><img src="https://github.com/Witty-Wizard/SerialIO/actions/workflows/arduino_ci.yaml/badge.svg" alt="Arduino_CI"></a>
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Witty-Wizard/SerialIO?style=flat">
     <a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img src="https://img.shields.io/github/license/Witty-Wizard/SerialIO" alt="GitHub License"></a>
 </p>
 
