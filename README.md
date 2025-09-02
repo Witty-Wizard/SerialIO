@@ -8,7 +8,9 @@
 
 # SerialIO
 
-An arduino library for parsing almost any RC protocol.
+<p align="center">
+    <img src="./Assets/SerialIO-Logo.png" alt="SerialIO Logo" width="200">
+</p>
 
 ## Overview
 
